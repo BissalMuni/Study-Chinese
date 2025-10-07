@@ -443,6 +443,10 @@ body {
   border-left-color: #3498db;
 }
 
+.app.dark-mode .translation-sentence {
+  color: #3498db;
+}
+
 .app.dark-mode .translation-pinyin {
   color: #e74c3c;
 }
@@ -1133,6 +1137,25 @@ body {
   border-radius: 10px;
   border-left: 4px solid #3498db;
   text-align: center;
+}
+
+.translation-sentence {
+  font-size: 1.6rem;
+  color: #3498db;
+
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.translation-sentence:hover {
+  transform: scale(1.05);
+  text-shadow: 2px 2px 4px rgba(52, 152, 219, 0.3);
 }
 
 .translation-pinyin {

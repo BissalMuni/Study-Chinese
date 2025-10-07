@@ -484,6 +484,14 @@ function App() {
                       <div className="chinese-display-scroll">
                         {showTranslations && (
                           <div className="sentence-translations">
+                            {allSentences[currentSentenceIndex]?.sentence && (
+                              <p
+                                className="translation-sentence"
+                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount)}
+                              >
+                                {allSentences[currentSentenceIndex]?.sentence}
+                              </p>
+                            )}
                             {allSentences[currentSentenceIndex]?.english && (
                               <p
                                 className="translation-english"
