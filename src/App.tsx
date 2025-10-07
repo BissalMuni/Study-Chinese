@@ -39,6 +39,8 @@ function App() {
   const [nextLessonDirection, setNextLessonDirection] = useState<'prev' | 'next' | null>(null);
   const [targetLessonNum, setTargetLessonNum] = useState<number | null>(null);
   const [repeatCount, setRepeatCount] = useState<number>(1);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Ref for lesson buttons to enable auto-scroll
   const lessonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
@@ -233,6 +235,66 @@ function App() {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+  };
+
+  // 스와이프 최소 거리 (픽셀)
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientY);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientY);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isUpSwipe = distance > minSwipeDistance;
+    const isDownSwipe = distance < -minSwipeDistance;
+
+    if (isUpSwipe) {
+      // 위로 스와이프 - 다음 문장
+      if (currentSentenceIndex < allSentences.length - 1) {
+        setCurrentSentenceIndex(currentSentenceIndex + 1);
+      } else {
+        // 마지막 문장에서 다음 레슨으로
+        const currentLessonNum = parseInt(selectedLessonId || '0');
+        const nextLessonNum = currentLessonNum + 1;
+
+        if (lessonData && lessonData.contents) {
+          const nextLessonExists = lessonData.contents.some(
+            (item: any) => String(item.lesson) === String(nextLessonNum) || item.lesson === nextLessonNum
+          );
+
+          if (nextLessonExists) {
+            setTargetLessonNum(nextLessonNum);
+            setNextLessonDirection('next');
+            setShowLessonModal(true);
+          }
+        }
+      }
+    }
+
+    if (isDownSwipe) {
+      // 아래로 스와이프 - 이전 문장
+      if (currentSentenceIndex > 0) {
+        setCurrentSentenceIndex(currentSentenceIndex - 1);
+      } else {
+        // 첫 문장에서 이전 레슨으로
+        const currentLessonNum = parseInt(selectedLessonId || '0');
+        const prevLessonNum = currentLessonNum - 1;
+
+        if (prevLessonNum >= 1) {
+          setTargetLessonNum(prevLessonNum);
+          setNextLessonDirection('prev');
+          setShowLessonModal(true);
+        }
+      }
+    }
   };
 
   const playAudio = async (text: string, lang?: string, repeat: number = 1) => {
@@ -483,7 +545,12 @@ function App() {
                     <div className="chinese-display">
                       <div className="chinese-display-scroll">
                         {showTranslations && (
-                          <div className="sentence-translations">
+                          <div
+                            className="sentence-translations"
+                            onTouchStart={onTouchStart}
+                            onTouchMove={onTouchMove}
+                            onTouchEnd={onTouchEnd}
+                          >
                             {allSentences[currentSentenceIndex]?.sentence && (
                               <p
                                 className="translation-sentence"
