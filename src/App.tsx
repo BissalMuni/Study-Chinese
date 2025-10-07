@@ -226,7 +226,7 @@ function App() {
 
   // Restore lesson when lessonData is loaded and selectedLessonId exists
   useEffect(() => {
-    if (lessonData && selectedLessonId) {   
+    if (lessonData && selectedLessonId) {
       selectLesson(selectedLessonId);
     }
   }, [lessonData, selectedLessonId, selectLesson]);
@@ -643,7 +643,24 @@ function App() {
           {/* Control buttons - 10% */}
           <div className="control-buttons">
             {/* Sentence controls moved outside content area */}
-
+            <button
+              onClick={() => setDisplayMode('others')}
+              className={`control-btn mode-btn ${displayMode === 'others' ? 'active' : ''}`}
+            >
+              🌐
+            </button>
+            <button
+              onClick={() => setDisplayMode('words')}
+              className={`control-btn mode-btn ${displayMode === 'words' ? 'active' : ''}`}
+            >
+              🔤
+            </button>
+            <button
+              onClick={() => setDisplayMode('chinese')}
+              className={`control-btn mode-btn ${displayMode === 'chinese' ? 'active' : ''}`}
+            >
+              中
+            </button>
             <button
               onClick={() => {
                 if (currentSentenceIndex === 0) {
@@ -663,24 +680,6 @@ function App() {
               className="control-btn prev-btn"
             >
               ◀️
-            </button>
-            <button
-              onClick={() => setDisplayMode('chinese')}
-              className={`control-btn mode-btn ${displayMode === 'chinese' ? 'active' : ''}`}
-            >
-              中
-            </button>
-            <button
-              onClick={() => setDisplayMode('words')}
-              className={`control-btn mode-btn ${displayMode === 'words' ? 'active' : ''}`}
-            >
-              🔤
-            </button>
-            <button
-              onClick={() => setDisplayMode('others')}
-              className={`control-btn mode-btn ${displayMode === 'others' ? 'active' : ''}`}
-            >
-              🌐
             </button>
             <button
               onClick={() => {
