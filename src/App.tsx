@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import './styles/App.css';
 import LegacyApp from './components/LegacyApp';
 
@@ -30,16 +30,131 @@ function App() {
   const [lessonData, setLessonData] = useState<any>(null);
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState<number>(0);
   const [allSentences, setAllSentences] = useState<any[]>([]);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem('chineseStudy_darkMode');
+    return saved === 'true';
+  });
   const [showTranslations, setShowTranslations] = useState<boolean>(false);
+  const [showLessonModal, setShowLessonModal] = useState<boolean>(false);
+  const [nextLessonDirection, setNextLessonDirection] = useState<'prev' | 'next' | null>(null);
+  const [targetLessonNum, setTargetLessonNum] = useState<number | null>(null);
+  const [repeatCount, setRepeatCount] = useState<number>(1);
+
+  // Ref for lesson buttons to enable auto-scroll
+  const lessonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+
+
+  // Auto-scroll to selected lesson when lesson list is shown
+  useEffect(() => {
+
+    if (selectedType && !selectedLesson && lessonData && selectedLessonId) {
+      // Small delay to ensure refs are populated after render
+      const timer = setTimeout(() => {
+        const targetButton = lessonRefs.current[selectedLessonId];
+        console.log('🔍 Scroll attempt:', {
+          selectedLessonId,
+          targetButton,
+          allRefs: Object.keys(lessonRefs.current)
+        });
+
+        if (targetButton) {
+          targetButton.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+          console.log('✅ Scrolled to lesson:', selectedLessonId);
+        } else {
+          console.log('❌ Button not found for lesson:', selectedLessonId);
+        }
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [selectedType, selectedLesson, lessonData, selectedLessonId]);
+
+  // Helper functions defined before useEffects
+  const extractAllSentences = useCallback((contents: any[]) => {
+    const sentences: any[] = [];
+    contents.forEach((lessonItem: any) => {
+      if (lessonItem.content) {
+        lessonItem.content.forEach((categoryItem: any) => {
+          if (categoryItem.subcategories) {
+            categoryItem.subcategories.forEach((subcat: any) => {
+              if (subcat.sentences) {
+                sentences.push(...subcat.sentences);
+              }
+            });
+          }
+        });
+      }
+    });
+    setAllSentences(sentences);
+    setCurrentSentenceIndex(0);
+  }, []);
+
+  const selectLesson = useCallback((lessonName: string, data?: any) => {
+    const targetData = data || lessonData;
+    if (targetData && targetData.contents) {
+      console.log('Searching for lesson:', lessonName);
+      console.log('First item lesson field:', targetData.contents[0]?.lesson);
+
+      const lessonContent = targetData.contents.filter((item: any) => {
+        // 숫자와 문자열 모두 비교 (타입 변환)
+        return String(item.lesson) === String(lessonName) ||
+          item.lesson === parseInt(lessonName) ||
+          `Lesson ${item.lesson || item.id}` === lessonName;
+      });
+
+      console.log('selectedLesson 예시 3개:', lessonContent.slice(0, 3));
+      setSelectedLesson(lessonContent);
+      setSelectedLessonId(lessonName);
+      extractAllSentences(lessonContent);
+    }
+  }, [lessonData, extractAllSentences]);
+
+  const loadLessonData = useCallback(async (type: IntegratedType | CurrentlyType) => {
+    try {
+      let url;
+      if (type === '202508') {
+        url = `/data/currently/${type}.json`;
+      } else {
+        url = `/data/integrated/${type}.json`;
+      }
+
+      const response = await fetch(url);
+      const data = await response.json();
+      setLessonData(data);
+
+      // Extract unique lessons for lesson selection
+      if (data.contents && Array.isArray(data.contents)) {
+        const lessons = data.contents.reduce((acc: any[], item: any) => {
+          const lessonNum = item.lesson || `Lesson ${item.lesson || item.id}`;
+          if (!acc.find(l => l.lesson === lessonNum)) {
+            acc.push({ lesson: lessonNum, id: item.lesson || item.id });
+          }
+          return acc;
+        }, []);
+
+        if (lessons.length === 1) {
+          // If only one lesson, go directly to content
+          setSelectedLesson(data.contents);
+          setSelectedLessonId(lessons[0].lesson);
+          extractAllSentences(data.contents);
+        }
+      } else {
+        // If no contents array, treat the whole data as lesson content
+        setSelectedLesson([data]);
+      }
+    } catch (error) {
+      console.error('Failed to load lesson data:', error);
+    }
+  }, [extractAllSentences]);
 
   // localStorage에서 상태 복원
   useEffect(() => {
     const savedDarkMode = localStorage.getItem('chineseStudy_darkMode');
     const savedViewMode = localStorage.getItem('chineseStudy_viewMode');
     const savedDataCategory = localStorage.getItem('chineseStudy_dataCategory');
-    
-    // 통합된 localStorage 변수 사용
     const savedSelectedType = localStorage.getItem('chineseStudy_selectedType');
     const savedSelectedLessonId = localStorage.getItem('chineseStudy_selectedLessonId');
     const savedCurrentSentenceIndex = localStorage.getItem('chineseStudy_currentSentenceIndex');
@@ -49,8 +164,6 @@ function App() {
     if (savedViewMode) setViewMode(savedViewMode as ViewMode);
     if (savedDataCategory) {
       setDataCategory(savedDataCategory as DataCategory);
-      
-      // 카테고리에 상관없이 통일된 변수로 상태 복원
       if (savedSelectedType) {
         if (savedDataCategory === 'currently') {
           setSelectedType(savedSelectedType as CurrentlyType);
@@ -77,8 +190,6 @@ function App() {
     if (dataCategory) localStorage.setItem('chineseStudy_dataCategory', dataCategory);
   }, [dataCategory]);
 
-
-  // 통합된 상태 저장
   useEffect(() => {
     localStorage.setItem('chineseStudy_currentSentenceIndex', currentSentenceIndex.toString());
   }, [currentSentenceIndex]);
@@ -87,7 +198,6 @@ function App() {
     localStorage.setItem('chineseStudy_displayMode', displayMode);
   }, [displayMode]);
 
-  // selectedLessonId localStorage에 저장
   useEffect(() => {
     if (selectedLessonId) {
       localStorage.setItem('chineseStudy_selectedLessonId', selectedLessonId);
@@ -95,8 +205,6 @@ function App() {
       localStorage.removeItem('chineseStudy_selectedLessonId');
     }
   }, [selectedLessonId]);
-
-  // lessonData와 allSentences는 localStorage에 저장하지 않음
 
   useEffect(() => {
     if (selectedType) {
@@ -106,58 +214,65 @@ function App() {
     }
   }, [selectedType]);
 
-
-  // Load data when selectedType exists but lessonData doesn't (for localStorage restoration)
+  // selectedType 변경 시 데이터 로드
   useEffect(() => {
-    const loadAndRestoreData = async () => {
-      if (selectedType && !lessonData) {
-        console.log('Loading lesson data for type:', selectedType);
-        await loadLessonData(selectedType);
+    if (selectedType && !lessonData) {
+      console.log('Loading lesson data for type:', selectedType);
+      loadLessonData(selectedType).then(() => {
         console.log('Lesson data loaded successfully');
-      }
-    };
-    
-    loadAndRestoreData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedType]);
+      });
+    }
+  }, [selectedType, lessonData, loadLessonData]);
 
   // Restore lesson when lessonData is loaded and selectedLessonId exists
   useEffect(() => {
-    if (lessonData && selectedLessonId) {
-      console.log('Restoring lesson:', selectedLessonId);
-      console.log('Available lessons:', lessonData.contents?.map((item: any) => item.lesson));
-      // 새로고침 후 복원 시 항상 실행 (기존: !selectedLesson 조건 제거)
+    if (lessonData && selectedLessonId) {   
       selectLesson(selectedLessonId);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lessonData, selectedLessonId]);
+  }, [lessonData, selectedLessonId, selectLesson]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  // TTS 기능
-  const playAudio = async (text: string, lang?: string) => {
+  const playAudio = async (text: string, lang?: string, repeat: number = 1) => {
     try {
       if ('speechSynthesis' in window) {
-        const utterance = new SpeechSynthesisUtterance(text);
+        // 이전 재생 중지
+        window.speechSynthesis.cancel();
 
-        // 언어별 설정
-        if (lang === 'chinese') {
-          utterance.lang = 'zh-CN';
-        } else if (lang === 'korean') {
-          utterance.lang = 'ko-KR';
-        } else if (lang === 'english') {
-          utterance.lang = 'en-US';
-        } else if (lang === 'japanese') {
-          utterance.lang = 'ja-JP';
-        } else {
-          utterance.lang = 'zh-CN'; // 기본값
+        const playOnce = () => {
+          return new Promise<void>((resolve) => {
+            const utterance = new SpeechSynthesisUtterance(text);
+
+            // 언어별 설정
+            if (lang === 'chinese') {
+              utterance.lang = 'zh-CN';
+            } else if (lang === 'korean') {
+              utterance.lang = 'ko-KR';
+            } else if (lang === 'english') {
+              utterance.lang = 'en-US';
+            } else if (lang === 'japanese') {
+              utterance.lang = 'ja-JP';
+            } else {
+              utterance.lang = 'zh-CN'; // 기본값
+            }
+
+            utterance.rate = 0.9;
+            utterance.onend = () => resolve();
+            utterance.onerror = () => resolve();
+            window.speechSynthesis.speak(utterance);
+          });
+        };
+
+        // 반복 재생
+        for (let i = 0; i < repeat; i++) {
+          await playOnce();
+          // 반복 사이에 짧은 지연
+          if (i < repeat - 1) {
+            await new Promise(resolve => setTimeout(resolve, 300));
+          }
         }
-
-        utterance.rate = 0.9;
-        window.speechSynthesis.speak(utterance);
-        return;
       }
     } catch (error) {
       console.error('Audio playback error:', error);
@@ -167,15 +282,18 @@ function App() {
   const goBack = () => {
     if (selectedLesson) {
       setSelectedLesson(null);
-      setSelectedLessonId(null);
+      // Keep selectedLessonId for auto-scroll when returning to lesson list
+      // setSelectedLessonId(null); // ← 주석 처리: 레슨 목록으로 돌아갈 때 ID 유지
       setDisplayMode('chinese');
-      // Clear lesson-related localStorage
-      localStorage.removeItem('chineseStudy_selectedLessonId');
+      // Don't clear selectedLessonId from localStorage - keep it for scroll position
+      // localStorage.removeItem('chineseStudy_selectedLessonId'); // ← 주석 처리
     } else if (selectedType) {
       setSelectedType(null);
       setLessonData(null);
+      setSelectedLessonId(null); // Clear lesson ID when changing type
       // Clear type-related localStorage
       localStorage.removeItem('chineseStudy_selectedType');
+      localStorage.removeItem('chineseStudy_selectedLessonId');
     } else if (dataCategory) {
       setDataCategory(null);
       // Clear category-related localStorage
@@ -195,82 +313,6 @@ function App() {
       setSelectedLesson(null);
       setLessonData(null);
       setAllSentences([]);
-    }
-  };
-
-  const loadLessonData = async (type: IntegratedType | CurrentlyType) => {
-    try {
-      let url;
-      if (type === '202508') {
-        url = `/data/currently/${type}.json`;
-      } else {
-        url = `/data/integrated/${type}.json`;
-      }
-
-      const response = await fetch(url);
-      const data = await response.json();
-      setLessonData(data);
-
-      // Extract unique lessons for lesson selection
-      if (data.contents && Array.isArray(data.contents)) {
-        const lessons = data.contents.reduce((acc: any[], item: any) => {
-          const lessonNum = item.lesson || `Lesson ${item.lesson || item.id}`;
-          if (!acc.find(l => l.lesson === lessonNum)) {
-            acc.push({ lesson: lessonNum, id: item.lesson || item.id });
-          }
-          return acc;
-        }, []);
-
-        if (lessons.length === 1) {
-          // If only one lesson, go directly to content
-          setSelectedLesson(data.contents);
-          setSelectedLessonId(lessons[0].lesson); // 단일 레슨일 때도 lessonId 저장
-          extractAllSentences(data.contents);
-        }
-      } else {
-        // If no contents array, treat the whole data as lesson content
-        setSelectedLesson([data]);
-      }
-    } catch (error) {
-      console.error('Failed to load lesson data:', error);
-    }
-  };
-
-  const extractAllSentences = (contents: any[]) => {
-    const sentences: any[] = [];
-    contents.forEach((lessonItem: any) => {
-      if (lessonItem.content) {
-        lessonItem.content.forEach((categoryItem: any) => {
-          if (categoryItem.subcategories) {
-            categoryItem.subcategories.forEach((subcat: any) => {
-              if (subcat.sentences) {
-                sentences.push(...subcat.sentences);
-              }
-            });
-          }
-        });
-      }
-    });
-    setAllSentences(sentences);
-    setCurrentSentenceIndex(0);
-  };
-
-  const selectLesson = (lessonName: string) => {
-    if (lessonData && lessonData.contents) {
-      console.log('Searching for lesson:', lessonName);
-      console.log('First item lesson field:', lessonData.contents[0]?.lesson);
-      
-      const lessonContent = lessonData.contents.filter((item: any) => {
-        // 숫자와 문자열 모두 비교 (타입 변환)
-        return String(item.lesson) === String(lessonName) || 
-               item.lesson === parseInt(lessonName) ||
-               `Lesson ${item.lesson || item.id}` === lessonName;
-      });
-      
-      console.log('selectedLesson 예시 3개:', lessonContent.slice(0, 3));
-      setSelectedLesson(lessonContent);
-      setSelectedLessonId(lessonName); // lessonId 저장
-      extractAllSentences(lessonContent);
     }
   };
 
@@ -313,7 +355,7 @@ function App() {
         <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
           <div className="header-with-center">
             <button onClick={goBack} className="back-btn">🔙</button>
-            
+
             <div className="header-spacer"></div>
           </div>
           <div className="data-category-selection">
@@ -381,8 +423,14 @@ function App() {
               {lessons.map((lesson: any, index: number) => (
                 <button
                   key={index}
+                  ref={(el) => {
+                    if (el) {
+                      lessonRefs.current[lesson.lesson] = el;
+                      // console.log('📌 Ref set for lesson:', lesson.lesson);
+                    }
+                  }}
                   onClick={() => selectLesson(lesson.lesson)}
-                  className="lesson-btn"
+                  className={`lesson-btn ${String(lesson.lesson) === String(selectedLessonId) ? 'selected' : ''}`}
                 >
                   <div className="lesson-btn-content">
 
@@ -402,7 +450,9 @@ function App() {
         <div className={`app full-height ${isDarkMode ? 'dark-mode' : ''}`}>
           <div className="header-with-center">
             <button onClick={goBack} className="back-btn">🔙</button>
-            <h2 className="header-title-center">{selectedLesson?.[0]?.lesson ? `${(selectedLesson[0] as any)?.content?.[0]?.category}` : selectedType}</h2>
+            <h2 className="header-title-center">
+              <span>{selectedLesson?.[0]?.lesson ? `${(selectedLesson[0] as any)?.content?.[0]?.category}` : selectedType}</span>
+            </h2>
             <div className="header-spacer"></div>
           </div>
 
@@ -412,202 +462,289 @@ function App() {
               <div className="single-sentence-view">
                 <div className="sentence-header">
                   <span className="sentence-id">ID: {allSentences[currentSentenceIndex]?.id}</span>
+                  <div className="audio-controller">
+                    <button
+                      className="repeat-btn"
+                      onClick={() => {
+                        const counts = [1, 3, 5, 10];
+                        const currentIndex = counts.indexOf(repeatCount);
+                        const nextIndex = (currentIndex + 1) % counts.length;
+                        setRepeatCount(counts[nextIndex]);
+                      }}
+                    >
+                      {repeatCount}회 반복
+                    </button>
+                  </div>
                   <span className="sentence-counter">{currentSentenceIndex + 1} / {allSentences.length}</span>
                 </div>
 
                 <div className="sentence-content">
                   {displayMode === 'chinese' && (
                     <div className="chinese-display">
-                      <p className="main-sentence" onClick={() => setShowTranslations(!showTranslations)}>
-                        {allSentences[currentSentenceIndex]?.sentence}
-                      </p>
-                      {showTranslations && (
-                        <div className="sentence-translations">
-                          {allSentences[currentSentenceIndex]?.pinyin && (
-                            <p 
-                              className="translation-pinyin"
-                              onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese')}
-                            >
-                              {allSentences[currentSentenceIndex]?.pinyin}
-                            </p>
-                          )}
-                          {allSentences[currentSentenceIndex]?.korean && (
-                            <p 
-                              className="translation-korean"
-                              onClick={() => playAudio(allSentences[currentSentenceIndex]?.korean, 'korean')}
-                            >
-                              {allSentences[currentSentenceIndex]?.korean}
-                            </p>
-                          )}
-                          {allSentences[currentSentenceIndex]?.english && (
-                            <p 
-                              className="translation-english"
-                              onClick={() => playAudio(allSentences[currentSentenceIndex]?.english, 'english')}
-                            >
-                              {allSentences[currentSentenceIndex]?.english}
-                            </p>
-                          )}
-                        </div>
-                      )}
-                      <div className="sentence-controls">
-                        <button
-                          onClick={() => setCurrentSentenceIndex(Math.max(0, currentSentenceIndex - 1))}
-                          className={`control-btn ${currentSentenceIndex === 0 ? 'disabled' : ''}`}
-                          disabled={currentSentenceIndex === 0}
-                        >
-                          ◀️
-                        </button>
-                        <button
-                          className="tts-button-center"
-                          onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese')}
-                          title="중국어 음성 재생"
-                        >
-                          🔊
-                        </button>
-                        <button
-                          onClick={() => setCurrentSentenceIndex(Math.min(allSentences.length - 1, currentSentenceIndex + 1))}
-                          className={`control-btn ${currentSentenceIndex >= allSentences.length - 1 ? 'disabled' : ''}`}
-                          disabled={currentSentenceIndex >= allSentences.length - 1}
-                        >
-                          ▶️
-                        </button>
+                      <div className="chinese-display-scroll">
+                        {showTranslations && (
+                          <div className="sentence-translations">
+                            {allSentences[currentSentenceIndex]?.english && (
+                              <p
+                                className="translation-english"
+                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.english, 'english', repeatCount)}
+                              >
+                                {allSentences[currentSentenceIndex]?.english}
+                              </p>
+                            )}
+                            {allSentences[currentSentenceIndex]?.korean && (
+                              <p
+                                className="translation-korean"
+                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.korean, 'korean', repeatCount)}
+                              >
+                                {allSentences[currentSentenceIndex]?.korean}
+                              </p>
+                            )}
+
+                            {allSentences[currentSentenceIndex]?.pinyin && (
+                              <p
+                                className="translation-pinyin"
+                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount)}
+                              >
+                                {allSentences[currentSentenceIndex]?.pinyin}
+                              </p>
+                            )}
+                          </div>
+                        )}
+                      </div>
+
+                      <div className="words-sentence-separator">
+                        <p className="main-sentence" onClick={() => setShowTranslations(!showTranslations)}>
+                          {allSentences[currentSentenceIndex]?.sentence}
+                        </p>
                       </div>
                     </div>
                   )}
 
                   {displayMode === 'translations' && (
                     <div className="translations-display">
-                      <div className="translation-item">
-                        <span className="content">{allSentences[currentSentenceIndex]?.sentence}</span>
-                        <button
-                          className="tts-button-inline"
-                          onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese')}
-                          title="중국어 음성 재생"
-                        >
-                          🔊
-                        </button>
+                      <div className="translations-display-scroll">
+                        <div className="translation-item">
+                          <span className="content">{allSentences[currentSentenceIndex]?.sentence}</span>
+                          <button
+                            className="tts-button-inline"
+                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese')}
+                            title="중국어 음성 재생"
+                          >
+                            🔊
+                          </button>
+                        </div>
+                        <div className="translation-item">
+                          <span className="content">{allSentences[currentSentenceIndex]?.pinyin}</span>
+                        </div>
+                        <div className="translation-item">
+                          <span className="content">{allSentences[currentSentenceIndex]?.korean}</span>
+                          <button
+                            className="tts-button-inline"
+                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.korean, 'korean')}
+                            title="한국어 음성 재생"
+                          >
+                            🔊
+                          </button>
+                        </div>
                       </div>
-                      <div className="translation-item">
-                        <span className="content">{allSentences[currentSentenceIndex]?.pinyin}</span>
-                      </div>
-                      <div className="translation-item">
-                        <span className="content">{allSentences[currentSentenceIndex]?.korean}</span>
-                        <button
-                          className="tts-button-inline"
-                          onClick={() => playAudio(allSentences[currentSentenceIndex]?.korean, 'korean')}
-                          title="한국어 음성 재생"
-                        >
-                          🔊
-                        </button>
+
+                      <div className="words-sentence-separator">
+                        <p className="main-sentence" onClick={() => setShowTranslations(!showTranslations)}>
+                          {allSentences[currentSentenceIndex]?.sentence}
+                        </p>
                       </div>
                     </div>
+
+
                   )}
 
                   {displayMode === 'others' && (
-                    <div className="translations-display">
-                      <div className="translation-item">
-                        <span className="content">{allSentences[currentSentenceIndex]?.english}</span>
-                        <button
-                          className="tts-button-inline"
-                          onClick={() => playAudio(allSentences[currentSentenceIndex]?.english, 'english')}
-                          title="영어 음성 재생"
-                        >
-                          🔊
-                        </button>
+                    <div className="translations-display" key={`others-${currentSentenceIndex}`}>
+                      <div className="translations-display-scroll">
+                        <div className="translation-item">
+                          <span className="content">{allSentences[currentSentenceIndex]?.english}</span>
+                          <button
+                            className="tts-button-inline"
+                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.english, 'english')}
+                            title="영어 음성 재생"
+                          >
+                            🔊
+                          </button>
+                        </div>
+                        <div className="translation-item">
+                          <span className="content">{allSentences[currentSentenceIndex]?.japanese}</span>
+                          <button
+                            className="tts-button-inline"
+                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.japanese, 'japanese')}
+                            title="일본어 음성 재생"
+                          >
+                            🔊
+                          </button>
+                        </div>
+                        <div className="translation-item">
+                          <span className="content">{allSentences[currentSentenceIndex]?.japanese_romaji}</span>
+                        </div>
                       </div>
-                      <div className="translation-item">
-                        <span className="content">{allSentences[currentSentenceIndex]?.japanese}</span>
-                        <button
-                          className="tts-button-inline"
-                          onClick={() => playAudio(allSentences[currentSentenceIndex]?.japanese, 'japanese')}
-                          title="일본어 음성 재생"
-                        >
-                          🔊
-                        </button>
-                      </div>
-                      <div className="translation-item">
-                        <span className="content">{allSentences[currentSentenceIndex]?.japanese_romaji}</span>
+
+                      <div className="words-sentence-separator">
+                        <p className="main-sentence" onClick={() => setShowTranslations(!showTranslations)}>
+                          {allSentences[currentSentenceIndex]?.sentence}
+                        </p>
                       </div>
                     </div>
                   )}
 
                   {displayMode === 'words' && (
-                    <div className="words-display">
-                      {allSentences[currentSentenceIndex]?.words && allSentences[currentSentenceIndex].words.words ?
-                        allSentences[currentSentenceIndex].words.words.map((word: any, wIndex: number) => (
-                          <div key={wIndex} className="word-item-detail">
-                            <div className="word-row-main">
-                              <div className="word-chinese">
-                                {word}
-                                <button
-                                  className="tts-button-word"
-                                  onClick={() => playAudio(word, 'chinese')}
-                                  title="단어 음성 재생"
-                                >
-                                  🔊
-                                </button>
+                    <div className="words-display-container">
+                      <div className="words-display-scroll">
+                        {allSentences[currentSentenceIndex]?.words && allSentences[currentSentenceIndex].words.words ?
+                          allSentences[currentSentenceIndex].words.words.map((word: any, wIndex: number) => (
+                            <div key={wIndex} className="word-item-detail">
+                              <div className="word-row-main">
+                                <div className="word-chinese">
+                                  {word}
+                                  <button
+                                    className="tts-button-word"
+                                    onClick={() => playAudio(word, 'chinese')}
+                                    title="단어 음성 재생"
+                                  >
+                                    🔊
+                                  </button>
+                                </div>
+                                <div className="word-pinyin">{allSentences[currentSentenceIndex].words.pinyin?.[wIndex]}</div>
+                                <div className="word-korean">{allSentences[currentSentenceIndex].words.korean?.[wIndex]}</div>
                               </div>
-                              <div className="word-pinyin">{allSentences[currentSentenceIndex].words.pinyin?.[wIndex]}</div>
-                              <div className="word-korean">{allSentences[currentSentenceIndex].words.korean?.[wIndex]}</div>
+                              <div className="word-row-sub">
+                                <div className="word-traditional">{allSentences[currentSentenceIndex].words.traditional?.[wIndex]}</div>
+                                <div className="word-meaning">{allSentences[currentSentenceIndex].words.meaning_and_reading?.[wIndex]}</div>
+                              </div>
                             </div>
-                            <div className="word-row-sub">
-                              <div className="word-traditional">{allSentences[currentSentenceIndex].words.traditional?.[wIndex]}</div>
-                              <div className="word-meaning">{allSentences[currentSentenceIndex].words.meaning_and_reading?.[wIndex]}</div>
-                            </div>
-                          </div>
-                        )) : (
-                          <div className="no-words">이 문장에는 단어 정보가 없습니다.</div>
-                        )
-                      }
+                          )) : (
+                            <div className="no-words">이 문장에는 단어 정보가 없습니다.</div>
+                          )
+                        }
+                      </div>
+
+                      <div className="words-sentence-separator">
+                        <p className="main-sentence" onClick={() => setShowTranslations(!showTranslations)}>
+                          {allSentences[currentSentenceIndex]?.sentence}
+                        </p>
+                      </div>
                     </div>
                   )}
                 </div>
+
+
               </div>
             )}
           </div>
 
           {/* Control buttons - 10% */}
           <div className="control-buttons">
+            {/* Sentence controls moved outside content area */}
+
             <button
-              onClick={() => setCurrentSentenceIndex(Math.max(0, currentSentenceIndex - 1))}
-              className={`control-btn ${currentSentenceIndex === 0 ? 'disabled' : ''}`}
-              disabled={currentSentenceIndex === 0}
+              onClick={() => {
+                if (currentSentenceIndex === 0) {
+                  // 첫 문장에서 이전 레슨으로 이동
+                  const currentLessonNum = parseInt(selectedLessonId || '0');
+                  const prevLessonNum = currentLessonNum - 1;
+
+                  if (prevLessonNum >= 1) {
+                    setTargetLessonNum(prevLessonNum);
+                    setNextLessonDirection('prev');
+                    setShowLessonModal(true);
+                  }
+                } else {
+                  setCurrentSentenceIndex(currentSentenceIndex - 1);
+                }
+              }}
+              className="control-btn prev-btn"
             >
               ◀️
             </button>
             <button
               onClick={() => setDisplayMode('chinese')}
-              className={`control-btn ${displayMode === 'chinese' ? 'active' : ''}`}
+              className={`control-btn mode-btn ${displayMode === 'chinese' ? 'active' : ''}`}
             >
               中
             </button>
             <button
-              onClick={() => setDisplayMode('translations')}
-              className={`control-btn ${displayMode === 'translations' ? 'active' : ''}`}
-            >
-              한
-            </button>
-            <button
               onClick={() => setDisplayMode('words')}
-              className={`control-btn ${displayMode === 'words' ? 'active' : ''}`}
+              className={`control-btn mode-btn ${displayMode === 'words' ? 'active' : ''}`}
             >
               🔤
             </button>
             <button
               onClick={() => setDisplayMode('others')}
-              className={`control-btn ${displayMode === 'others' ? 'active' : ''}`}
+              className={`control-btn mode-btn ${displayMode === 'others' ? 'active' : ''}`}
             >
               🌐
             </button>
-
             <button
-              onClick={() => setCurrentSentenceIndex(Math.min(allSentences.length - 1, currentSentenceIndex + 1))}
-              className={`control-btn ${currentSentenceIndex >= allSentences.length - 1 ? 'disabled' : ''}`}
-              disabled={currentSentenceIndex >= allSentences.length - 1}
+              onClick={() => {
+                if (currentSentenceIndex >= allSentences.length - 1) {
+                  // 마지막 문장에서 다음 레슨으로 이동
+                  const currentLessonNum = parseInt(selectedLessonId || '0');
+                  const nextLessonNum = currentLessonNum + 1;
+
+                  // lessonData에서 다음 레슨이 존재하는지 확인
+                  if (lessonData && lessonData.contents) {
+                    const nextLessonExists = lessonData.contents.some(
+                      (item: any) => String(item.lesson) === String(nextLessonNum) || item.lesson === nextLessonNum
+                    );
+
+                    if (nextLessonExists) {
+                      setTargetLessonNum(nextLessonNum);
+                      setNextLessonDirection('next');
+                      setShowLessonModal(true);
+                    }
+                  }
+                } else {
+                  setCurrentSentenceIndex(currentSentenceIndex + 1);
+                }
+              }}
+              className="control-btn next-btn"
             >
               ▶️
             </button>
           </div>
+
+          {/* 레슨 이동 확인 모달 */}
+          {showLessonModal && (
+            <div className="lesson-modal-overlay">
+              <div className="lesson-modal">
+                <h3>{nextLessonDirection === 'next' ? '다음 레슨을 불러올까요?' : '이전 레슨을 불러올까요?'}</h3>
+                <div className="lesson-modal-buttons">
+                  <button
+                    className="lesson-modal-btn confirm"
+                    onClick={() => {
+                      if (targetLessonNum !== null) {
+                        selectLesson(String(targetLessonNum));
+                      }
+                      setShowLessonModal(false);
+                      setNextLessonDirection(null);
+                      setTargetLessonNum(null);
+                    }}
+                  >
+                    확인
+                  </button>
+                  <button
+                    className="lesson-modal-btn cancel"
+                    onClick={() => {
+                      setShowLessonModal(false);
+                      setNextLessonDirection(null);
+                      setTargetLessonNum(null);
+                    }}
+                  >
+                    취소
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       );
     }
