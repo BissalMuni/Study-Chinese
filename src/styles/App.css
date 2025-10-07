@@ -13,6 +13,7 @@ body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
   transition: all 0.3s ease;
+  overscroll-behavior-y: contain;
 }
 
 /* Home Screen Styles */
@@ -811,6 +812,7 @@ body {
   margin-bottom: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   min-height: 0;
+  overscroll-behavior: contain;
 }
 
 .content-item {
@@ -1137,6 +1139,8 @@ body {
   border-radius: 10px;
   border-left: 4px solid #3498db;
   text-align: center;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
 }
 
 .translation-sentence {

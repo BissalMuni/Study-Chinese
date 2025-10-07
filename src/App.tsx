@@ -247,6 +247,17 @@ function App() {
 
   const onTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientY);
+
+    // pull-to-refresh 방지
+    if (touchStart !== null) {
+      const currentTouch = e.targetTouches[0].clientY;
+      const diff = currentTouch - touchStart;
+
+      // 아래로 스와이프 중이면 기본 동작 방지
+      if (diff > 0) {
+        e.preventDefault();
+      }
+    }
   };
 
   const onTouchEnd = () => {
