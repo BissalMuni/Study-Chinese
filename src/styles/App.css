@@ -1115,6 +1115,10 @@ body {
   padding: 0;
   transition: color 0.3s ease;
   flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .main-sentence:hover {
@@ -1134,11 +1138,15 @@ body {
 .translation-pinyin {
   font-size: 1.6rem;
   color: #e74c3c;
-  
+
   margin-bottom: 10px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .translation-pinyin:hover {
@@ -1149,11 +1157,15 @@ body {
 .translation-korean {
   font-size: 1.3rem;
   color: #27ae60;
-  
+
   margin-bottom: 10px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .translation-korean:hover {
@@ -1164,11 +1176,15 @@ body {
 .translation-english {
   font-size: 1.3rem;
   color: #8e44ad;
-  
+
   margin-bottom: 10px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .translation-english:hover {
