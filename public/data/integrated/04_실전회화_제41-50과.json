@@ -513,7 +513,7 @@
                                 {
                                     "id": 9,
                                     "sentence": "没有人不喜欢这首歌",
-                                    "pinyin": "méi yǒu rén bù xǐ huān zhè shǒu gē",
+                                    "pinyin": "méi yǒu rén bù xǐ huan zhè shǒu gē",
                                     "korean": "이 노래를 좋아하지 않는 사람은 없어요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -814,7 +814,7 @@
                                 {
                                     "id": 15,
                                     "sentence": "要是早一点告诉我就好了",
-                                    "pinyin": "yào shì zǎo yī diǎn gào sù wǒ jiù hǎo le",
+                                    "pinyin": "yàoshi zǎo yīdiǎn gàosu wǒ jiù hǎo le",
                                     "korean": "조금 일찍 말해줬다면 좋았을 텐데요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -951,7 +951,7 @@
                                 {
                                     "id": 17,
                                     "sentence": "我既高兴又担心",
-                                    "pinyin": "wǒ jì gāo xìng yòu dān xīn",
+                                    "pinyin": "wǒ jì gāoxìng yòu dānxīn",
                                     "korean": "저는 기쁘기도 하고 걱정도 돼요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -997,7 +997,7 @@
                                 {
                                     "id": 18,
                                     "sentence": "他心情复杂",
-                                    "pinyin": "tā xīn qíng fù zá",
+                                    "pinyin": "tā xīnqíng fùzá",
                                     "korean": "그의 마음이 복잡해요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -1033,7 +1033,7 @@
                                 {
                                     "id": 19,
                                     "sentence": "说不出是什么滋味",
-                                    "pinyin": "shuō bù chū shì shén me zī wèi",
+                                    "pinyin": "shuō bu chū shì shén me zī wèi",
                                     "korean": "무슨 기분인지 말로 표현할 수 없어요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -1458,7 +1458,7 @@
                                 {
                                     "id": 29,
                                     "sentence": "这个问题很复杂",
-                                    "pinyin": "zhè ge wèn tí hěn fù zá",
+                                    "pinyin": "zhè gè wèn tí hěn fù zá",
                                     "korean": "이 문제가 매우 복잡해요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -1499,7 +1499,7 @@
                                 {
                                     "id": 30,
                                     "sentence": "不是三言两语能说清楚的",
-                                    "pinyin": "bù shì sān yán liǎng yǔ néng shuō qīng chǔ de",
+                                    "pinyin": "bù shì sān yán liǎng yǔ néng shuō qīng chu de",
                                     "korean": "몇 마디 말로는 설명이 안 되는 거예요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -1555,7 +1555,7 @@
                                 {
                                     "id": 31,
                                     "sentence": "需要从多个角度来分析",
-                                    "pinyin": "xū yào cóng duō ge jiǎo dù lái fēn xī",
+                                    "pinyin": "xū yào cóng duō gè jiǎo dù lái fēn xī",
                                     "korean": "여러 각도에서 분석해야 해요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -1606,7 +1606,7 @@
                                 {
                                     "id": 32,
                                     "sentence": "解决这个问题不容易",
-                                    "pinyin": "jiě jué zhè ge wèn tí bù róng yì",
+                                    "pinyin": "jiě jué zhè gè wèn tí bù róng yì",
                                     "korean": "이 문제를 해결하는 것은 쉽지 않아요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -1938,7 +1938,7 @@
                                 {
                                     "id": 39,
                                     "sentence": "学语言就是学文化",
-                                    "pinyin": "xué yǔ yán jiù shì xué wén huà",
+                                    "pinyin": "xué yǔyán jiùshì xué wénhuà",
                                     "korean": "언어를 배우는 것이 바로 문화를 배우는 것이에요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -2086,7 +2086,7 @@
                                 {
                                     "id": 42,
                                     "sentence": "情况很紧急",
-                                    "pinyin": "qíng kuàng hěn jǐn jí",
+                                    "pinyin": "qíngkuàng hěn jǐnjí",
                                     "korean": "상황이 매우 급해요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -2250,7 +2250,7 @@
                                 {
                                     "id": 46,
                                     "sentence": "能不能帮我一下",
-                                    "pinyin": "néng bù néng bāng wǒ yī xià",
+                                    "pinyin": "néng bu néng bāng wǒ yí xià",
                                     "korean": "저 좀 도와주실 수 있나요?",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -2393,7 +2393,7 @@
                                 {
                                     "id": 49,
                                     "sentence": "事情是这样的",
-                                    "pinyin": "shì qíng shì zhè yàng de",
+                                    "pinyin": "shì qing shì zhè yàng de",
                                     "korean": "일이 이래요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -2823,7 +2823,7 @@
                                 {
                                     "id": 59,
                                     "sentence": "一步一个脚印",
-                                    "pinyin": "yī bù yī ge jiǎo yìn",
+                                    "pinyin": "yī bù yī gè jiǎo yìn",
                                     "korean": "한 걸음씩 차근차근",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -2859,7 +2859,7 @@
                                 {
                                     "id": 60,
                                     "sentence": "罗马不是一天建成的",
-                                    "pinyin": "luó mǎ bù shì yī tiān jiàn chéng de",
+                                    "pinyin": "luó mǎ bú shì yī tiān jiàn chéng de",
                                     "korean": "로마는 하루아침에 이루어진 게 아니에요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -3099,7 +3099,7 @@
                                 {
                                     "id": 65,
                                     "sentence": "这件事情比较复杂",
-                                    "pinyin": "zhè jiàn shì qíng bǐ jiào fù zá",
+                                    "pinyin": "zhè jiàn shì qing bǐ jiào fù zá",
                                     "korean": "이 일이 비교적 복잡해요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -3140,7 +3140,7 @@
                                 {
                                     "id": 66,
                                     "sentence": "涉及到多个方面",
-                                    "pinyin": "shè jí dào duō ge fāng miàn",
+                                    "pinyin": "shè jí dào duō gè fāng miàn",
                                     "korean": "여러 방면에 관련돼요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -3776,7 +3776,7 @@
                                 {
                                     "id": 82,
                                     "sentence": "用中文进行深入交流",
-                                    "pinyin": "yòng zhōng wén jìn xíng shēn rù jiāo liú",
+                                    "pinyin": "yòng zhōngwén jìnxíng shēnrù jiāoliú",
                                     "korean": "중국어로 깊이 있는 소통을 하다",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",
@@ -3863,7 +3863,7 @@
                                 {
                                     "id": 84,
                                     "sentence": "这将是一个持续的过程",
-                                    "pinyin": "zhè jiāng shì yī ge chí xù de guò chéng",
+                                    "pinyin": "zhè jiāng shì yī gè chí xù de guò chéng",
                                     "korean": "이것은 지속적인 과정이 될 거예요",
                                     "english": "Translation needed",
                                     "japanese": "翻訳が必要です",

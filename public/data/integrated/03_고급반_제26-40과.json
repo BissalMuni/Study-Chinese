@@ -117,7 +117,7 @@
                                 {
                                     "id": 3,
                                     "sentence": "跟中国人交朋友",
-                                    "pinyin": "gēn zhōng guó rén jiāo péng yǒu",
+                                    "pinyin": "gēn zhōngguó rén jiāo péngyou",
                                     "korean": "중국 사람과 친구가 되고 싶어요",
                                     "english": "Make friends with Chinese people",
                                     "japanese": "中国人と友達になりたい",
@@ -422,7 +422,7 @@
                                 {
                                     "id": 8,
                                     "sentence": "你会唱京剧",
-                                    "pinyin": "nǐ huì chàng jīng jù",
+                                    "pinyin": "nǐ huì chàng jīngjù",
                                     "korean": "경극을 부를 수 있으세요?",
                                     "english": "Can you sing Beijing Opera?",
                                     "japanese": "京劇を歌えますか？",
@@ -1091,7 +1091,7 @@
                                 {
                                     "id": 22,
                                     "sentence": "小心台阶",
-                                    "pinyin": "xiǎo xīn tái jiē",
+                                    "pinyin": "xiǎoxīn táijiē",
                                     "korean": "계단 조심하세요",
                                     "english": "Watch the steps",
                                     "japanese": "階段に気をつけてください",
@@ -1475,7 +1475,7 @@
                                 {
                                     "id": 31,
                                     "sentence": "好好休息",
-                                    "pinyin": "hǎo hǎo xiū xi",
+                                    "pinyin": "hǎo hao xiū xi",
                                     "korean": "푹 쉬세요",
                                     "english": "Get some good rest",
                                     "japanese": "よく休んでください",
@@ -1593,7 +1593,7 @@
                                 {
                                     "id": 34,
                                     "sentence": "她是个很好的女孩子",
-                                    "pinyin": "tā shì ge hěn hǎo de nǚ hái zi",
+                                    "pinyin": "tā shì gè hěn hǎo de nǚ hái zi",
                                     "korean": "그녀는 아주 좋은 여자애예요",
                                     "english": "She is a very good girl",
                                     "japanese": "彼女はとてもいい女の子です",
@@ -1649,7 +1649,7 @@
                                 {
                                     "id": 35,
                                     "sentence": "你们交往多长时间了",
-                                    "pinyin": "nǐ men jiāo wǎng duō cháng shí jiān le",
+                                    "pinyin": "nǐmen jiāowǎng duō cháng shíjiān le",
                                     "korean": "얼마나 오랫동안 사귀었어요?",
                                     "english": "How long have you been dating?",
                                     "japanese": "付き合うようになってからどのくらい経つのですか？",
@@ -1767,7 +1767,7 @@
                                 {
                                     "id": 38,
                                     "sentence": "我朋友给我生日礼物",
-                                    "pinyin": "wǒ péng yǒu gěi wǒ shēng rì lǐ wù",
+                                    "pinyin": "wǒ péng you gěi wǒ shēng rì lǐ wù",
                                     "korean": "친구가 저에게 생일선물을 줬어요",
                                     "english": "My friend gave me a birthday gift",
                                     "japanese": "友達が私に誕生日プレゼントをくれました",
@@ -1818,7 +1818,7 @@
                                 {
                                     "id": 39,
                                     "sentence": "找我零钱",
-                                    "pinyin": "zhǎo wǒ líng qián",
+                                    "pinyin": "zhǎo wǒ língqián",
                                     "korean": "저에게 거스름돈을 주세요",
                                     "english": "Give me change",
                                     "japanese": "お釣りをください",
@@ -2069,7 +2069,7 @@
                                 {
                                     "id": 45,
                                     "sentence": "这个价格可以商量吗",
-                                    "pinyin": "zhè ge jià gé kě yǐ shāng liang ma",
+                                    "pinyin": "zhè ge jià gé kě yǐ shāng liàng ma",
                                     "korean": "이 가격은 협상할 수 있나요?",
                                     "english": "Can this price be negotiated?",
                                     "japanese": "この価格は交渉できますか？",
@@ -2115,7 +2115,7 @@
                                 {
                                     "id": 46,
                                     "sentence": "我们再考虑考虑",
-                                    "pinyin": "wǒ men zài kǎo lǜ kǎo lǜ",
+                                    "pinyin": "wǒmen zài kǎolǜ kǎolǜ",
                                     "korean": "우리가 다시 생각해 볼게요",
                                     "english": "We'll think about it again",
                                     "japanese": "また考えてみましょう",
@@ -2156,7 +2156,7 @@
                                 {
                                     "id": 47,
                                     "sentence": "给您打个折扣",
-                                    "pinyin": "gěi nín dǎ ge zhé kòu",
+                                    "pinyin": "gěi nín dǎ gè zhékòu",
                                     "korean": "할인해 드릴게요",
                                     "english": "I'll give you a discount",
                                     "japanese": "割引して差し上げます",
@@ -3163,7 +3163,7 @@
                                 {
                                     "id": 69,
                                     "sentence": "空气污染越来越严重",
-                                    "pinyin": "kōng qì wū rǎn yuè lái yuè yán zhòng",
+                                    "pinyin": "kōngqì wūrǎn yuè lái yuè yánzhòng",
                                     "korean": "대기오염이 점점 심해져요",
                                     "english": "Air pollution is getting more and more serious",
                                     "japanese": "大気汚染がどんどん深刻になっています",
@@ -3245,7 +3245,7 @@
                                 {
                                     "id": 71,
                                     "sentence": "我们每个人都要保护环境",
-                                    "pinyin": "wǒ men měi ge rén dōu yào bǎo hù huán jìng",
+                                    "pinyin": "wǒ men měi gè rén dōu yào bǎo hù huán jìng",
                                     "korean": "우리 모든 사람이 환경을 보호해야 해요",
                                     "english": "All of us need to protect the environment",
                                     "japanese": "私たち一人一人が環境を守らなければなりません",
@@ -3654,7 +3654,7 @@
                                 {
                                     "id": 80,
                                     "sentence": "还是要分散投资",
-                                    "pinyin": "hái shì yào fēn sàn tóu zī",
+                                    "pinyin": "hái shì yào fēn sǎn tóu zī",
                                     "korean": "역시 분산투자를 해야 해요",
                                     "english": "We should still diversify our investments",
                                     "japanese": "やはり分散投資をすべきです",
@@ -3852,7 +3852,7 @@
                                 {
                                     "id": 83,
                                     "sentence": "他打算去应聘",
-                                    "pinyin": "tā dǎ suàn qù yìng pìn",
+                                    "pinyin": "tā dǎsuàn qù yìngpìn",
                                     "korean": "그는 지원하러 갈 계획이에요",
                                     "english": "He plans to go and apply for the job",
                                     "japanese": "彼は応募しに行く予定です",
@@ -5528,7 +5528,7 @@
                                 {
                                     "id": 114,
                                     "sentence": "他去中国是为了做生意",
-                                    "pinyin": "tā qù zhōng guó shì wèi le zuò shēng yì",
+                                    "pinyin": "tā qù zhōng guó shì wèi le zuò shēng yi",
                                     "meaning": "그가 중국에 가는 것은 사업을 하기 위해서예요",
                                     "words": {
                                         "words": [

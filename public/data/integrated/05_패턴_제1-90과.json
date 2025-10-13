@@ -130,7 +130,7 @@
                                 },
                                 {
                                     "sentence": "五月十号是她的生日",
-                                    "pinyin": "wǔ yuè shí hào shì tā de shēng rì",
+                                    "pinyin": "wǔ yuè shí hào shì tā de shēngrì",
                                     "korean": "5월 10일은 그녀의 생일입니다.",
                                     "english": "May 10th is her birthday.",
                                     "japanese": "五月十日は彼女の誕生日です。",
@@ -237,7 +237,7 @@
                                 },
                                 {
                                     "sentence": "我姐姐是高中三年级",
-                                    "pinyin": "wǒ jiějiě shì gāozhōng sān niánjí",
+                                    "pinyin": "wǒ jiějie shì gāozhōng sān niánjí",
                                     "korean": "우리 언니는 고등학교 3학년이에요.",
                                     "english": "My older sister is in the third year of high school.",
                                     "japanese": "私の姉は高校三年生です。",
@@ -394,7 +394,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我不是学生",
-                                    "pinyin": "wǒ bù shì xuéshēng",
+                                    "pinyin": "wǒ bú shì xuéshēng",
                                     "korean": "저는 학생이 아닙니다.",
                                     "english": "I am not a student.",
                                     "japanese": "私は学生ではありません。",
@@ -583,7 +583,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我妹妹不是空姐",
-                                    "pinyin": "wǒ mèimei bù shì kōngjiě",
+                                    "pinyin": "wǒ mèimei bú shì kōngjiě",
                                     "korean": "내 여동생은 스튜어디스가 아니에요.",
                                     "english": "My younger sister is not a flight attendant.",
                                     "japanese": "私の妹は客室乗務員ではありません。",
@@ -629,7 +629,7 @@
                                 },
                                 {
                                     "sentence": "她的生日不是七月",
-                                    "pinyin": "tā de shēngrì bù shì qīyuè",
+                                    "pinyin": "tā de shēngrì bú shì qīyuè",
                                     "korean": "그녀의 생일은 7월이 아닙니다.",
                                     "english": "Her birthday is not in July.",
                                     "japanese": "彼女の誕生日は七月ではありません。",
@@ -675,7 +675,7 @@
                                 },
                                 {
                                     "sentence": "我喜欢的人不是我们班同学",
-                                    "pinyin": "wǒ xǐhuān de rén bùshì wǒmen bān tóngxué",
+                                    "pinyin": "wǒ xǐhuan de rén bú shì wǒmen bān tóngxué",
                                     "korean": "내가 좋아하는 사람은 우리 반 학생이 아니야.",
                                     "english": "The person I like is not a classmate from our class.",
                                     "japanese": "私が好きな人は私たちのクラスメートではありません。",
@@ -863,7 +863,7 @@
                                 },
                                 {
                                     "sentence": "她有个弟弟",
-                                    "pinyin": "tā yǒu gè dìdi",
+                                    "pinyin": "tā yǒu ge dìdi",
                                     "korean": "그녀는 남동생이 한 명 있습니다.",
                                     "english": "She has a younger brother.",
                                     "japanese": "彼女には弟がいます。",
@@ -904,7 +904,7 @@
                                 },
                                 {
                                     "sentence": "我有三个哥哥",
-                                    "pinyin": "wǒ yǒu sān gè gēge",
+                                    "pinyin": "wǒ yǒu sān ge gē ge",
                                     "korean": "저는 형이 세 명 있습니다.",
                                     "english": "I have three older brothers.",
                                     "japanese": "私には三人の兄がいます。",
@@ -1134,7 +1134,7 @@
                                 },
                                 {
                                     "sentence": "那天没有课",
-                                    "pinyin": "その日は授業がなかった。\n\nsono hi wa jugyou ga nakatta",
+                                    "pinyin": "nà tiān méi yǒu kè",
                                     "korean": "그날은 수업이 없었어요.",
                                     "english": "There were no classes that day.",
                                     "japanese": "その日は授業がなかった。",
@@ -1185,7 +1185,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我没有姐姐",
-                                    "pinyin": "wǒ méiyǒu jiějiě",
+                                    "pinyin": "wǒ méiyǒu jiějie",
                                     "korean": "저는 언니가 없습니다.",
                                     "english": "I don't have an older sister.",
                                     "japanese": "私には姉がいません。",
@@ -1257,7 +1257,7 @@
                                 },
                                 {
                                     "sentence": "今天没有课",
-                                    "pinyin": "今日は授業がありません。\n\nJapanese romaji: Kyou wa jugyou ga arimasen.",
+                                    "pinyin": "jīn tiān méi yǒu kè",
                                     "korean": "오늘은 수업이 없습니다.",
                                     "english": "There are no classes today.",
                                     "japanese": "今日は授業がありません。",
@@ -1293,7 +1293,7 @@
                                 },
                                 {
                                     "sentence": "我没有时间",
-                                    "pinyin": "Watashi wa jikan ga arimasen.",
+                                    "pinyin": "Wǒ méiyǒu shíjiān",
                                     "korean": "저는 시간이 없습니다.",
                                     "english": "I don't have time.",
                                     "japanese": "私は時間がありません。",
@@ -1595,7 +1595,7 @@
                                 },
                                 {
                                     "sentence": "钥匙在桌子上",
-                                    "pinyin": "yào shi zài zhuō zi shàng",
+                                    "pinyin": "yào shi zài zhuō zi shang",
                                     "korean": "열쇠가 책상 위에 있습니다.",
                                     "english": "The key is on the table.",
                                     "japanese": "鍵はテーブルの上にあります。",
@@ -1636,7 +1636,7 @@
                                 },
                                 {
                                     "sentence": "银行在邮局旁边",
-                                    "pinyin": "",
+                                    "pinyin": "yín háng zài yóu jú páng biān",
                                     "korean": "은행은 우체국 옆에 있습니다.",
                                     "english": "The bank is next to the post office.",
                                     "japanese": "銀行は郵便局の隣にあります。",
@@ -1769,7 +1769,7 @@
                                 },
                                 {
                                     "sentence": "妈妈在厨房做饭",
-                                    "pinyin": "māmā zài chúfáng zuòfàn",
+                                    "pinyin": "māma zài chúfáng zuòfàn",
                                     "korean": "엄마가 부엌에서 밥을 하고 있어요.",
                                     "english": "Mom is cooking in the kitchen.",
                                     "japanese": "お母さんは台所で料理をしています。",
@@ -1871,7 +1871,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我不在家",
-                                    "pinyin": "watashi wa ie ni imasen",
+                                    "pinyin": "wǒ bú zài jiā",
                                     "korean": "저는 집에 없어요.",
                                     "english": "I'm not at home.",
                                     "japanese": "私は家にいません。",
@@ -1948,7 +1948,7 @@
                                 },
                                 {
                                     "sentence": "钥匙不在这里",
-                                    "pinyin": "yào shi bù zài zhè lǐ",
+                                    "pinyin": "yào shi bú zài zhè lǐ",
                                     "korean": "열쇠가 여기에 없습니다.",
                                     "english": "The key is not here.",
                                     "japanese": "鍵はここにありません。",
@@ -2137,7 +2137,7 @@
                                 },
                                 {
                                     "sentence": "我的手机不在包里",
-                                    "pinyin": "wǒ de shǒujī bù zài bāo lǐ",
+                                    "pinyin": "wǒ de shǒujī bú zài bāo lǐ",
                                     "korean": "내 핸드폰이 가방 안에 없어요.",
                                     "english": "My phone is not in the bag.",
                                     "japanese": "私の携帯電話はカバンの中にありません。",
@@ -2561,7 +2561,7 @@
                                 },
                                 {
                                     "sentence": "我们参观了很多地方",
-                                    "pinyin": "wǒmen cānguān le hěnduō dìfāng",
+                                    "pinyin": "wǒmen cānguān le hěnduō dìfang",
                                     "korean": "우리는 많은 곳을 참관했습니다.",
                                     "english": "We visited many places.",
                                     "japanese": "私たちは多くの場所を見学しました。",
@@ -2704,7 +2704,7 @@
                                 },
                                 {
                                     "sentence": "昨天没下雨",
-                                    "pinyin": "zuó tiān méi xià yǔ",
+                                    "pinyin": "zuótiān méi xiàyǔ",
                                     "korean": "어제 비가 오지 않았다.",
                                     "english": "Yesterday it didn't rain.",
                                     "japanese": "昨日雨が降らなかった。",
@@ -2786,7 +2786,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我没去过中国",
-                                    "pinyin": "wǒ méi qù guò zhōngguó",
+                                    "pinyin": "wǒ méi qù guo zhōngguó",
                                     "korean": "저는 중국에 가본 적이 없습니다.",
                                     "english": "I have never been to China.",
                                     "japanese": "私は中国に行ったことがありません。",
@@ -2965,7 +2965,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我正在学习",
-                                    "pinyin": "Watashi wa benkyou shite imasu.",
+                                    "pinyin": "wǒ zhèngzài xuéxí",
                                     "korean": "저는 공부하고 있습니다.",
                                     "english": "I am studying.",
                                     "japanese": "私は勉強しています。",
@@ -3001,7 +3001,7 @@
                                 },
                                 {
                                     "sentence": "他正在看书",
-                                    "pinyin": "tā zhèng zài kàn shū",
+                                    "pinyin": "tā zhèngzài kànshū",
                                     "korean": "그는 책을 읽고 있다.",
                                     "english": "He is reading a book.",
                                     "japanese": "彼は本を読んでいます。",
@@ -3155,7 +3155,7 @@
                                 },
                                 {
                                     "sentence": "妈妈正在洗衣服",
-                                    "pinyin": "お母さんは洗濯をしています。\n\n**Japanese Romaji:** Okaasan wa sentaku wo shite imasu.",
+                                    "pinyin": "Māma zhèngzài xǐ yīfu",
                                     "korean": "엄마는 지금 빨래를 하고 있어요.",
                                     "english": "Mom is washing clothes.",
                                     "japanese": "お母さんは洗濯をしています。",
@@ -3283,7 +3283,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我会说中文",
-                                    "pinyin": "wǒ huì shuō zhōngwén",
+                                    "pinyin": "wǒ huì shuō zhōng wén",
                                     "korean": "저는 중국어를 할 수 있습니다.",
                                     "english": "I can speak Chinese.",
                                     "japanese": "私は中国語が話せます。",
@@ -3401,7 +3401,7 @@
                                 },
                                 {
                                     "sentence": "弟弟会游泳",
-                                    "pinyin": "dì dì huì yóu yǒng",
+                                    "pinyin": "dì di huì yóu yǒng",
                                     "korean": "동생은 수영할 수 있어요.",
                                     "english": "The younger brother can swim.",
                                     "japanese": "弟は泳げます。",
@@ -3514,7 +3514,7 @@
                                 },
                                 {
                                     "sentence": "妈妈会弹钢琴",
-                                    "pinyin": "māmā huì tán gāngqín",
+                                    "pinyin": "māma huì tán gāngqín",
                                     "korean": "엄마는 피아노를 칠 수 있어요.",
                                     "english": "Mom can play the piano.",
                                     "japanese": "お母さんはピアノが弾けます。",
@@ -3652,7 +3652,7 @@
                                 },
                                 {
                                     "sentence": "你能来吗",
-                                    "pinyin": "できますか？ (dekimasu ka?)",
+                                    "pinyin": "nǐ néng lái ma",
                                     "korean": "올 수 있어요?",
                                     "english": "Can you come?",
                                     "japanese": "できますか？",
@@ -3826,7 +3826,7 @@
                                 },
                                 {
                                     "sentence": "你能等我一下吗",
-                                    "pinyin": "nǐ néng děng wǒ yī xià ma",
+                                    "pinyin": "nǐ néng děng wǒ yīxià ma",
                                     "korean": "나를 좀 기다려 줄 수 있어요?",
                                     "english": "Can you wait for me a moment?",
                                     "japanese": "ちょっと待ってもらえますか。",
@@ -3918,7 +3918,7 @@
                                 },
                                 {
                                     "sentence": "我们能克服这个困难",
-                                    "pinyin": "wǒmen néng kèfú zhège kùnnán",
+                                    "pinyin": "wǒmen néng kèfú zhège kùnnan",
                                     "korean": "우리는 이 어려움을 극복할 수 있습니다.",
                                     "english": "We can overcome this difficulty.",
                                     "japanese": "私たちはこの困難を克服できます。",
@@ -3974,7 +3974,7 @@
                             "sentences": [
                                 {
                                     "sentence": "可以进来吗",
-                                    "pinyin": "haitte mo ii desu ka",
+                                    "pinyin": "kě yǐ jìn lái ma",
                                     "korean": "들어가도 돼요?",
                                     "english": "May I come in?",
                                     "japanese": "入ってもいいですか。",
@@ -4010,7 +4010,7 @@
                                 },
                                 {
                                     "sentence": "这里可以停车",
-                                    "pinyin": "koko ni chuusha dekimasu.",
+                                    "pinyin": "zhèlǐ kěyǐ tíngchē",
                                     "korean": "여기에 주차할 수 있습니다.",
                                     "english": "This place allows parking.",
                                     "japanese": "ここに駐車できます。",
@@ -4189,7 +4189,7 @@
                                 },
                                 {
                                     "sentence": "明天可以休息",
-                                    "pinyin": "あしたはやすむことができます。\n(ashita wa yasumu koto ga dekimasu)",
+                                    "pinyin": "míng tiān kě yǐ xiū xi",
                                     "korean": "내일은 쉴 수 있습니다.",
                                     "english": "Tomorrow can rest.",
                                     "japanese": "明日は休むことができます。",
@@ -4225,7 +4225,7 @@
                                 },
                                 {
                                     "sentence": "你可以用我的电脑",
-                                    "pinyin": "anata wa watashi no konpyuuta o tsukatte mo ii desu.",
+                                    "pinyin": "nǐ kěyǐ yòng wǒ de diànnǎo",
                                     "korean": "제 컴퓨터를 사용하셔도 됩니다.",
                                     "english": "You can use my computer.",
                                     "japanese": "あなたは私のコンピュータを使ってもいいです。",
@@ -4276,7 +4276,7 @@
                                 },
                                 {
                                     "sentence": "我们可以一起去",
-                                    "pinyin": "wǒmen kěyǐ yīqǐ qù",
+                                    "pinyin": "wǒmen kěyǐ yìqǐ qù",
                                     "korean": "우리는 함께 갈 수 있어요.",
                                     "english": "We can go together.",
                                     "japanese": "私たちは一緒に行くことができます。",
@@ -4368,7 +4368,7 @@
                                 },
                                 {
                                     "sentence": "他要买新手机",
-                                    "pinyin": "tā yào mǎi xīn shǒu jī",
+                                    "pinyin": "tā yào mǎi xīn shǒujī",
                                     "korean": "그는 새 휴대폰을 사려고 한다.",
                                     "english": "He wants to buy a new phone.",
                                     "japanese": "彼は新しい携帯電話を買いたい。",
@@ -4486,7 +4486,7 @@
                             "sentences": [
                                 {
                                     "sentence": "不要忘记",
-                                    "pinyin": "wasurenaideください",
+                                    "pinyin": "bú yào wàng jì",
                                     "korean": "잊지 마세요.",
                                     "english": "Don't forget.",
                                     "japanese": "忘れないでください。",
@@ -4517,7 +4517,7 @@
                                 },
                                 {
                                     "sentence": "不要迟到",
-                                    "pinyin": "遅れないでください。\nokurenaide kudasai.",
+                                    "pinyin": "bú yào chí dào",
                                     "korean": "늦지 마세요.",
                                     "english": "Don't be late.",
                                     "japanese": "遅れないでください。",
@@ -4548,7 +4548,7 @@
                                 },
                                 {
                                     "sentence": "我要回家了",
-                                    "pinyin": "私は家に帰ります。\n\nJapanese romaji: Watashi wa ie ni kaerimasu.",
+                                    "pinyin": "wǒ yào huí jiā le",
                                     "korean": "나는 집에 가야 해요.",
                                     "english": "I'm going home.",
                                     "japanese": "私は家に帰ります。",
@@ -4645,7 +4645,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我想去中国",
-                                    "pinyin": "wǒ xiǎng qù zhōngguó",
+                                    "pinyin": "wǒ xiǎng qù zhōng guó",
                                     "korean": "나는 중국에 가고 싶다.",
                                     "english": "I want to go to China.",
                                     "japanese": "中国に行きたいです。",
@@ -4876,7 +4876,7 @@
                                 },
                                 {
                                     "sentence": "妈妈想我了",
-                                    "pinyin": "mā ma xiǎng wǒ le",
+                                    "pinyin": "māma xiǎng wǒ le",
                                     "korean": "엄마가 나를 보고 싶어해요.",
                                     "english": "Mom misses me.",
                                     "japanese": "お母さんは私に会いたがっている。",
@@ -4968,7 +4968,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我喜欢中国菜",
-                                    "pinyin": "wǒ xǐhuān zhōngguó cài",
+                                    "pinyin": "wǒ xǐhuan zhōngguó cài",
                                     "korean": "저는 중국 요리를 좋아합니다.",
                                     "english": "I like Chinese food.",
                                     "japanese": "私は中国料理が好きです。",
@@ -5009,7 +5009,7 @@
                                 },
                                 {
                                     "sentence": "他喜欢看电影",
-                                    "pinyin": "tā xǐhuān kàn diànyǐng",
+                                    "pinyin": "tā xǐhuan kàn diànyǐng",
                                     "korean": "그는 영화 보는 것을 좋아합니다.",
                                     "english": "He likes to watch movies.",
                                     "japanese": "彼は映画を見るのが好きです。",
@@ -5137,7 +5137,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我喜欢听音乐",
-                                    "pinyin": "wǒ xǐ huān tīng yīn yuè",
+                                    "pinyin": "wǒ xǐ huan tīng yīn yuè",
                                     "korean": "나는 음악 듣는 것을 좋아합니다.",
                                     "english": "I like listening to music.",
                                     "japanese": "私は音楽を聴くのが好きです。",
@@ -5178,7 +5178,7 @@
                                 },
                                 {
                                     "sentence": "他们喜欢旅游",
-                                    "pinyin": "tā men xǐ huān lǚ yóu",
+                                    "pinyin": "tā men xǐ huan lǚ yóu",
                                     "korean": "그들은 여행을 좋아합니다.",
                                     "english": "They like to travel.",
                                     "japanese": "彼らは旅行が好きです。",
@@ -5250,7 +5250,7 @@
                                 },
                                 {
                                     "sentence": "我不太喜欢这个颜色",
-                                    "pinyin": "wǒ bù tài xǐhuān zhège yánsè",
+                                    "pinyin": "wǒ bù tài xǐhuan zhège yánsè",
                                     "korean": "저는 이 색깔을 별로 좋아하지 않아요.",
                                     "english": "I don't really like this color.",
                                     "japanese": "私はこの色があまり好きではありません。",
@@ -5414,7 +5414,7 @@
                                 },
                                 {
                                     "sentence": "孩子们爱父母",
-                                    "pinyin": "háizi men ài fùmǔ",
+                                    "pinyin": "háizimen ài fùmǔ",
                                     "korean": "아이들은 부모를 사랑한다.",
                                     "english": "Children love their parents.",
                                     "japanese": "子供たちは両親を愛しています。",
@@ -5803,7 +5803,7 @@
                             "sentences": [
                                 {
                                     "sentence": "弟弟比哥哥聪明",
-                                    "pinyin": "dìdi bǐ gēge cōngmíng",
+                                    "pinyin": "dìdi bǐ gēge cōngming",
                                     "korean": "동생이 형보다 똑똑하다.",
                                     "english": "My younger brother is smarter than my older brother.",
                                     "japanese": "弟は兄より賢い。",
@@ -6074,7 +6074,7 @@
                                 },
                                 {
                                     "sentence": "他很聪明",
-                                    "pinyin": "tā hěn cōngmíng",
+                                    "pinyin": "tā hěn cōngming",
                                     "korean": "그는 매우 똑똑하다.",
                                     "english": "He is very smart.",
                                     "japanese": "彼はとても賢いです。",
@@ -6110,7 +6110,7 @@
                                 },
                                 {
                                     "sentence": "这本书很有趣",
-                                    "pinyin": "zhè běn shū hěn yǒu qù",
+                                    "pinyin": "zhè běn shū hěn yǒuqù",
                                     "korean": "이 책은 매우 재미있다.",
                                     "english": "This book is very interesting.",
                                     "japanese": "これは本がとても面白いです。",
@@ -6156,7 +6156,7 @@
                             "sentences": [
                                 {
                                     "sentence": "中文很难",
-                                    "pinyin": "中国語は難しいです。\n\nJapanese romaji: Chuugokugo wa muzukashii desu.",
+                                    "pinyin": "Zhōngwén hěn nán",
                                     "korean": "중국어는 어렵다.",
                                     "english": "Chinese is very difficult.",
                                     "japanese": "中国語は難しいです。",
@@ -6223,7 +6223,7 @@
                                 },
                                 {
                                     "sentence": "这个地方很安静",
-                                    "pinyin": "zhè ge dì fāng hěn ān jìng",
+                                    "pinyin": "zhè ge dì fang hěn ān jìng",
                                     "korean": "이곳은 매우 조용합니다.",
                                     "english": "This place is very quiet.",
                                     "japanese": "これは静かな場所です。",
@@ -6541,7 +6541,7 @@
                                 },
                                 {
                                     "sentence": "你太客气了",
-                                    "pinyin": "osoreirimasu.",
+                                    "pinyin": "nǐ tài kèqì le",
                                     "korean": "너무 과분하십니다.",
                                     "english": "You're too polite.",
                                     "japanese": "恐れ入ります。",
@@ -6638,7 +6638,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我去过中国",
-                                    "pinyin": "wǒ qù guò zhōngguó",
+                                    "pinyin": "wǒ qù guo zhōng guó",
                                     "korean": "나는 중국에 가본 적이 있다.",
                                     "english": "I have been to China.",
                                     "japanese": "私は中国に行ったことがあります。",
@@ -6674,7 +6674,7 @@
                                 },
                                 {
                                     "sentence": "他学过韩语",
-                                    "pinyin": "tā xué guò hán yǔ",
+                                    "pinyin": "tā xué guo hán yǔ",
                                     "korean": "그는 한국어를 배운 적이 있다.",
                                     "english": "He has studied Korean.",
                                     "japanese": "彼は韓国語を勉強したことがあります。",
@@ -6710,7 +6710,7 @@
                                 },
                                 {
                                     "sentence": "你看过这部电影吗",
-                                    "pinyin": "この映画を見たことがありますか。\n\n**Japanese Romaji:** Kono eiga o mita koto ga arimasu ka.",
+                                    "pinyin": "nǐ kàn guò zhè bù diàn yǐng ma",
                                     "korean": "이 영화를 본 적이 있나요?",
                                     "english": "Have you seen this movie?",
                                     "japanese": "この映画を見たことがありますか。",
@@ -6756,7 +6756,7 @@
                                 },
                                 {
                                     "sentence": "我没吃过这个菜",
-                                    "pinyin": "wǒ méi chī guò zhè ge cài",
+                                    "pinyin": "wǒ méi chī guo zhè ge cài",
                                     "korean": "저는 이 요리를 먹어본 적이 없어요.",
                                     "english": "I have never eaten this dish.",
                                     "japanese": "これは食べたことがありません。",
@@ -6848,7 +6848,7 @@
                                 },
                                 {
                                     "sentence": "我们参观过那个博物馆",
-                                    "pinyin": "wǒmen cānguān guò nàge bówùguǎn",
+                                    "pinyin": "wǒmen cānguān guo nàge bówùguǎn",
                                     "korean": "우리는 그 박물관을 참관한 적이 있다.",
                                     "english": "We have visited that museum.",
                                     "japanese": "私たちはその博物館を見学したことがあります。",
@@ -6935,7 +6935,7 @@
                                 },
                                 {
                                     "sentence": "你听过这首歌吗",
-                                    "pinyin": "nǐ tīng guò zhè shǒu gē ma",
+                                    "pinyin": "nǐ tīng guo zhè shǒu gē ma",
                                     "korean": "이 노래 들어본 적 있어요?",
                                     "english": "Have you heard this song?",
                                     "japanese": "你听过这首歌吗？ → この歌を聞いたことがありますか？",
@@ -7099,7 +7099,7 @@
                                 },
                                 {
                                     "sentence": "出去吧",
-                                    "pinyin": "Dete ike.",
+                                    "pinyin": "chū qù ba",
                                     "korean": "나가세요.",
                                     "english": "Let's go out.",
                                     "japanese": "出て行け。",
@@ -7135,7 +7135,7 @@
                             "sentences": [
                                 {
                                     "sentence": "回来了吗",
-                                    "pinyin": "帰ってきましたか。\nkaette kimashita ka.",
+                                    "pinyin": "huí lái le ma",
                                     "korean": "돌아왔어요?",
                                     "english": "Did you come back?",
                                     "japanese": "帰ってきましたか。",
@@ -7171,7 +7171,7 @@
                                 },
                                 {
                                     "sentence": "他们走了",
-                                    "pinyin": "彼らは行った。(karera wa itta.)",
+                                    "pinyin": "tā men zǒu le",
                                     "korean": "그들은 갔습니다.",
                                     "english": "They left.",
                                     "japanese": "彼らは行った。",
@@ -7207,7 +7207,7 @@
                                 },
                                 {
                                     "sentence": "上来一下",
-                                    "pinyin": "agatte kite kudasai",
+                                    "pinyin": "shàng lái yī xià",
                                     "korean": "잠깐 올라와.",
                                     "english": "Come up for a moment.",
                                     "japanese": "上がって来てください。",
@@ -7238,7 +7238,7 @@
                                 },
                                 {
                                     "sentence": "下去买东西",
-                                    "pinyin": "下に行って買い物をする。\n\nJapanese romaji: shita ni itte kaimono wo suru",
+                                    "pinyin": "xià qù mǎi dōng xi",
                                     "korean": "내려가서 물건을 사요.",
                                     "english": "I'll translate that Chinese sentence for you.\n\n\"下去买东西\" means \"Go down to buy things\" or \"Go downstairs to shop\"\n\nThe most natural English translation would be:\n\nGo down to buy things.",
                                     "japanese": "下に行って買い物をする。",
@@ -7417,7 +7417,7 @@
                                 },
                                 {
                                     "sentence": "我们班有二十个学生",
-                                    "pinyin": "wǒmen bān yǒu èrshí gè xuésheng",
+                                    "pinyin": "wǒmen bān yǒu èrshí ge xuésheng",
                                     "korean": "우리 반에는 학생이 스무 명 있습니다.",
                                     "english": "There are twenty students in our class.",
                                     "japanese": "私たちのクラスには二十人の学生がいます。",
@@ -7550,7 +7550,7 @@
                                 },
                                 {
                                     "sentence": "我买了五张票",
-                                    "pinyin": "私は五枚の切符を買いました。\n\n**Japanese romaji:** Watashi wa go-mai no kippu wo kaimashita.",
+                                    "pinyin": "wǒ mǎi le wǔ zhāng piào",
                                     "korean": "나는 표 다섯 장을 샀다.",
                                     "english": "I bought five tickets.",
                                     "japanese": "私は五枚の切符を買いました。",
@@ -7729,7 +7729,7 @@
                                 },
                                 {
                                     "sentence": "明天星期几",
-                                    "pinyin": "míngtiān xīngqī jǐ",
+                                    "pinyin": "míng tiān xīng qī jǐ",
                                     "korean": "내일은 무슨 요일이에요?",
                                     "english": "What day of the week is tomorrow?",
                                     "japanese": "明日は何曜日ですか。",
@@ -7806,7 +7806,7 @@
                             "sentences": [
                                 {
                                     "sentence": "上午十点开会",
-                                    "pinyin": "午前十時に会議があります。\n\n**Japanese romaji:** gozen jūji ni kaigi ga arimasu.",
+                                    "pinyin": "shàngwǔ shí diǎn kāihuì",
                                     "korean": "오전 10시에 회의가 있습니다.",
                                     "english": "The meeting is at 10 AM.",
                                     "japanese": "午前十時に会議があります。",
@@ -7842,7 +7842,7 @@
                                 },
                                 {
                                     "sentence": "晚上八点看电视",
-                                    "pinyin": "wǎn shàng bā diǎn kàn diàn shì",
+                                    "pinyin": "wǎn shang bā diǎn kàn diàn shì",
                                     "korean": "저녁 8시에 텔레비전을 봅니다.",
                                     "english": "At eight o'clock in the evening, watch TV.",
                                     "japanese": "夜八時にテレビを見ます。",
@@ -7878,7 +7878,7 @@
                                 },
                                 {
                                     "sentence": "下星期考试",
-                                    "pinyin": "来週試験があります。\n\n**Japanese romaji:** Raishū shiken ga arimasu.",
+                                    "pinyin": "xià xīng qī kǎo shì",
                                     "korean": "다음 주에 시험이 있어요.",
                                     "english": "Next week is the exam.",
                                     "japanese": "来週試験があります。",
@@ -8037,7 +8037,7 @@
                                 },
                                 {
                                     "sentence": "灯亮着",
-                                    "pinyin": "でんきがついている。\ndenki ga tsuite iru.",
+                                    "pinyin": "dēng liàng zhe",
                                     "korean": "불이 켜져 있다.",
                                     "english": "The light is on.",
                                     "japanese": "電気がついている。",
@@ -8109,7 +8109,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我拿着书",
-                                    "pinyin": "Watashi wa hon wo motte imasu.",
+                                    "pinyin": "Wǒ názhe shū",
                                     "korean": "나는 책을 들고 있다.",
                                     "english": "I am holding a book.",
                                     "japanese": "私は本を持っています。",
@@ -8150,7 +8150,7 @@
                                 },
                                 {
                                     "sentence": "她戴着帽子",
-                                    "pinyin": "nǐ dài zhe mào zi → tā dài zhe mào zi",
+                                    "pinyin": "tā dài zhe mào zi",
                                     "korean": "그녀는 모자를 쓰고 있습니다.",
                                     "english": "She is wearing a hat.",
                                     "japanese": "彼女は帽子をかぶっています。",
@@ -8191,7 +8191,7 @@
                                 },
                                 {
                                     "sentence": "电视开着呢",
-                                    "pinyin": "テレビがついています。\n\n**Japanese Romaji:** Terebi ga tsuite imasu.",
+                                    "pinyin": "diànshì kāi zhe ne",
                                     "korean": "텔레비전이 켜져 있어요.",
                                     "english": "The TV is on.",
                                     "japanese": "テレビがついています。",
@@ -8283,7 +8283,7 @@
                             "sentences": [
                                 {
                                     "sentence": "天气暖了",
-                                    "pinyin": "あたたかくなりました。(atatakaku narimashita)",
+                                    "pinyin": "tiān qì nuǎn le",
                                     "korean": "날씨가 따뜻해졌어요.",
                                     "english": "The weather has gotten warm.",
                                     "japanese": "暖かくなりました。",
@@ -8583,7 +8583,7 @@
                             "sentences": [
                                 {
                                     "sentence": "你是学生吗",
-                                    "pinyin": "あなたは がくせい ですか。\n\n(anata wa gakusei desu ka.)",
+                                    "pinyin": "nǐ shì xuésheng ma",
                                     "korean": "너는 학생이니?",
                                     "english": "Are you a student?",
                                     "japanese": "你是学生吗 → あなたは学生ですか。",
@@ -8624,7 +8624,7 @@
                                 },
                                 {
                                     "sentence": "今天热吗",
-                                    "pinyin": "今天热吗 → jīn tiān rè ma",
+                                    "pinyin": "jīn tiān rè ma",
                                     "korean": "오늘 덥습니까?",
                                     "english": "Is it hot today?",
                                     "japanese": "今日は暑いですか。",
@@ -8829,7 +8829,7 @@
                                 },
                                 {
                                     "sentence": "明天下雨吗",
-                                    "pinyin": "míngtiān xià yǔ ma",
+                                    "pinyin": "míng tiān xià yǔ ma",
                                     "korean": "내일 비가 올까요?",
                                     "english": "Will it rain tomorrow?",
                                     "japanese": "明日は雨が降りますか。",
@@ -8865,7 +8865,7 @@
                                 },
                                 {
                                     "sentence": "你喜欢中国菜吗",
-                                    "pinyin": "nǐ xǐhuān zhōngguó cài ma",
+                                    "pinyin": "nǐ xǐhuan zhōngguó cài ma",
                                     "korean": "당신은 중국 요리를 좋아합니까?",
                                     "english": "Do you like Chinese food?",
                                     "japanese": "中国料理が好きですか。",
@@ -8926,7 +8926,7 @@
                             "sentences": [
                                 {
                                     "sentence": "你喝茶还是喝咖啡",
-                                    "pinyin": "nǐ hē chá hái shì hē kā fēi",
+                                    "pinyin": "nǐ hē chá háishi hē kāfēi",
                                     "korean": "차를 마시겠습니까, 아니면 커피를 마시겠습니까?",
                                     "english": "Do you drink tea or coffee?",
                                     "japanese": "お茶を飲みますか、それともコーヒーを飲みますか。",
@@ -9003,7 +9003,7 @@
                                 },
                                 {
                                     "sentence": "今天还是明天",
-                                    "pinyin": "今日それとも明日 → kyō soretomo ashita",
+                                    "pinyin": "jīn tiān hái shì míng tiān",
                                     "korean": "오늘인가 내일인가.",
                                     "english": "Is it today or tomorrow?",
                                     "japanese": "今日それとも明日",
@@ -9039,7 +9039,7 @@
                                 },
                                 {
                                     "sentence": "这个还是那个",
-                                    "pinyin": "zhè ge hái shì nà ge",
+                                    "pinyin": "zhège háishi nàge",
                                     "korean": "이것입니까 저것입니까?",
                                     "english": "Which one, this or that?",
                                     "japanese": "これかそれか。",
@@ -9080,7 +9080,7 @@
                             "sentences": [
                                 {
                                     "sentence": "你是韩国人还是日本人",
-                                    "pinyin": "nǐ shì hánguórén háishì rìběnrén",
+                                    "pinyin": "nǐ shì hánguó rén háishì rìběn rén",
                                     "korean": "당신은 한국인입니까 아니면 일본인입니까?",
                                     "english": "Are you Korean or Japanese?",
                                     "japanese": "あなたは韓国人ですか、それとも日本人ですか。",
@@ -9172,7 +9172,7 @@
                                 },
                                 {
                                     "sentence": "在家吃还是出去吃",
-                                    "pinyin": "家で食べますか、それとも外で食べますか。\n\n**Romaji:** Ie de tabemasu ka, soretomo soto de tabemasu ka.",
+                                    "pinyin": "zài jiā chī háishì chū qù chī",
                                     "korean": "집에서 먹을까요 아니면 나가서 먹을까요?",
                                     "english": "Eat at home or go out to eat?",
                                     "japanese": "家で食べますか、それとも外で食べますか。",
@@ -9218,7 +9218,7 @@
                                 },
                                 {
                                     "sentence": "买还是不买",
-                                    "pinyin": "買うか買わないか。(kau ka kawanai ka)",
+                                    "pinyin": "mǎi háishi bù mǎi",
                                     "korean": "살까 말까.",
                                     "english": "To buy or not to buy.",
                                     "japanese": "買うか買わないか。",
@@ -9500,7 +9500,7 @@
                                 },
                                 {
                                     "sentence": "你的朋友呢",
-                                    "pinyin": "nǐ de péng yǒu ne",
+                                    "pinyin": "nǐ de péng you ne",
                                     "korean": "너의 친구는요?",
                                     "english": "Where is your friend?",
                                     "japanese": "あなたの友達は？",
@@ -9541,7 +9541,7 @@
                                 },
                                 {
                                     "sentence": "钥匙呢",
-                                    "pinyin": "鍵はどこですか。\n**Japanese romaji:** kagi wa doko desu ka",
+                                    "pinyin": "yàoshi ne",
                                     "korean": "열쇠는요?",
                                     "english": "Where are the keys?",
                                     "japanese": "鍵はどこですか。",
@@ -9654,7 +9654,7 @@
                                 },
                                 {
                                     "sentence": "这么多啊",
-                                    "pinyin": "zhè me duō a",
+                                    "pinyin": "zhème duō a",
                                     "korean": "이렇게 많아요.",
                                     "english": "That's so much.",
                                     "japanese": "これほど多いのか。",
@@ -9736,7 +9736,7 @@
                             "sentences": [
                                 {
                                     "sentence": "真的啊",
-                                    "pinyin": "hontou desu ka.",
+                                    "pinyin": "zhēn de a",
                                     "korean": "정말이야.",
                                     "english": "Really?",
                                     "japanese": "本当ですか。",
@@ -9798,7 +9798,7 @@
                                 },
                                 {
                                     "sentence": "这么贵啊",
-                                    "pinyin": "zhè me guì a",
+                                    "pinyin": "zhème guì a",
                                     "korean": "이렇게 비싸요?",
                                     "english": "That's so expensive!",
                                     "japanese": "これはそんなに高いですか。",
@@ -10273,7 +10273,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我们走吧",
-                                    "pinyin": "ikimashou",
+                                    "pinyin": "wǒmen zǒu ba",
                                     "korean": "우리 가자.",
                                     "english": "Let's go.",
                                     "japanese": "行きましょう。",
@@ -10309,7 +10309,7 @@
                                 },
                                 {
                                     "sentence": "休息一下吧",
-                                    "pinyin": "Sukoshi yasumimashou.",
+                                    "pinyin": "xiū xi yī xià ba",
                                     "korean": "좀 쉬세요.",
                                     "english": "Take a break.",
                                     "japanese": "少し休みましょう。",
@@ -10376,7 +10376,7 @@
                                 },
                                 {
                                     "sentence": "别担心吧",
-                                    "pinyin": "shinpai shinaide.",
+                                    "pinyin": "bié dān xīn ba",
                                     "korean": "걱정하지 마세요.",
                                     "english": "Don't worry.",
                                     "japanese": "心配しないで。",
@@ -10417,7 +10417,7 @@
                             "sentences": [
                                 {
                                     "sentence": "一起去吧",
-                                    "pinyin": "yī qǐ qù ba",
+                                    "pinyin": "yì qǐ qù ba",
                                     "korean": "같이 가자.",
                                     "english": "Let's go together.",
                                     "japanese": "一緒に行きましょう。",
@@ -10453,7 +10453,7 @@
                                 },
                                 {
                                     "sentence": "试试看吧",
-                                    "pinyin": "やってみましょう → yatte mimashou",
+                                    "pinyin": "shì shi kàn ba",
                                     "korean": "해보세요.",
                                     "english": "Let's give it a try.",
                                     "japanese": "やってみましょう。",
@@ -10489,7 +10489,7 @@
                                 },
                                 {
                                     "sentence": "算了吧",
-                                    "pinyin": "諦めよう。\nakirameyou.",
+                                    "pinyin": "suàn le ba",
                                     "korean": "그만두자.",
                                     "english": "Never mind.",
                                     "japanese": "諦めよう。",
@@ -10658,7 +10658,7 @@
                                 },
                                 {
                                     "sentence": "一边听音乐一边工作",
-                                    "pinyin": "yī biān tīng yīn yuè yī biān gōng zuò",
+                                    "pinyin": "yì biān tīng yīn yuè yì biān gōng zuò",
                                     "korean": "음악을 들으면서 일한다.",
                                     "english": "While listening to music, working.",
                                     "japanese": "音楽を聞きながら仕事をする。",
@@ -10883,7 +10883,7 @@
                                 },
                                 {
                                     "sentence": "一边开车一边听收音机",
-                                    "pinyin": "yī biān kāi chē yī biān tīng shōu yīn jī",
+                                    "pinyin": "yì biān kāi chē yì biān tīng shōu yīn jī",
                                     "korean": "운전하면서 라디오를 듣는다.",
                                     "english": "Listening to the radio while driving.",
                                     "japanese": "運転しながらラジオを聞く。",
@@ -11072,7 +11072,7 @@
                                 },
                                 {
                                     "sentence": "先工作然后休息",
-                                    "pinyin": "先に仕事をしてから休憩する。\n\nJapanese romaji: Saki ni shigoto o shite kara kyūkei suru.",
+                                    "pinyin": "xiān gōngzuò ránhòu xiūxi",
                                     "korean": "먼저 일하고 그 다음에 쉬세요.",
                                     "english": "Work first, then rest.",
                                     "japanese": "先に仕事をしてから休憩する。",
@@ -11118,7 +11118,7 @@
                             "sentences": [
                                 {
                                     "sentence": "先买票然后进去",
-                                    "pinyin": "先にチケットを買ってから入ります。\n\nJapanese romaji: Saki ni chiketto o katte kara hairimasu.",
+                                    "pinyin": "xiān mǎi piào rán hòu jìn qù",
                                     "korean": "먼저 표를 사고 그 다음에 들어가세요.",
                                     "english": "Let's buy tickets first, then go in.",
                                     "japanese": "先にチケットを買ってから入ります。",
@@ -11241,7 +11241,7 @@
                                 },
                                 {
                                     "sentence": "先想然后做",
-                                    "pinyin": "Saki ni kangaete kara kōdō suru.",
+                                    "pinyin": "Xiān xiǎng ránhòu zuò",
                                     "korean": "먼저 생각하고 나서 하라.",
                                     "english": "Think first, then act.",
                                     "japanese": "先に考えてから行動する。",
@@ -11297,7 +11297,7 @@
                             "sentences": [
                                 {
                                     "sentence": "又好吃又便宜",
-                                    "pinyin": "yòu hǎo chī yòu pián yi",
+                                    "pinyin": "yòu hǎo chī yòu piányí",
                                     "korean": "맛있고 싸다.",
                                     "english": "It's both delicious and cheap.",
                                     "japanese": "美味しくて安い。",
@@ -11466,7 +11466,7 @@
                             "sentences": [
                                 {
                                     "sentence": "又聪明又漂亮",
-                                    "pinyin": "yòu cōngmíng yòu piàoliang",
+                                    "pinyin": "yòu cōngming yòu piàoliang",
                                     "korean": "똑똑하고 또 예쁘다.",
                                     "english": "Both smart and beautiful.",
                                     "japanese": "賢くて美しい。",
@@ -11655,7 +11655,7 @@
                             "sentences": [
                                 {
                                     "sentence": "如果下雨就不去",
-                                    "pinyin": "雨が降ったら行かない。\n\name ga futtara ikanai.",
+                                    "pinyin": "rúguǒ xià yǔ jiù bù qù",
                                     "korean": "비가 오면 가지 않겠습니다.",
                                     "english": "If it rains, then (I/we) won't go.",
                                     "japanese": "雨が降ったら行かない。",
@@ -11752,7 +11752,7 @@
                                 },
                                 {
                                     "sentence": "如果有时间就学习",
-                                    "pinyin": "ruò guǒ yǒu shí jiān jiù xué xí",
+                                    "pinyin": "rú guǒ yǒu shí jiān jiù xué xí",
                                     "korean": "시간이 있으면 공부한다.",
                                     "english": "If there is time, then study.",
                                     "japanese": "時間があれば勉強します。",
@@ -11798,7 +11798,7 @@
                                 },
                                 {
                                     "sentence": "如果便宜就买",
-                                    "pinyin": "rúguǒ piányí jiù mǎi",
+                                    "pinyin": "rúguǒ piányi jiù mǎi",
                                     "korean": "싸면 사요.",
                                     "english": "If it's cheap, then buy it.",
                                     "japanese": "安ければ買います。",
@@ -11844,7 +11844,7 @@
                             "sentences": [
                                 {
                                     "sentence": "如果他同意就去",
-                                    "pinyin": "彼が同意すれば行く。\n\nJapanese romaji: Kare ga dōi sureba iku.",
+                                    "pinyin": "rúguǒ tā tóngyì jiù qù",
                                     "korean": "그가 동의하면 가세요.",
                                     "english": "If he agrees, then go.",
                                     "japanese": "彼が同意すれば行く。",
@@ -11941,7 +11941,7 @@
                                 },
                                 {
                                     "sentence": "如果你喜欢就拿去",
-                                    "pinyin": "rúguǒ nǐ xǐhuān jiù ná qù",
+                                    "pinyin": "rúguǒ nǐ xǐhuan jiù ná qù",
                                     "korean": "마음에 들면 가져가세요.",
                                     "english": "If you like it, take it.",
                                     "japanese": "好きなら持って行ってください。",
@@ -11992,7 +11992,7 @@
                                 },
                                 {
                                     "sentence": "如果累了就休息",
-                                    "pinyin": "rú guǒ lèi le jiù xiū xí",
+                                    "pinyin": "rú guǒ lèi le jiù xiū xi",
                                     "korean": "피곤하면 쉬세요.",
                                     "english": "If you're tired, then rest.",
                                     "japanese": "疲れたら休んでください。",
@@ -12115,7 +12115,7 @@
                                 },
                                 {
                                     "sentence": "就是今天",
-                                    "pinyin": "今日です。\n\nJapanese romaji: Kyō desu.",
+                                    "pinyin": "jiù shì jīn tiān",
                                     "korean": "바로 오늘입니다.",
                                     "english": "It's today.",
                                     "japanese": "今日です。",
@@ -12146,7 +12146,7 @@
                                 },
                                 {
                                     "sentence": "我就是不去",
-                                    "pinyin": "Watashi wa ikanai.",
+                                    "pinyin": "wǒ jiù shì bù qù",
                                     "korean": "나는 그냥 안 갈 거야.",
                                     "english": "I just won't go.",
                                     "japanese": "私は行かない。",
@@ -12187,7 +12187,7 @@
                             "sentences": [
                                 {
                                     "sentence": "就是要学好",
-                                    "pinyin": "勉強をしっかりやらなければならない。\nbenkyou o shikkari yaranakereba naranai.",
+                                    "pinyin": "jiù shì yào xué hǎo",
                                     "korean": "바로 잘 배워야 한다.",
                                     "english": "Just want to study well.",
                                     "japanese": "勉強をしっかりやらなければならない。",
@@ -12223,7 +12223,7 @@
                                 },
                                 {
                                     "sentence": "就是这样",
-                                    "pinyin": "sou iu koto desu.",
+                                    "pinyin": "jiù shì zhè yàng",
                                     "korean": "바로 이렇습니다.",
                                     "english": "That's how it is.",
                                     "japanese": "そういうことです。",
@@ -12254,7 +12254,7 @@
                                 },
                                 {
                                     "sentence": "他就是不听",
-                                    "pinyin": "彼はどうしても聞かない。\n\nkare wa dōshitemo kikanai.",
+                                    "pinyin": "tā jiù shì bù tīng",
                                     "korean": "그는 그냥 듣지 않아요.",
                                     "english": "He just won't listen.",
                                     "japanese": "彼はどうしても聞かない。",
@@ -12290,7 +12290,7 @@
                                 },
                                 {
                                     "sentence": "就是喜欢",
-                                    "pinyin": "jiù shì xǐ huān",
+                                    "pinyin": "jiù shì xǐ huan",
                                     "korean": "그냥 좋아해요.",
                                     "english": "I just like it.",
                                     "japanese": "好きなんだ",
@@ -12423,7 +12423,7 @@
                                 },
                                 {
                                     "sentence": "因为喜欢所以学习",
-                                    "pinyin": "yīn wèi xǐ huān suǒ yǐ xué xí",
+                                    "pinyin": "yīn wèi xǐ huan suǒ yǐ xué xí",
                                     "korean": "좋아해서 공부해요.",
                                     "english": "Because I like it, I study.",
                                     "japanese": "好きだから勉強する。",
@@ -12464,7 +12464,7 @@
                                 },
                                 {
                                     "sentence": "因为便宜所以买了",
-                                    "pinyin": "yīn wèi pián yí suǒ yǐ mǎi le",
+                                    "pinyin": "yīn wèi pián yi suǒ yǐ mǎi le",
                                     "korean": "싸서 샀어요.",
                                     "english": "I bought it because it was cheap.",
                                     "japanese": "安いから買いました。",
@@ -12515,7 +12515,7 @@
                             "sentences": [
                                 {
                                     "sentence": "因为累所以休息",
-                                    "pinyin": "yīn wèi lèi suǒ yǐ xiū xí",
+                                    "pinyin": "yīn wèi lèi suǒ yǐ xiū xi",
                                     "korean": "피곤해서 쉬어요.",
                                     "english": "Because I'm tired, I'm resting.",
                                     "japanese": "疲れたから休みます。",
@@ -12556,7 +12556,7 @@
                                 },
                                 {
                                     "sentence": "因为早所以先走了",
-                                    "pinyin": "因为早所以先走了\n\nPinyin: yīnwèi zǎo suǒyǐ xiān zǒu le",
+                                    "pinyin": "yīnwèi zǎo suǒyǐ xiān zǒu le",
                                     "korean": "일찍이어서 먼저 갔어요.",
                                     "english": "I'll translate that Chinese sentence for you.\n\n\"因为早所以先走了\" translates to:\n\n\"Because it was early, (I/he/she/they) left first.\"",
                                     "japanese": "早いので先に行きました。",
@@ -12719,7 +12719,7 @@
                             "sentences": [
                                 {
                                     "sentence": "为了学好中文",
-                                    "pinyin": "中国語を上手に学ぶために。\n\nJapanese romaji: Chuugokugo wo jouzu ni manabu tame ni.",
+                                    "pinyin": "wèi le xué hǎo zhōng wén",
                                     "korean": "중국어를 잘 배우기 위해서",
                                     "english": "To learn Chinese well.",
                                     "japanese": "中国語を上手に学ぶために。",
@@ -12755,7 +12755,7 @@
                                 },
                                 {
                                     "sentence": "为了健康运动",
-                                    "pinyin": "Kenkou no tame ni undou suru.",
+                                    "pinyin": "wèi le jiàn kāng yùn dòng",
                                     "korean": "건강을 위해 운동합니다.",
                                     "english": "For the sake of health, exercise.",
                                     "japanese": "健康のために運動する。",
@@ -12791,7 +12791,7 @@
                                 },
                                 {
                                     "sentence": "为了赚钱工作",
-                                    "pinyin": "wèi le zhuàn qián gōng zuò",
+                                    "pinyin": "wèile zhuànqián gōngzuò",
                                     "korean": "돈을 벌기 위해 일한다.",
                                     "english": "To work in order to make money.",
                                     "japanese": "金を稼ぐために働く。",
@@ -12827,7 +12827,7 @@
                                 },
                                 {
                                     "sentence": "为了家人努力",
-                                    "pinyin": "家族のために努力する。\nkazoku no tame ni doryoku suru.",
+                                    "pinyin": "wèi le jiā rén nǔ lì",
                                     "korean": "가족을 위해 노력한다.",
                                     "english": "Working hard for my family.",
                                     "japanese": "家族のために努力する。",
@@ -12940,7 +12940,7 @@
                                 },
                                 {
                                     "sentence": "为了朋友帮忙",
-                                    "pinyin": "wèi le péng yǒu bāng máng",
+                                    "pinyin": "wèi le péng you bāng máng",
                                     "korean": "친구를 위해 도와주다.",
                                     "english": "To help a friend.",
                                     "japanese": "友達のために手伝う。",
@@ -13027,7 +13027,7 @@
                             "sentences": [
                                 {
                                     "sentence": "要是下雨怎么办",
-                                    "pinyin": "yào shì xià yǔ zěn me bàn",
+                                    "pinyin": "yào shi xià yǔ zěn me bàn",
                                     "korean": "비가 오면 어떻게 하죠?",
                                     "english": "What if it rains?",
                                     "japanese": "雨が降ったらどうしましょう。",
@@ -13063,7 +13063,7 @@
                                 },
                                 {
                                     "sentence": "要是他不来呢",
-                                    "pinyin": "彼が来なかったらどうする？\n\nkare ga konakattara dou suru?",
+                                    "pinyin": "yàoshi tā bù lái ne",
                                     "korean": "만약 그가 오지 않으면 어떻게 하죠?",
                                     "english": "What if he doesn't come?",
                                     "japanese": "彼が来なかったらどうする？",
@@ -13104,7 +13104,7 @@
                                 },
                                 {
                                     "sentence": "要是有钱就好了",
-                                    "pinyin": "お金があればよかったのに。\n\n**Japanese Romaji:** Okane ga areba yokatta noni.",
+                                    "pinyin": "yàoshi yǒu qián jiù hǎo le",
                                     "korean": "돈이 있으면 좋겠다.",
                                     "english": "If only I had money.",
                                     "japanese": "お金があればよかったのに。",
@@ -13155,7 +13155,7 @@
                                 },
                                 {
                                     "sentence": "要是早知道就好了",
-                                    "pinyin": "Hayaku shitte ireba yokatta noni.",
+                                    "pinyin": "Yàoshi zǎo zhīdào jiù hǎo le",
                                     "korean": "일찍 알았더라면 좋았을 텐데.",
                                     "english": "If only I had known earlier.",
                                     "japanese": "早く知っていればよかったのに。",
@@ -13305,7 +13305,7 @@
                                 },
                                 {
                                     "sentence": "要是便宜我就买",
-                                    "pinyin": "yào shì pián yí wǒ jiù mǎi",
+                                    "pinyin": "yào shì pián yi wǒ jiù mǎi",
                                     "korean": "싸면 사겠어요.",
                                     "english": "If it's cheap, I'll buy it.",
                                     "japanese": "安ければ買います。",
@@ -13351,7 +13351,7 @@
                                 },
                                 {
                                     "sentence": "要是有时间就学习",
-                                    "pinyin": "時間があれば勉強します。\n\n**Japanese romaji:** jikan ga areba benkyou shimasu",
+                                    "pinyin": "yàoshi yǒu shíjiān jiù xuéxí",
                                     "korean": "시간이 있으면 공부해요.",
                                     "english": "If there is time, then study.",
                                     "japanese": "時間があれば勉強します。",
@@ -13412,7 +13412,7 @@
                             "sentences": [
                                 {
                                     "sentence": "虽然累但是很高兴",
-                                    "pinyin": "疲れたけど嬉しいです。\ntsukare ta kedo ureshii desu.",
+                                    "pinyin": "suī rán lèi dàn shì hěn gāo xìng",
                                     "korean": "비록 피곤하지만 매우 기쁩니다.",
                                     "english": "Although tired, (I'm) very happy.",
                                     "japanese": "疲れたけど嬉しいです。",
@@ -13458,7 +13458,7 @@
                                 },
                                 {
                                     "sentence": "虽然难但是要学",
-                                    "pinyin": "虽然难但是要学 → suīrán nán dànshì yào xué",
+                                    "pinyin": "suīrán nán dànshì yào xué",
                                     "korean": "어렵지만 배워야 해요.",
                                     "english": "Although it's difficult, (I/you/one) must study it.",
                                     "japanese": "難しいけれど勉強しなければならない。",
@@ -13504,7 +13504,7 @@
                                 },
                                 {
                                     "sentence": "虽然贵但是质量好",
-                                    "pinyin": "Pinyin: suīrán guì dànshì zhìliàng hǎo",
+                                    "pinyin": "suīrán guì dànshì zhìliàng hǎo",
                                     "korean": "비싸지만 품질이 좋습니다.",
                                     "english": "Although expensive, the quality is good.",
                                     "japanese": "高いけれど品質が良い。",
@@ -13550,7 +13550,7 @@
                                 },
                                 {
                                     "sentence": "虽然忙但是有时间",
-                                    "pinyin": "虽然忙但是有时间 → suīrán máng dànshì yǒu shíjiān",
+                                    "pinyin": "suīrán máng dànshì yǒu shíjiān",
                                     "korean": "바쁘지만 시간이 있어요.",
                                     "english": "Although busy, there is time.",
                                     "japanese": "忙しいけれど時間はあります。",
@@ -13647,7 +13647,7 @@
                                 },
                                 {
                                     "sentence": "虽然下雨但是要去",
-                                    "pinyin": "Ame ga futte iru keredomo ikanakereba naranai.",
+                                    "pinyin": "Suīrán xià yǔ dànshì yào qù",
                                     "korean": "비가 와도 가야 해요.",
                                     "english": "Although it's raining, (I/we) still have to go.",
                                     "japanese": "雨が降っているけれども行かなければならない。",
@@ -13693,7 +13693,7 @@
                                 },
                                 {
                                     "sentence": "虽然晚了但是还来了",
-                                    "pinyin": "虽然晚了但是还来了\n\nPinyin: suīrán wǎn le dànshì hái lái le",
+                                    "pinyin": "suīrán wǎn le dànshì hái lái le",
                                     "korean": "늦었지만 그래도 왔어요.",
                                     "english": "Although it was late, (he/she/they) still came.",
                                     "japanese": "遅れたけど来ました。",
@@ -13810,7 +13810,7 @@
                             "sentences": [
                                 {
                                     "sentence": "一点儿也不累",
-                                    "pinyin": "yī diǎnr yě bù lèi",
+                                    "pinyin": "yīdiǎnr yě bù lèi",
                                     "korean": "조금도 피곤하지 않아요.",
                                     "english": "Not tired at all.",
                                     "japanese": "全然疲れていません。",
@@ -13846,7 +13846,7 @@
                                 },
                                 {
                                     "sentence": "一点儿也不难",
-                                    "pinyin": "yī diǎnr yě bù nán",
+                                    "pinyin": "yīdiǎnr yě bù nán",
                                     "korean": "조금도 어렵지 않아요.",
                                     "english": "Not difficult at all.",
                                     "japanese": "全然難しくない。",
@@ -13882,7 +13882,7 @@
                                 },
                                 {
                                     "sentence": "一点儿也不贵",
-                                    "pinyin": "yì diǎnr yě bù guì",
+                                    "pinyin": "yìdiǎnr yě bù guì",
                                     "korean": "전혀 비싸지 않아요.",
                                     "english": "Not expensive at all.",
                                     "japanese": "全然高くない。",
@@ -13918,7 +13918,7 @@
                                 },
                                 {
                                     "sentence": "一点儿也不怕",
-                                    "pinyin": "Zenzen kowakunai.",
+                                    "pinyin": "yīdiǎnr yě bù pà",
                                     "korean": "조금도 무섭지 않아요.",
                                     "english": "Not afraid at all.",
                                     "japanese": "全然怖くない。",
@@ -14000,7 +14000,7 @@
                                 },
                                 {
                                     "sentence": "一点儿也不好吃",
-                                    "pinyin": "yī diǎn er yě bù hǎo chī",
+                                    "pinyin": "yīdiǎnr yě bù hǎochī",
                                     "korean": "조금도 맛없어요.",
                                     "english": "Not tasty at all.",
                                     "japanese": "全然美味しくない。",
@@ -14036,7 +14036,7 @@
                                 },
                                 {
                                     "sentence": "一点儿也不容易",
-                                    "pinyin": "yì diǎnr yě bù róng yì",
+                                    "pinyin": "yìdiǎnr yě bù róngyì",
                                     "korean": "조금도 쉽지 않아요.",
                                     "english": "Not easy at all.",
                                     "japanese": "少しも簡単ではない。",
@@ -14072,7 +14072,7 @@
                                 },
                                 {
                                     "sentence": "一点儿也不麻烦",
-                                    "pinyin": "yì diǎnr yě bù máfan",
+                                    "pinyin": "yìdiǎnr yě bù máfan",
                                     "korean": "조금도 번거롭지 않아요.",
                                     "english": "It's not troublesome at all.",
                                     "japanese": "全然面倒ではありません。",
@@ -14123,7 +14123,7 @@
                             "sentences": [
                                 {
                                     "sentence": "再忙也要吃饭",
-                                    "pinyin": "いくらいそがしくてもしょくじはしなければならない。\n(ikura isogashikute mo shokuji wa shinakereba naranai.)",
+                                    "pinyin": "zài máng yě yào chī fàn",
                                     "korean": "아무리 바빠도 밥은 먹어야 해.",
                                     "english": "\"No matter how busy you are, you still need to eat.\"",
                                     "japanese": "いくら忙しくても食事はしなければならない。",
@@ -14261,7 +14261,7 @@
                                 },
                                 {
                                     "sentence": "再贵也要买",
-                                    "pinyin": "高くても買わなければならない。\n\ntakakutemo kawanakereba naranai.",
+                                    "pinyin": "zài guì yě yào mǎi",
                                     "korean": "아무리 비싸도 사야 해요.",
                                     "english": "No matter how expensive, I still have to buy it.",
                                     "japanese": "高くても買わなければならない。",
@@ -14312,7 +14312,7 @@
                             "sentences": [
                                 {
                                     "sentence": "再远也要去",
-                                    "pinyin": "遠くても行かなければならない。\nTōkute mo ikanakereba naranai.",
+                                    "pinyin": "zài yuǎn yě yào qù",
                                     "korean": "아무리 멀어도 가야 해.",
                                     "english": "No matter how far, I must go.",
                                     "japanese": "遠くても行かなければならない。",
@@ -14358,7 +14358,7 @@
                                 },
                                 {
                                     "sentence": "再晚也要等",
-                                    "pinyin": "遅くなっても待つ。\nosoku natte mo matsu.",
+                                    "pinyin": "zài wǎn yě yào děng",
                                     "korean": "아무리 늦어도 기다려야 해.",
                                     "english": "I'll translate that Chinese sentence for you.\n\n\"再晚也要等\" translates to:\n\nNo matter how late, I must wait.",
                                     "japanese": "遅くなっても待つ。",
@@ -14537,7 +14537,7 @@
                                 },
                                 {
                                     "sentence": "只能这样",
-                                    "pinyin": "kore shika nai.",
+                                    "pinyin": "zhǐ néng zhè yàng",
                                     "korean": "이렇게 할 수밖에 없다.",
                                     "english": "I can only do it this way.",
                                     "japanese": "これしかない。",
@@ -14640,7 +14640,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我只喜欢你",
-                                    "pinyin": "wǒ zhǐ xǐhuān nǐ",
+                                    "pinyin": "wǒ zhǐ xǐhuan nǐ",
                                     "korean": "나는 너만 좋아해.",
                                     "english": "I only like you.",
                                     "japanese": "私はあなただけが好きです。",
@@ -14681,7 +14681,7 @@
                                 },
                                 {
                                     "sentence": "只买一个",
-                                    "pinyin": "一つだけ買います。\n\nJapanese romaji: hitotsu dake kaimasu.",
+                                    "pinyin": "zhǐ mǎi yī gè",
                                     "korean": "하나만 사요.",
                                     "english": "Just buy one.",
                                     "japanese": "一つだけ買います。",
@@ -14717,7 +14717,7 @@
                                 },
                                 {
                                     "sentence": "只去过一次",
-                                    "pinyin": "一度だけ行ったことがある。\nichido dake itta koto ga aru.",
+                                    "pinyin": "zhǐ qù guò yī cì",
                                     "korean": "한 번만 가봤어요.",
                                     "english": "I've only been there once.",
                                     "japanese": "一度だけ行ったことがある。",
@@ -14809,7 +14809,7 @@
                             "sentences": [
                                 {
                                     "sentence": "都是学生",
-                                    "pinyin": "dōu shì xuéshēng",
+                                    "pinyin": "dōu shì xuésheng",
                                     "korean": "모두 학생입니다.",
                                     "english": "They are all students.",
                                     "japanese": "皆学生です。",
@@ -14845,7 +14845,7 @@
                                 },
                                 {
                                     "sentence": "都很好",
-                                    "pinyin": "みな とても よい です。\n(mina totemo yoi desu.)",
+                                    "pinyin": "dōu hěn hǎo",
                                     "korean": "다 좋아요.",
                                     "english": "All are good.",
                                     "japanese": "皆とても良いです。",
@@ -14881,7 +14881,7 @@
                                 },
                                 {
                                     "sentence": "都喜欢",
-                                    "pinyin": "dōu xǐhuān",
+                                    "pinyin": "dōu xǐhuan",
                                     "korean": "다 좋아해요.",
                                     "english": "They all like it.",
                                     "japanese": "全部好きです。",
@@ -14989,7 +14989,7 @@
                                 },
                                 {
                                     "sentence": "哪儿都去过",
-                                    "pinyin": "",
+                                    "pinyin": "nǎr dōu qùguo",
                                     "korean": "어디든 다 가봤어요.",
                                     "english": "I've been everywhere.",
                                     "japanese": "どこでも行ったことがある。",
@@ -15030,7 +15030,7 @@
                                 },
                                 {
                                     "sentence": "谁都知道",
-                                    "pinyin": "Dare demo shitte iru.",
+                                    "pinyin": "shuí dōu zhīdào",
                                     "korean": "누구나 다 안다.",
                                     "english": "Everyone knows.",
                                     "japanese": "誰でも知っている。",
@@ -15066,7 +15066,7 @@
                                 },
                                 {
                                     "sentence": "都没问题",
-                                    "pinyin": "zenbu mondai arimasen",
+                                    "pinyin": "dōu méi wèntí",
                                     "korean": "다 문제없어요.",
                                     "english": "It's all fine.",
                                     "japanese": "全部問題ありません。",
@@ -15117,7 +15117,7 @@
                             "sentences": [
                                 {
                                     "sentence": "连他都知道",
-                                    "pinyin": "彼でさえ知っている。\n\nkare de sae shitte iru.",
+                                    "pinyin": "lián tā dōu zhīdào",
                                     "korean": "그조차도 알고 있다.",
                                     "english": "Even he knows.",
                                     "japanese": "彼でさえ知っている。",
@@ -15158,7 +15158,7 @@
                                 },
                                 {
                                     "sentence": "连小孩都会",
-                                    "pinyin": "子供でもできる。\nkodomo demo dekiru.",
+                                    "pinyin": "lián xiǎo hái dōu huì",
                                     "korean": "아이들도 할 수 있어요.",
                                     "english": "Even children can do it.",
                                     "japanese": "子供でもできる。",
@@ -15199,7 +15199,7 @@
                                 },
                                 {
                                     "sentence": "连这个也不知道",
-                                    "pinyin": "kore mo shiranai nante.",
+                                    "pinyin": "lián zhè ge yě bù zhī dào",
                                     "korean": "이것도 모르다니.",
                                     "english": "I don't even know this.",
                                     "japanese": "これも知らないなんて。",
@@ -15240,7 +15240,7 @@
                                 },
                                 {
                                     "sentence": "连一句话都不说",
-                                    "pinyin": "一言も言わない。\nhitokoto mo iwanai.",
+                                    "pinyin": "lián yī jù huà dōu bù shuō",
                                     "korean": "한 마디도 하지 않다.",
                                     "english": "Even won't say a single word.",
                                     "japanese": "一言も言わない。",
@@ -15332,7 +15332,7 @@
                                 },
                                 {
                                     "sentence": "连饭都不吃",
-                                    "pinyin": "食事さえも取らない。\nshokuji sae mo toranai.",
+                                    "pinyin": "lián fàn dōu bù chī",
                                     "korean": "밥조차 안 먹어.",
                                     "english": "I won't even eat.",
                                     "japanese": "食事さえも取らない。",
@@ -15373,7 +15373,7 @@
                                 },
                                 {
                                     "sentence": "连中文都会说",
-                                    "pinyin": "Chūgokugo sae hanaseru.",
+                                    "pinyin": "Lián zhōngwén dōu huì shuō",
                                     "korean": "중국어까지도 할 줄 안다.",
                                     "english": "Even knows how to speak Chinese.",
                                     "japanese": "中国語さえ話せる。",
@@ -15475,7 +15475,7 @@
                             "sentences": [
                                 {
                                     "sentence": "除了他以外都来了",
-                                    "pinyin": "除了他以外都来了 → chúle tā yǐwài dōu lái le",
+                                    "pinyin": "chúle tā yǐwài dōu lái le",
                                     "korean": "그를 제외하고 모두 왔다.",
                                     "english": "Everyone came except him.",
                                     "japanese": "彼以外はみんな来た。",
@@ -15575,7 +15575,7 @@
                                 },
                                 {
                                     "sentence": "除了苹果以外都喜欢",
-                                    "pinyin": "chú le píng guǒ yǐ wài dōu xǐ huān",
+                                    "pinyin": "chú le píng guǒ yǐ wài dōu xǐ huan",
                                     "korean": "사과를 제외하고는 모두 좋아해요.",
                                     "english": "Besides apples, I like everything.",
                                     "japanese": "りんご以外は全部好きです。",
@@ -15717,7 +15717,7 @@
                                 },
                                 {
                                     "sentence": "除了我以外都会开车",
-                                    "pinyin": "chúle wǒ yǐwài dōu huì kāichē",
+                                    "pinyin": "chúle wǒ yǐwài dōu huì kāi chē",
                                     "korean": "나를 제외하고 모두 운전할 수 있다.",
                                     "english": "Everyone can drive except me.",
                                     "japanese": "私以外はみんな運転できます。",
@@ -15916,7 +15916,7 @@
                                 },
                                 {
                                     "sentence": "不但好看而且便宜",
-                                    "pinyin": "bù dàn hǎo kàn ér qiě pián yí",
+                                    "pinyin": "bù dàn hǎo kàn ér qiě pián yi",
                                     "korean": "예쁘기도 하고 싸기도 해요.",
                                     "english": "Not only good-looking but also cheap.",
                                     "japanese": "見た目が良いだけでなく安い。",
@@ -16008,7 +16008,7 @@
                                 },
                                 {
                                     "sentence": "不但学习而且工作",
-                                    "pinyin": "勉強だけでなく仕事もする。\nbenkyou dake de naku shigoto mo suru.",
+                                    "pinyin": "bù dàn xué xí ér qiě gōng zuò",
                                     "korean": "공부할 뿐만 아니라 일도 한다.",
                                     "english": "Not only studying but also working.",
                                     "japanese": "勉強だけでなく仕事もする。",
@@ -16095,7 +16095,7 @@
                                 },
                                 {
                                     "sentence": "不但远而且不方便",
-                                    "pinyin": "遠いだけでなく不便です。\n\n**Japanese romaji:** Tooi dake de naku fuben desu.",
+                                    "pinyin": "bù dàn yuǎn ér qiě bù fāng biàn",
                                     "korean": "멀 뿐만 아니라 불편하다.",
                                     "english": "Not only far but also inconvenient.",
                                     "japanese": "遠いだけでなく不便です。",
@@ -16136,7 +16136,7 @@
                                 },
                                 {
                                     "sentence": "不但便宜而且质量好",
-                                    "pinyin": "安いだけでなく品質も良い。\n\nyasui dake de naku hinshitsu mo yoi.",
+                                    "pinyin": "bùdàn piányi érqiě zhìliàng hǎo",
                                     "korean": "싸고 품질도 좋다.",
                                     "english": "Not only cheap but also good quality.",
                                     "japanese": "安いだけでなく品質も良い。",
@@ -16182,7 +16182,7 @@
                                 },
                                 {
                                     "sentence": "不但喜欢而且很爱",
-                                    "pinyin": "bù dàn xǐ huān ér qiě hěn ài",
+                                    "pinyin": "bùdàn xǐhuan érqiě hěn ài",
                                     "korean": "좋아할 뿐만 아니라 매우 사랑해요.",
                                     "english": "Not only like but also love very much.",
                                     "japanese": "好きなだけでなくとても愛している",
@@ -16243,7 +16243,7 @@
                             "sentences": [
                                 {
                                     "sentence": "通过学习提高水平",
-                                    "pinyin": "学習を通じてレベルを向上させる\n\nJapanese romaji: gakushuu wo tsuujite reberu wo koujou saseru",
+                                    "pinyin": "tōngguò xuéxí tígāo shuǐpíng",
                                     "korean": "학습을 통해 수준을 향상시킨다.",
                                     "english": "Through studying to improve one's level.",
                                     "japanese": "学習を通じてレベルを向上させる",
@@ -16325,7 +16325,7 @@
                                 },
                                 {
                                     "sentence": "通过工作赚钱",
-                                    "pinyin": "仕事でお金を稼ぐ。\n\nJapanese romaji: Shigoto de okane wo kasegu.",
+                                    "pinyin": "tōngguò gōngzuò zhuànqián",
                                     "korean": "일을 통해 돈을 번다.",
                                     "english": "Making money through work.",
                                     "japanese": "仕事でお金を稼ぐ。",
@@ -16361,7 +16361,7 @@
                                 },
                                 {
                                     "sentence": "通过练习提高技能",
-                                    "pinyin": "練習を通じてスキルを向上させる\n\nrenshū o tsūjite sukiru o kōjō saseru",
+                                    "pinyin": "tōngguò liànxí tígāo jìnéng",
                                     "korean": "연습을 통해 기능을 향상시킨다.",
                                     "english": "Through practice, improve skills.",
                                     "japanese": "練習を通じてスキルを向上させる",
@@ -16407,7 +16407,7 @@
                             "sentences": [
                                 {
                                     "sentence": "通过旅行了解文化",
-                                    "pinyin": "旅行を通じて文化を理解する\n\nryokō wo tsūjite bunka wo rikai suru",
+                                    "pinyin": "Lǚxíng le jiě wénhuà",
                                     "korean": "여행을 통해 문화를 이해하다.",
                                     "english": "Through travel, one understands culture.",
                                     "japanese": "旅行を通じて文化を理解する",
@@ -16448,7 +16448,7 @@
                                 },
                                 {
                                     "sentence": "通过交流增进友谊",
-                                    "pinyin": "Kōryū o tsūjite yūjō o fukameru.",
+                                    "pinyin": "Tōngguò jiāoliú zēngjìn yǒuyì",
                                     "korean": "교류를 통해 우정을 증진시킨다.",
                                     "english": "Through communication, we enhance friendship.",
                                     "japanese": "交流を通じて友情を深める。",
@@ -16586,7 +16586,7 @@
                             "sentences": [
                                 {
                                     "sentence": "结果考试及格了",
-                                    "pinyin": "結果試験に合格した。\n\n**Japanese romaji:** kekka shiken ni goukaku shita.",
+                                    "pinyin": "jiéguǒ kǎoshì jígé le",
                                     "korean": "결과적으로 시험에 합격했다.",
                                     "english": "The exam was passed as a result.",
                                     "japanese": "結果試験に合格した。",
@@ -16627,7 +16627,7 @@
                                 },
                                 {
                                     "sentence": "结果他没来",
-                                    "pinyin": "結局彼は来なかった。\n\n**Japanese Romaji:** Kekkyoku kare wa konakatta.",
+                                    "pinyin": "jiéguǒ tā méi lái",
                                     "korean": "결과 그는 오지 않았다.",
                                     "english": "He didn't come in the end.",
                                     "japanese": "結局彼は来なかった。",
@@ -16668,7 +16668,7 @@
                                 },
                                 {
                                     "sentence": "结果天气很好",
-                                    "pinyin": "結果、天気が良かったです。\n\n**Japanese Romaji:** Kekka, tenki ga yokatta desu.",
+                                    "pinyin": "jiéguǒ tiānqì hěn hǎo",
                                     "korean": "결과 날씨가 매우 좋았습니다.",
                                     "english": "The weather turned out to be very good.",
                                     "japanese": "結果、天気が良かったです。",
@@ -16711,7 +16711,7 @@
                                 },
                                 {
                                     "sentence": "结果买到了便宜的",
-                                    "pinyin": "結果、安いものを買った。\n\n**Japanese Romaji:** Kekka, yasui mono o katta.",
+                                    "pinyin": "jiéguǒ mǎidàole piányi de",
                                     "korean": "결과적으로 싼 것을 샀다.",
                                     "english": "I ended up buying the cheap one.",
                                     "japanese": "結果、安いものを買った。",
@@ -16803,7 +16803,7 @@
                                 },
                                 {
                                     "sentence": "结果什么都没买",
-                                    "pinyin": "結局何も買わなかった。\n\nkekkyoku nanimo kawanakatta.",
+                                    "pinyin": "jiéguǒ shénme dōu méi mǎi",
                                     "korean": "결국 아무것도 사지 않았다.",
                                     "english": "I didn't buy anything in the end.",
                                     "japanese": "結局何も買わなかった。",
@@ -16849,7 +16849,7 @@
                                 },
                                 {
                                     "sentence": "结果找到了工作",
-                                    "pinyin": "結果、仕事を見つけた。\n\nJapanese romaji: kekka, shigoto wo mitsuketa.",
+                                    "pinyin": "jié guǒ zhǎo dào le gōng zuò",
                                     "korean": "결과적으로 일자리를 찾았다.",
                                     "english": "I found a job as a result.",
                                     "japanese": "結果、仕事を見つけた。",
@@ -16890,7 +16890,7 @@
                                 },
                                 {
                                     "sentence": "结果很成功",
-                                    "pinyin": "結果は成功でした。(kekka wa seikou deshita.)",
+                                    "pinyin": "jié guǒ hěn chéng gōng",
                                     "korean": "결과는 매우 성공적이었습니다.",
                                     "english": "The result was very successful.",
                                     "japanese": "結果は成功でした。",
@@ -16977,7 +16977,7 @@
                                 },
                                 {
                                     "sentence": "大概要一个小时",
-                                    "pinyin": "dà gài yào yī gè xiǎo shí",
+                                    "pinyin": "dà gài yào yí gè xiǎo shí",
                                     "korean": "대략 한 시간 정도 걸립니다.",
                                     "english": "About an hour.",
                                     "japanese": "大体1時間かかります。",
@@ -17464,7 +17464,7 @@
                                 },
                                 {
                                     "sentence": "可能会迟到",
-                                    "pinyin": "遅れるかもしれません。\nokureru kamoshiremasen.",
+                                    "pinyin": "kěnéng huì chídào",
                                     "korean": "늦을 수도 있어요.",
                                     "english": "I might be late.",
                                     "japanese": "遅れるかもしれません。",
@@ -17500,7 +17500,7 @@
                                 },
                                 {
                                     "sentence": "可能不够",
-                                    "pinyin": "足りないかもしれません。\n\nJapanese romaji: tarinai kamoshiremasen",
+                                    "pinyin": "kěnéng bù gòu",
                                     "korean": "아마 부족할 거예요.",
                                     "english": "Maybe not enough.",
                                     "japanese": "足りないかもしれません。",
@@ -17695,7 +17695,7 @@
                                 },
                                 {
                                     "sentence": "一定没问题",
-                                    "pinyin": "Zettai ni mondai arimasen.",
+                                    "pinyin": "Yīdìng méi wèntí",
                                     "korean": "틀림없이 문제없어요.",
                                     "english": "It will definitely be no problem.",
                                     "japanese": "絶対に問題ありません。",
@@ -17736,7 +17736,7 @@
                             "sentences": [
                                 {
                                     "sentence": "一定会来的",
-                                    "pinyin": "必ず来ます。(kanarazu kimasu)",
+                                    "pinyin": "yīdìng huì lái de",
                                     "korean": "꼭 올 거예요.",
                                     "english": "I'll translate that Chinese sentence for you.\n\n\"一定会来的\" translates to: \"Will definitely come.\"",
                                     "japanese": "必ず来ます。",
@@ -17777,7 +17777,7 @@
                                 },
                                 {
                                     "sentence": "一定要小心",
-                                    "pinyin": "必ず気をつけてください。\n\nJapanese romaji: kanarazu ki wo tsukete kudasai",
+                                    "pinyin": "yīdìng yào xiǎoxīn",
                                     "korean": "꼭 조심해야 해요.",
                                     "english": "Be sure to be careful.",
                                     "japanese": "必ず気をつけてください。",
@@ -17813,7 +17813,7 @@
                                 },
                                 {
                                     "sentence": "一定很好吃",
-                                    "pinyin": "yī dìng hěn hǎo chī",
+                                    "pinyin": "yīdìng hěn hǎochī",
                                     "korean": "분명 맛있을 거예요.",
                                     "english": "It must be delicious.",
                                     "japanese": "絶対に美味しいはずです。",
@@ -17849,7 +17849,7 @@
                                 },
                                 {
                                     "sentence": "一定要记住",
-                                    "pinyin": "必ず覚えておいてください。\n\n**Japanese romaji:** kanarazu oboete oite kudasai",
+                                    "pinyin": "yīdìng yào jìzhù",
                                     "korean": "꼭 기억해야 해요.",
                                     "english": "I'll translate that Chinese sentence for you.\n\nThe Chinese sentence \"一定要记住\" translates to:\n\n\"Must remember\"",
                                     "japanese": "必ず覚えておいてください。",
@@ -17936,7 +17936,7 @@
                                 },
                                 {
                                     "sentence": "恐怕来不及了",
-                                    "pinyin": "Osoraku ma ni awanai deshou.",
+                                    "pinyin": "Kǒngpà láibùjí le",
                                     "korean": "아마 늦을 것 같아요.",
                                     "english": "I'm afraid there won't be enough time.",
                                     "japanese": "恐らく間に合わないでしょう。",
@@ -18008,7 +18008,7 @@
                                 },
                                 {
                                     "sentence": "恐怕没时间了",
-                                    "pinyin": "Osoraku jikan ga nai deshou.",
+                                    "pinyin": "kǒngpà méi shíjiān le",
                                     "korean": "시간이 없을 것 같아요.",
                                     "english": "I'm afraid there's no time.",
                                     "japanese": "恐らく時間がないでしょう。",
@@ -18121,7 +18121,7 @@
                                 },
                                 {
                                     "sentence": "恐怕有困难",
-                                    "pinyin": "kǒngpà yǒu kùnnan",
+                                    "pinyin": "kǒngpà yǒu kùnnán",
                                     "korean": "아마 어려울 것 같습니다.",
                                     "english": "I'm afraid there are difficulties.",
                                     "japanese": "恐らく困難があります。",
@@ -18157,7 +18157,7 @@
                                 },
                                 {
                                     "sentence": "恐怕不行",
-                                    "pinyin": "I'll provide the romaji for that Japanese sentence.\n\n恐れ入りますが、それはできません。\nosore irimasu ga, sore wa dekimasen.",
+                                    "pinyin": "kǒngpà bùxíng",
                                     "korean": "아마 안 될 것 같습니다.",
                                     "english": "I'm afraid not.",
                                     "japanese": "恐れ入りますが、それはできません。",
@@ -18249,7 +18249,7 @@
                                 },
                                 {
                                     "sentence": "相反的意见",
-                                    "pinyin": "aihan no iken",
+                                    "pinyin": "xiāngfǎn de yìjiàn",
                                     "korean": "반대 의견",
                                     "english": "Opposite opinion.",
                                     "japanese": "相反の意見",
@@ -18285,7 +18285,7 @@
                                 },
                                 {
                                     "sentence": "结果相反",
-                                    "pinyin": "結果は逆だった。\n\nJapanese romaji: kekka wa gyaku datta.",
+                                    "pinyin": "jié guǒ xiāng fǎn",
                                     "korean": "결과는 정반대입니다.",
                                     "english": "The result is opposite.",
                                     "japanese": "結果は逆だった。",
@@ -18316,7 +18316,7 @@
                                 },
                                 {
                                     "sentence": "完全相反",
-                                    "pinyin": "完全に相反する。\n\n**Japanese romaji:** kanzen ni souhan suru.",
+                                    "pinyin": "wán quán xiāng fǎn",
                                     "korean": "완전히 정반대입니다.",
                                     "english": "Completely opposite.",
                                     "japanese": "完全に相反する。",
@@ -18352,7 +18352,7 @@
                             "sentences": [
                                 {
                                     "sentence": "情况相反",
-                                    "pinyin": "状況は逆です。\n\nJapanese romaji: jōkyō wa gyaku desu.",
+                                    "pinyin": "qíngkuàng xiāngfǎn",
                                     "korean": "상황이 정반대입니다.",
                                     "english": "The situation is opposite.",
                                     "japanese": "状況は逆です。",
@@ -18383,7 +18383,7 @@
                                 },
                                 {
                                     "sentence": "态度相反",
-                                    "pinyin": "たいどがせいはんたいだ (taido ga seihantai da)",
+                                    "pinyin": "tàidù xiāngfǎn",
                                     "korean": "태도가 정반대다.",
                                     "english": "Opposite attitudes.",
                                     "japanese": "態度が正反対だ",
@@ -18445,7 +18445,7 @@
                                 },
                                 {
                                     "sentence": "看法相反",
-                                    "pinyin": "見解が相反する → kenkai ga aihan suru",
+                                    "pinyin": "kànfǎ xiāngfǎn",
                                     "korean": "견해가 상반된다.",
                                     "english": "Views are opposite.",
                                     "japanese": "見解が相反する",
@@ -18537,7 +18537,7 @@
                                 },
                                 {
                                     "sentence": "大家都同意",
-                                    "pinyin": "みんなどういします。\nminna doui shimasu.",
+                                    "pinyin": "dàjiā dōu tóngyì",
                                     "korean": "모두 동의합니다.",
                                     "english": "Everyone agrees.",
                                     "japanese": "みんな同意します。",
@@ -18604,7 +18604,7 @@
                                 },
                                 {
                                     "sentence": "完全同意",
-                                    "pinyin": "kanzen ni doui shimasu.",
+                                    "pinyin": "wánquán tóngyì",
                                     "korean": "완전히 동의합니다.",
                                     "english": "I completely agree.",
                                     "japanese": "完全に同意します。",
@@ -18640,7 +18640,7 @@
                             "sentences": [
                                 {
                                     "sentence": "基本同意",
-                                    "pinyin": "kibonteki ni dōi shimasu.",
+                                    "pinyin": "jīběn tóngyì",
                                     "korean": "기본적으로 동의합니다.",
                                     "english": "I basically agree.",
                                     "japanese": "基本的に同意します。",
@@ -18671,7 +18671,7 @@
                                 },
                                 {
                                     "sentence": "不太同意",
-                                    "pinyin": "太同意しません (futoi dōi shimasen)\n\nHowever, this appears to be a typo. The correct phrase would likely be:\n\n**全く同意しません** (mattaku dōi shimasen) - \"I don't agree at all\"\n\nor\n\n**大いに同意しません** (ōini dōi shimasen) - \"I strongly disagree\"\n\nThe character 太 (futoi/tai) means \"thick/fat\" and doesn't make grammatical sense with 同意しません (don't agree).",
+                                    "pinyin": "bù tài tóngyì",
                                     "korean": "별로 동의하지 않습니다.",
                                     "english": "I don't quite agree.",
                                     "japanese": "太同意しません。",
@@ -18856,7 +18856,7 @@
                                 },
                                 {
                                     "sentence": "坚决反对",
-                                    "pinyin": "断固反対する。- danko hantai suru.",
+                                    "pinyin": "jiān jué fǎn duì",
                                     "korean": "단호히 반대한다.",
                                     "english": "Resolutely oppose.",
                                     "japanese": "断固反対する。",
@@ -18887,7 +18887,7 @@
                                 },
                                 {
                                     "sentence": "表示反对",
-                                    "pinyin": "duì cǐ biǎo shì fǎn duì\n\nThe pinyin for \"表示反对\" is: biǎo shì fǎn duì",
+                                    "pinyin": "biǎo shì fǎn duì",
                                     "korean": "반대를 표시하다.",
                                     "english": "I express opposition.",
                                     "japanese": "反対を表す。",
@@ -18923,7 +18923,7 @@
                             "sentences": [
                                 {
                                     "sentence": "强烈反对",
-                                    "pinyin": "強く反対する。(つよくはんたいする。)\ntsuyoku hantai suru.",
+                                    "pinyin": "qiángliè fǎnduì",
                                     "korean": "강력히 반대합니다.",
                                     "english": "Strongly oppose.",
                                     "japanese": "強く反対する。",
@@ -18980,7 +18980,7 @@
                                 },
                                 {
                                     "sentence": "没有反对",
-                                    "pinyin": "hanntai wa arimasen.",
+                                    "pinyin": "méiyǒu fǎnduì",
                                     "korean": "반대가 없습니다.",
                                     "english": "No objection.",
                                     "japanese": "反対はありません。",
@@ -19011,7 +19011,7 @@
                                 },
                                 {
                                     "sentence": "遇到反对",
-                                    "pinyin": "hantan ni sōgū suru",
+                                    "pinyin": "yù dào fǎn duì",
                                     "korean": "반대에 부딪히다.",
                                     "english": "Encountered opposition.",
                                     "japanese": "反対に遭遇する",
@@ -19057,7 +19057,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我支持你",
-                                    "pinyin": "wǒ zhīchí nǐ",
+                                    "pinyin": "wǒ zhī chí nǐ",
                                     "korean": "나는 너를 지지해.",
                                     "english": "I support you.",
                                     "japanese": "私はあなたを支持します。",
@@ -19093,7 +19093,7 @@
                                 },
                                 {
                                     "sentence": "大家都支持",
-                                    "pinyin": "みんながしじしている。\nminna ga shiji shite iru.",
+                                    "pinyin": "dà jiā dōu zhī chí",
                                     "korean": "모두가 지지합니다.",
                                     "english": "Everyone supports it.",
                                     "japanese": "皆が支持している。",
@@ -19227,7 +19227,7 @@
                                 },
                                 {
                                     "sentence": "互相支持",
-                                    "pinyin": "互いに支え合う。\ntagai ni sasae au.",
+                                    "pinyin": "hù xiāng zhī chí",
                                     "korean": "서로 지지하다.",
                                     "english": "Supporting each other.",
                                     "japanese": "互いに支え合う。",
@@ -19258,7 +19258,7 @@
                                 },
                                 {
                                     "sentence": "支持这个决定",
-                                    "pinyin": "kono kettei wo shiji suru",
+                                    "pinyin": "zhīchí zhège juédìng",
                                     "korean": "이 결정을 지지합니다.",
                                     "english": "I support this decision.",
                                     "japanese": "「この決定を支持する」",
@@ -19407,7 +19407,7 @@
                                 },
                                 {
                                     "sentence": "得到帮助",
-                                    "pinyin": "dé dào bāng zhù",
+                                    "pinyin": "dédào bāngzhù",
                                     "korean": "도움을 받다.",
                                     "english": "Getting help.",
                                     "japanese": "助けを得る。",
@@ -19536,7 +19536,7 @@
                                 },
                                 {
                                     "sentence": "提供帮助",
-                                    "pinyin": "助けを提供する。\n\nJapanese romaji: tasuke wo teikyou suru.",
+                                    "pinyin": "tígōng bāngzhù",
                                     "korean": "도움을 제공하다.",
                                     "english": "Provide help.",
                                     "japanese": "助けを提供する。",
@@ -19567,7 +19567,7 @@
                                 },
                                 {
                                     "sentence": "寻求帮助",
-                                    "pinyin": "tasuke wo motomeru",
+                                    "pinyin": "xúnqiú bāngzhù",
                                     "korean": "도움을 구하다.",
                                     "english": "Seeking help.",
                                     "japanese": "助けを求める",
@@ -19613,7 +19613,7 @@
                             "sentences": [
                                 {
                                     "sentence": "感谢你的帮助",
-                                    "pinyin": "ご協力ありがとうございます。\ngo kyōryoku arigatō gozaimasu",
+                                    "pinyin": "Gǎnxiè nǐ de bāngzhù",
                                     "korean": "도와주셔서 감사합니다.",
                                     "english": "Thank you for your help.",
                                     "japanese": "ご協力ありがとうございます。",
@@ -19685,7 +19685,7 @@
                                 },
                                 {
                                     "sentence": "深表感谢",
-                                    "pinyin": "ふかくかんしゃいたします。\n(fukaku kansha itashimasu)",
+                                    "pinyin": "shēn biǎo gǎn xiè",
                                     "korean": "깊이 감사드립니다.",
                                     "english": "I am deeply grateful.",
                                     "japanese": "深く感謝いたします。",
@@ -20025,7 +20025,7 @@
                             "sentences": [
                                 {
                                     "sentence": "正式道歉",
-                                    "pinyin": "正式に謝罪する。(seishiki ni shazai suru)",
+                                    "pinyin": "zhèng shì dào qiàn",
                                     "korean": "정식으로 사과합니다.",
                                     "english": "I apologize formally.",
                                     "japanese": "正式に謝罪する。",
@@ -20087,7 +20087,7 @@
                                 },
                                 {
                                     "sentence": "真诚道歉",
-                                    "pinyin": "心から謝罪します。\n\nJapanese romaji: kokoro kara shazai shimasu",
+                                    "pinyin": "zhēn chéng dào qiàn",
                                     "korean": "진심으로 사과드립니다.",
                                     "english": "I sincerely apologize.",
                                     "japanese": "心から謝罪します。",
@@ -20118,7 +20118,7 @@
                                 },
                                 {
                                     "sentence": "接受道歉",
-                                    "pinyin": "謝罪を受け入れる。(shazai wo ukeireru.)",
+                                    "pinyin": "jiēshòu dàoqiàn",
                                     "korean": "사과를 받아들이다.",
                                     "english": "I accept the apology.",
                                     "japanese": "謝罪を受け入れる。",
@@ -20195,7 +20195,7 @@
                                 },
                                 {
                                     "sentence": "表示祝贺",
-                                    "pinyin": "bǐao shì zhù hè",
+                                    "pinyin": "biǎo shì zhù hè",
                                     "korean": "축하를 표시하다.",
                                     "english": "Congratulations.",
                                     "japanese": "祝賀を表す。",
@@ -20257,7 +20257,7 @@
                                 },
                                 {
                                     "sentence": "衷心祝贺",
-                                    "pinyin": "kokoro kara oiwai mōshiagemasu",
+                                    "pinyin": "zhōngxīn zhùhè",
                                     "korean": "진심으로 축하드립니다.",
                                     "english": "Heartfelt congratulations.",
                                     "japanese": "心からお祝い申し上げます。",
@@ -20293,7 +20293,7 @@
                             "sentences": [
                                 {
                                     "sentence": "祝贺成功",
-                                    "pinyin": "seikō omedetō",
+                                    "pinyin": "zhùhè chénggōng",
                                     "korean": "축하합니다, 성공하셨습니다.",
                                     "english": "Congratulations on your success.",
                                     "japanese": "成功おめでとう。",
@@ -20355,7 +20355,7 @@
                                 },
                                 {
                                     "sentence": "祝贺新年",
-                                    "pinyin": "新年おめでとうございます (shinnen omedetou gozaimasu)",
+                                    "pinyin": "zhù hè xīn nián",
                                     "korean": "새해를 축하합니다.",
                                     "english": "Happy New Year.",
                                     "japanese": "新年おめでとうございます。",
@@ -20463,7 +20463,7 @@
                                 },
                                 {
                                     "sentence": "给予祝福",
-                                    "pinyin": "祝福を与える\n\nJapanese romaji: shukufuku wo ataeru",
+                                    "pinyin": "gěiyǔ zhùfú",
                                     "korean": "축복을 주다.",
                                     "english": "Give blessings.",
                                     "japanese": "祝福を与える",
@@ -20623,7 +20623,7 @@
                                 },
                                 {
                                     "sentence": "收到祝福",
-                                    "pinyin": "祝福を受け取りました。\n\nJapanese romaji: shukufuku wo uketorimashita",
+                                    "pinyin": "shōu dào zhù fú",
                                     "korean": "축복을 받았습니다.",
                                     "english": "Received blessings.",
                                     "japanese": "祝福を受け取りました。",
@@ -20700,7 +20700,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我希望",
-                                    "pinyin": "watashi wa kibou shimasu",
+                                    "pinyin": "wǒ xī wàng",
                                     "korean": "나는 희망한다",
                                     "english": "I hope.",
                                     "japanese": "私は希望します。",
@@ -20798,7 +20798,7 @@
                                 },
                                 {
                                     "sentence": "看到希望",
-                                    "pinyin": "kibou ga mieru",
+                                    "pinyin": "kàn dào xī wàng",
                                     "korean": "희망을 보다.",
                                     "english": "I see hope.",
                                     "japanese": "希望が見える",
@@ -20865,7 +20865,7 @@
                                 },
                                 {
                                     "sentence": "实现希望",
-                                    "pinyin": "希望を実現する → kibō wo jitsugen suru",
+                                    "pinyin": "xī wàng",
                                     "korean": "희망을 실현하다.",
                                     "english": "Realize hope.",
                                     "japanese": "希望を実現する",
@@ -20973,7 +20973,7 @@
                             "sentences": [
                                 {
                                     "sentence": "期待见面",
-                                    "pinyin": "aeru no wo tanoshimi ni shite imasu.",
+                                    "pinyin": "qī dài jiàn miàn",
                                     "korean": "만남을 기대합니다.",
                                     "english": "I look forward to meeting you.",
                                     "japanese": "会えるのを楽しみにしています。",
@@ -21004,7 +21004,7 @@
                                 },
                                 {
                                     "sentence": "充满期待",
-                                    "pinyin": "期待に満ちている。(kitai ni michite iru.)",
+                                    "pinyin": "chōngmǎn qídài",
                                     "korean": "기대감으로 가득하다.",
                                     "english": "Full of anticipation.",
                                     "japanese": "期待に満ちている。",
@@ -21066,7 +21066,7 @@
                                 },
                                 {
                                     "sentence": "不负期待",
-                                    "pinyin": "期待を裏切らない → kitai wo uragira nai",
+                                    "pinyin": "bù fù qī dài",
                                     "korean": "기대를 저버리지 않다.",
                                     "english": "Worth the wait.",
                                     "japanese": "期待を裏切らない",
@@ -21102,7 +21102,7 @@
                             "sentences": [
                                 {
                                     "sentence": "超出期待",
-                                    "pinyin": "期待を超える - kitai wo koeru",
+                                    "pinyin": "chāochū qīdài",
                                     "korean": "기대를 초과했다",
                                     "english": "Beyond expectations.",
                                     "japanese": "期待を超える",
@@ -21133,7 +21133,7 @@
                                 },
                                 {
                                     "sentence": "满足期待",
-                                    "pinyin": "期待に応える (kitai ni kotaeru)",
+                                    "pinyin": "mǎn zú qī dài",
                                     "korean": "기대를 충족시키다.",
                                     "english": "Meeting expectations.",
                                     "japanese": "期待に応える",
@@ -21195,7 +21195,7 @@
                                 },
                                 {
                                     "sentence": "期待结果",
-                                    "pinyin": "結果を期待する (kekka wo kitai suru)",
+                                    "pinyin": "qīdài jiéguǒ",
                                     "korean": "결과를 기대합니다.",
                                     "english": "Looking forward to the results.",
                                     "japanese": "結果を期待する",
@@ -21241,7 +21241,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我很担心",
-                                    "pinyin": "wǒ hěn dānxīn",
+                                    "pinyin": "wǒ hěn dān xīn",
                                     "korean": "저는 매우 걱정됩니다.",
                                     "english": "I'm very worried.",
                                     "japanese": "私はとても心配です。",
@@ -21339,7 +21339,7 @@
                                 },
                                 {
                                     "sentence": "担心安全",
-                                    "pinyin": "安全が心配です。(anzen ga shinpai desu)",
+                                    "pinyin": "dānxīn ānquán",
                                     "korean": "안전을 걱정하다.",
                                     "english": "Worried about safety.",
                                     "japanese": "安全が心配です。",
@@ -21406,7 +21406,7 @@
                                 },
                                 {
                                     "sentence": "担心考试",
-                                    "pinyin": "Shiken ga shinpai desu.",
+                                    "pinyin": "dānxīn kǎoshì",
                                     "korean": "시험이 걱정돼요.",
                                     "english": "Worried about the exam.",
                                     "japanese": "試験が心配です。",
@@ -21437,7 +21437,7 @@
                                 },
                                 {
                                     "sentence": "担心天气",
-                                    "pinyin": "tenki wo shinpai suru.",
+                                    "pinyin": "dānxīn tiānqì",
                                     "korean": "날씨가 걱정됩니다.",
                                     "english": "I worry about the weather.",
                                     "japanese": "天気を心配する。",
@@ -21470,7 +21470,7 @@
                                 },
                                 {
                                     "sentence": "消除担心",
-                                    "pinyin": "心配を取り除く (shinpai wo torinozoku)",
+                                    "pinyin": "xiāochú dānxīn",
                                     "korean": "걱정을 없애다.",
                                     "english": "Eliminate worries.",
                                     "japanese": "心配を取り除く",
@@ -21609,7 +21609,7 @@
                                 },
                                 {
                                     "sentence": "不要失望",
-                                    "pinyin": "Shitsubō shinaide kudasai.",
+                                    "pinyin": "Bùyào shīwàng",
                                     "korean": "실망하지 마세요.",
                                     "english": "Don't be disappointed.",
                                     "japanese": "失望しないでください。",
@@ -21645,7 +21645,7 @@
                             "sentences": [
                                 {
                                     "sentence": "充满失望",
-                                    "pinyin": "失望に満ちている。\n\nJapanese romaji: shitsubou ni michite iru.",
+                                    "pinyin": "chōngmǎn shīwàng",
                                     "korean": "실망으로 가득 차다.",
                                     "english": "Full of disappointment.",
                                     "japanese": "失望に満ちている。",
@@ -21820,7 +21820,7 @@
                                 },
                                 {
                                     "sentence": "不要生气",
-                                    "pinyin": "Okoranaide kudasai.",
+                                    "pinyin": "bù yào shēng qì",
                                     "korean": "화내지 마세요.",
                                     "english": "Don't be angry.",
                                     "japanese": "怒らないでください。",
@@ -21851,7 +21851,7 @@
                                 },
                                 {
                                     "sentence": "令人生气",
-                                    "pinyin": "はらがたつ (hara ga tatsu)",
+                                    "pinyin": "lìng rén shēng qì",
                                     "korean": "화나게 한다.",
                                     "english": "It makes one angry.",
                                     "japanese": "腹が立つ。",
@@ -21882,7 +21882,7 @@
                                 },
                                 {
                                     "sentence": "很容易生气",
-                                    "pinyin": "怒りやすいです。(okoriyasui desu.)",
+                                    "pinyin": "hěn róngyì shēngqì",
                                     "korean": "쉽게 화를 낸다.",
                                     "english": "Gets angry very easily.",
                                     "japanese": "怒りやすいです。",
@@ -21923,7 +21923,7 @@
                             "sentences": [
                                 {
                                     "sentence": "因为什么生气",
-                                    "pinyin": "Nande okotte iru no?",
+                                    "pinyin": "Yīnwèi shénme shēngqì",
                                     "korean": "왜 화가 났어요?",
                                     "english": "Why are you angry?",
                                     "japanese": "何で怒っているの？",
@@ -21959,7 +21959,7 @@
                                 },
                                 {
                                     "sentence": "生气是没用的",
-                                    "pinyin": "怒っても無駄です。(okotte mo muda desu.)",
+                                    "pinyin": "shēng qì shì méi yòng de",
                                     "korean": "화내는 것은 소용없다.",
                                     "english": "Getting angry is useless.",
                                     "japanese": "怒っても無駄です。",
@@ -22000,7 +22000,7 @@
                                 },
                                 {
                                     "sentence": "别跟我生气",
-                                    "pinyin": "bié gēn wǒ shēng qì",
+                                    "pinyin": "bié gēn wǒ shēngqì",
                                     "korean": "나한테 화내지 마.",
                                     "english": "Don't be angry with me.",
                                     "japanese": "私に怒らないで。",
@@ -22041,7 +22041,7 @@
                                 },
                                 {
                                     "sentence": "消除生气",
-                                    "pinyin": "怒りを消す → ikari wo kesu",
+                                    "pinyin": "xiāo chú shēng qì",
                                     "korean": "화를 없애다.",
                                     "english": "Eliminate anger.",
                                     "japanese": "怒りを消す。",
@@ -22190,7 +22190,7 @@
                                 },
                                 {
                                     "sentence": "为你高兴",
-                                    "pinyin": "君のために嬉しい。(kimi no tame ni ureshii)",
+                                    "pinyin": "wèi nǐ gāo xìng",
                                     "korean": "기뻐해 줘서 기뻐요.",
                                     "english": "I'm happy for you.",
                                     "japanese": "君のために嬉しい。",
@@ -22293,7 +22293,7 @@
                                 },
                                 {
                                     "sentence": "不太高兴",
-                                    "pinyin": "あまり嬉しくない → amari ureshikunai",
+                                    "pinyin": "bù tài gāo xìng",
                                     "korean": "별로 기쁘지 않아요.",
                                     "english": "Not very happy.",
                                     "japanese": "不太高兴 → あまり嬉しくない",
@@ -22324,7 +22324,7 @@
                                 },
                                 {
                                     "sentence": "高兴得笑了",
-                                    "pinyin": "ureshikute waratta",
+                                    "pinyin": "gāoxìng de xiào le",
                                     "korean": "기뻐서 웃었다.",
                                     "english": "She smiled with happiness.",
                                     "japanese": "嬉しくて笑った。",
@@ -22416,7 +22416,7 @@
                                 },
                                 {
                                     "sentence": "感到难过",
-                                    "pinyin": "悲しく感じる。→ kanashiku kanjiru.",
+                                    "pinyin": "gǎndào nánguò",
                                     "korean": "슬프다고 느낀다.",
                                     "english": "I feel sad.",
                                     "japanese": "悲しく感じる。",
@@ -22478,7 +22478,7 @@
                                 },
                                 {
                                     "sentence": "不要难过",
-                                    "pinyin": "bù yào nán guò",
+                                    "pinyin": "bú yào nán guò",
                                     "korean": "슬퍼하지 마세요.",
                                     "english": "Don't be sad.",
                                     "japanese": "悲しまないで。",
@@ -22545,7 +22545,7 @@
                                 },
                                 {
                                     "sentence": "难过得哭了",
-                                    "pinyin": "nán guò de kū le",
+                                    "pinyin": "nánguò de kū le",
                                     "korean": "슬퍼서 울었다.",
                                     "english": "I was so sad that I cried.",
                                     "japanese": "悲しくて泣いた。",
@@ -22586,7 +22586,7 @@
                                 },
                                 {
                                     "sentence": "安慰难过的人",
-                                    "pinyin": "悲しんでいる人を慰める。\nkanashinde iru hito wo nagusameru.",
+                                    "pinyin": "ān wèi nán guò de rén",
                                     "korean": "슬퍼하는 사람을 위로하다.",
                                     "english": "Comfort those who are sad.",
                                     "japanese": "悲しんでいる人を慰める。",
@@ -22812,7 +22812,7 @@
                             "sentences": [
                                 {
                                     "sentence": "不太惊讶",
-                                    "pinyin": "別に驚かない。\nBetsu ni odorokanai.",
+                                    "pinyin": "bù tài jīng yà",
                                     "korean": "별로 놀랍지 않아요.",
                                     "english": "Not very surprised.",
                                     "japanese": "別に驚かない。",
@@ -22920,7 +22920,7 @@
                                 },
                                 {
                                     "sentence": "没有惊讶",
-                                    "pinyin": "驚きはない。\n\nJapanese romaji: odoroki wa nai.",
+                                    "pinyin": "méiyǒu jīngyà",
                                     "korean": "놀라지 않았어요.",
                                     "english": "No surprise.",
                                     "japanese": "驚きはない。",
@@ -22997,7 +22997,7 @@
                                 },
                                 {
                                     "sentence": "不要害怕",
-                                    "pinyin": "bù yào hài pà",
+                                    "pinyin": "bú yào hài pà",
                                     "korean": "두려워하지 마세요.",
                                     "english": "Don't be afraid.",
                                     "japanese": "怖がらないで。",
@@ -23059,7 +23059,7 @@
                                 },
                                 {
                                     "sentence": "很容易害怕",
-                                    "pinyin": "こわがりやすいです。(kowagariyasui desu.)",
+                                    "pinyin": "hěn róngyì hàipà",
                                     "korean": "매우 쉽게 무서워해요.",
                                     "english": "Very easy to be afraid.",
                                     "japanese": "怖がりやすいです。",
@@ -23159,7 +23159,7 @@
                                 },
                                 {
                                     "sentence": "害怕一个人",
-                                    "pinyin": "hài pà yí gè rén",
+                                    "pinyin": "hài pà yī gè rén",
                                     "korean": "혼자 있는 것이 무서워요.",
                                     "english": "I'm afraid of being alone.",
                                     "japanese": "一人でいるのが怖い",
@@ -23190,7 +23190,7 @@
                                 },
                                 {
                                     "sentence": "克服害怕",
-                                    "pinyin": "恐怖を克服する → kyōfu o kokufuku suru",
+                                    "pinyin": "kèfú hàipà",
                                     "korean": "두려움을 극복하다",
                                     "english": "Overcome fear.",
                                     "japanese": "恐怖を克服する",
@@ -23298,7 +23298,7 @@
                                 },
                                 {
                                     "sentence": "勇敢地说",
-                                    "pinyin": "勇敢に話しなさい。\nyūkan ni hanashinasai.",
+                                    "pinyin": "yǒnggǎn de shuō",
                                     "korean": "용감하게 말하세요.",
                                     "english": "Speak bravely.",
                                     "japanese": "勇敢に話しなさい。",
@@ -23468,7 +23468,7 @@
                                 },
                                 {
                                     "sentence": "鼓励勇敢",
-                                    "pinyin": "gǔ lì yǒng gǎn",
+                                    "pinyin": "gǔlì yǒnggǎn",
                                     "korean": "용기를 격려하다.",
                                     "english": "Encourage bravery.",
                                     "japanese": "勇気を奨励する",
@@ -23514,7 +23514,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我确信",
-                                    "pinyin": "Watashi wa kakushin shite imasu.",
+                                    "pinyin": "wǒ quèxìn",
                                     "korean": "저는 확신합니다.",
                                     "english": "I am certain.",
                                     "japanese": "私は確信しています。",
@@ -23545,7 +23545,7 @@
                                 },
                                 {
                                     "sentence": "完全确信",
-                                    "pinyin": "完全に確信している。\n\n**Japanese romaji:** kanzen ni kakushin shite iru.",
+                                    "pinyin": "wán quán què xìn",
                                     "korean": "완전히 확신한다.",
                                     "english": "Completely convinced.",
                                     "japanese": "完全に確信している。",
@@ -23576,7 +23576,7 @@
                                 },
                                 {
                                     "sentence": "表示确信",
-                                    "pinyin": "kakushin wo arawasu.",
+                                    "pinyin": "kāquè xìn",
                                     "korean": "\"표시 확신\"은 중국어가 아니라 한자입니다. 중국어 문장을 원하신다면 완전한 중국어 문장을 제공해 주세요.\n\n만약 \"表示确信\"을 의미로 번역하면:\n확신을 나타내다",
                                     "english": "I'll translate that Chinese sentence for you.\n\nThe Chinese text \"表示确信\" translates to:\n\nExpresses certainty.",
                                     "japanese": "確信を表す。",
@@ -23607,7 +23607,7 @@
                                 },
                                 {
                                     "sentence": "确信无疑",
-                                    "pinyin": "疑いなく確信している。(utagainaku kakushin shite iru.)",
+                                    "pinyin": "quèxìn wúyí",
                                     "korean": "의심할 여지가 없다",
                                     "english": "Without a doubt.",
                                     "japanese": "疑いなく確信している。",
@@ -23643,7 +23643,7 @@
                             "sentences": [
                                 {
                                     "sentence": "确信会成功",
-                                    "pinyin": "成功すると確信している。\nseikou suru to kakushin shite iru.",
+                                    "pinyin": "quèxìn huì chénggōng",
                                     "korean": "성공할 것을 확신한다.",
                                     "english": "I'm certain it will succeed.",
                                     "japanese": "成功すると確信している。",
@@ -23679,7 +23679,7 @@
                                 },
                                 {
                                     "sentence": "令人确信",
-                                    "pinyin": "kakushin saseru",
+                                    "pinyin": "lìng rén quèxìn",
                                     "korean": "확신하게 하다",
                                     "english": "Convincing.",
                                     "japanese": "確信させる",
@@ -23710,7 +23710,7 @@
                                 },
                                 {
                                     "sentence": "缺乏确信",
-                                    "pinyin": "確信に欠ける (kakushin ni kakeru)",
+                                    "pinyin": "quēfá quèxìn",
                                     "korean": "확신이 부족하다",
                                     "english": "Lack of confidence.",
                                     "japanese": "確信に欠ける",
@@ -23787,7 +23787,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我怀疑",
-                                    "pinyin": "Watashi wa utagatte iru.",
+                                    "pinyin": "Wǒ huáiyí",
                                     "korean": "나는 의심한다.",
                                     "english": "I doubt.",
                                     "japanese": "私は疑っている。",
@@ -23818,7 +23818,7 @@
                                 },
                                 {
                                     "sentence": "表示怀疑",
-                                    "pinyin": "Utagāi wo arawasu.",
+                                    "pinyin": "Biǎoshì huáiyí",
                                     "korean": "의심을 나타낸다.",
                                     "english": "I'll translate that Chinese sentence for you.\n\nThe Chinese phrase \"表示怀疑\" translates to:\n\nExpress doubt",
                                     "japanese": "疑いを表す。",
@@ -23849,7 +23849,7 @@
                                 },
                                 {
                                     "sentence": "令人怀疑",
-                                    "pinyin": "Utagawashii.",
+                                    "pinyin": "lìng rén huái yí",
                                     "korean": "의심스럽다.",
                                     "english": "Suspicious.",
                                     "japanese": "疑わしい。",
@@ -23880,7 +23880,7 @@
                                 },
                                 {
                                     "sentence": "不要怀疑",
-                                    "pinyin": "疑わないでください。→ utagawanaide kudasai.",
+                                    "pinyin": "bùyào huáiyí",
                                     "korean": "의심하지 마세요.",
                                     "english": "Don't doubt.",
                                     "japanese": "疑わないでください。",
@@ -23916,7 +23916,7 @@
                             "sentences": [
                                 {
                                     "sentence": "怀疑真假",
-                                    "pinyin": "真偽を疑う → shingi wo utagau",
+                                    "pinyin": "huáiyí zhēnjiǎ",
                                     "korean": "진위를 의심하다.",
                                     "english": "Doubt the authenticity.",
                                     "japanese": "真偽を疑う",
@@ -23947,7 +23947,7 @@
                                 },
                                 {
                                     "sentence": "产生怀疑",
-                                    "pinyin": "utagaiwoidaku",
+                                    "pinyin": "chǎnshēng huáiyí",
                                     "korean": "의심이 생기다",
                                     "english": "I'll translate that Chinese sentence for you.\n\nThe Chinese sentence \"产生怀疑\" translates to:\n\nTo have doubts",
                                     "japanese": "疑いを抱く",
@@ -24117,7 +24117,7 @@
                                 },
                                 {
                                     "sentence": "理解困难",
-                                    "pinyin": "理解が困難です。\n\nJapanese romaji: rikai ga konnan desu.",
+                                    "pinyin": "lǐjiě kùnnán",
                                     "korean": "이해하기 어렵습니다.",
                                     "english": "Difficult to understand.",
                                     "japanese": "理解が困難です。",
@@ -24184,7 +24184,7 @@
                             "sentences": [
                                 {
                                     "sentence": "深入理解",
-                                    "pinyin": "fukaku rikai suru",
+                                    "pinyin": "shēnrù lǐjiě",
                                     "korean": "깊이 이해하다",
                                     "english": "Understanding deeply.",
                                     "japanese": "深く理解する",
@@ -24215,7 +24215,7 @@
                                 },
                                 {
                                     "sentence": "理解错了",
-                                    "pinyin": "lǐjiě cuò le",
+                                    "pinyin": "lǐ jiě cuò le",
                                     "korean": "잘못 이해했습니다.",
                                     "english": "Misunderstood.",
                                     "japanese": "I'll translate the Chinese sentence \"理解错了\" to Japanese.\n\n\"理解错了\" (misunderstood/understood incorrectly) in Japanese is:\n\n理解を間違えた",
@@ -24364,7 +24364,7 @@
                                 },
                                 {
                                     "sentence": "表示同情",
-                                    "pinyin": "biǎo shì tóng qíng",
+                                    "pinyin": "biǎoshì tóngqíng",
                                     "korean": "동정을 표시하다.",
                                     "english": "Expressing sympathy.",
                                     "japanese": "同情を表す。",
@@ -24426,7 +24426,7 @@
                                 },
                                 {
                                     "sentence": "深表同情",
-                                    "pinyin": "深く同情します。\n\nJapanese romaji: fukaku doujou shimasu",
+                                    "pinyin": "shēn biǎo tóng qíng",
                                     "korean": "깊이 동정을 표합니다.",
                                     "english": "I deeply sympathize.",
                                     "japanese": "深く同情します。",
@@ -24462,7 +24462,7 @@
                             "sentences": [
                                 {
                                     "sentence": "值得同情",
-                                    "pinyin": "同情に値する。(どうじょうにあたいする。) - doujou ni atai suru.",
+                                    "pinyin": "zhí dé tóng qíng",
                                     "korean": "동정할 만하다",
                                     "english": "Worth sympathizing with.",
                                     "japanese": "同情に値する。",
@@ -24493,7 +24493,7 @@
                                 },
                                 {
                                     "sentence": "给予同情",
-                                    "pinyin": "同情を与える。(dōjō o ataeru.)",
+                                    "pinyin": "gěiyǔ tóngqíng",
                                     "korean": "동정을 베풀다.",
                                     "english": "Give sympathy.",
                                     "japanese": "同情を与える。",
@@ -24550,7 +24550,7 @@
                                 },
                                 {
                                     "sentence": "同情得眼泪流下",
-                                    "pinyin": "tóng qíng de yǎn lèi liú xià",
+                                    "pinyin": "tóngqíng dé yǎnlèi liúxià",
                                     "korean": "동정해서 눈물이 흘러내렸다.",
                                     "english": "Tears flowed down out of sympathy.",
                                     "japanese": "同情して涙が流れ落ちる。",
@@ -24766,7 +24766,7 @@
                                 },
                                 {
                                     "sentence": "值得羡慕",
-                                    "pinyin": "urayamashii kagiri desu",
+                                    "pinyin": "zhí dé xiàn mù",
                                     "korean": "부러울 만하다.",
                                     "english": "Worth envying.",
                                     "japanese": "羨ましい限りです。",
@@ -24797,7 +24797,7 @@
                                 },
                                 {
                                     "sentence": "羡慕生活",
-                                    "pinyin": "urayamashii seikatsu.",
+                                    "pinyin": "xiànmù shēnghuó",
                                     "korean": "삶을 부러워한다.",
                                     "english": "I envy (this) life.",
                                     "japanese": "羨ましい生活。",
@@ -24874,7 +24874,7 @@
                             "sentences": [
                                 {
                                     "sentence": "有点嫉妒",
-                                    "pinyin": "chotto shitto shite iru.",
+                                    "pinyin": "yǒudiǎn jídù",
                                     "korean": "좀 질투나요.",
                                     "english": "A bit jealous.",
                                     "japanese": "ちょっと嫉妬している。",
@@ -24967,7 +24967,7 @@
                                 },
                                 {
                                     "sentence": "不要嫉妒",
-                                    "pinyin": "bù yào jí dù",
+                                    "pinyin": "bú yào jí dù",
                                     "korean": "질투하지 마세요.",
                                     "english": "Don't be jealous.",
                                     "japanese": "嫉妬しないでください。",
@@ -25003,7 +25003,7 @@
                             "sentences": [
                                 {
                                     "sentence": "嫉妒别人",
-                                    "pinyin": "他人を嫉妬する。(tanin wo shitto suru.)",
+                                    "pinyin": "jí dù bié rén",
                                     "korean": "남을 질투하다.",
                                     "english": "Jealous of others.",
                                     "japanese": "他人を嫉妬する。",
@@ -25065,7 +25065,7 @@
                                 },
                                 {
                                     "sentence": "克服嫉妒",
-                                    "pinyin": "aruku wo kokufuku suru\n\nCorrection: \nshitto wo kokufuku suru",
+                                    "pinyin": "kèfú jídù",
                                     "korean": "질투를 극복하다.",
                                     "english": "Overcome jealousy.",
                                     "japanese": "嫉妬を克服する",
@@ -25096,7 +25096,7 @@
                                 },
                                 {
                                     "sentence": "嫉妒心理",
-                                    "pinyin": "jitto shinri",
+                                    "pinyin": "jídù xīnlǐ",
                                     "korean": "질투심리",
                                     "english": "Jealousy.",
                                     "japanese": "嫉妬心理",
@@ -25174,7 +25174,7 @@
                                 },
                                 {
                                     "sentence": "为你骄傲",
-                                    "pinyin": "wèi nǐ jiāo'ào",
+                                    "pinyin": "wèi nǐ jiāo ào",
                                     "korean": "네가 자랑스러워.",
                                     "english": "I'm proud of you.",
                                     "japanese": "君を誇りに思う",
@@ -25206,7 +25206,7 @@
                                 },
                                 {
                                     "sentence": "令人骄傲",
-                                    "pinyin": "lìng rén jiāo'ào",
+                                    "pinyin": "lìng rén jiāo ào",
                                     "korean": "자랑스럽다",
                                     "english": "Pride-inducing.",
                                     "japanese": "誇らしい",
@@ -25267,7 +25267,7 @@
                             "sentences": [
                                 {
                                     "sentence": "感到骄傲",
-                                    "pinyin": "hokori ni omou",
+                                    "pinyin": "gǎndào jiāo'ào",
                                     "korean": "자랑스럽게 느끼다.",
                                     "english": "Feeling proud.",
                                     "japanese": "誇りに思う",
@@ -25295,7 +25295,7 @@
                                 },
                                 {
                                     "sentence": "骄傲的成就",
-                                    "pinyin": "kodorashii seijuu",
+                                    "pinyin": "jiāo'ào de chéngjiù",
                                     "korean": "자랑스러운 성취",
                                     "english": "Pride's achievement.",
                                     "japanese": "誇らしい成就",
@@ -25327,7 +25327,7 @@
                                 },
                                 {
                                     "sentence": "不要骄傲",
-                                    "pinyin": "Ogoranaide kudasai.",
+                                    "pinyin": "Bùyào jiāo'ào",
                                     "korean": "교만하지 마세요.",
                                     "english": "Don't be arrogant.",
                                     "japanese": "驕らないでください。",
@@ -25355,7 +25355,7 @@
                                 },
                                 {
                                     "sentence": "骄傲自满",
-                                    "pinyin": "For the Japanese phrase 驕り高ぶる:\n\n**Japanese romaji:** ogori takaburu",
+                                    "pinyin": "jiāo ào zì mǎn",
                                     "korean": "교만자만",
                                     "english": "Pride and complacency.",
                                     "japanese": "驕り高ぶる",
@@ -25398,7 +25398,7 @@
                             "sentences": [
                                 {
                                     "sentence": "很谦虚",
-                                    "pinyin": "けんきょですね。(kenkyo desu ne.)",
+                                    "pinyin": "hěn qiānxū",
                                     "korean": "매우 겸손합니다.",
                                     "english": "Very modest.",
                                     "japanese": "謙虚ですね。",
@@ -25429,7 +25429,7 @@
                                 },
                                 {
                                     "sentence": "表现谦虚",
-                                    "pinyin": "Kenkyo na taido o shimesu",
+                                    "pinyin": "Biǎoxiàn qiānxū",
                                     "korean": "겸손을 표현하다.",
                                     "english": "Expressing humility.",
                                     "japanese": "謙虚な態度を示す",
@@ -25460,7 +25460,7 @@
                                 },
                                 {
                                     "sentence": "谦虚地说",
-                                    "pinyin": "謙虚に言うと。\nkenkyo ni iu to.",
+                                    "pinyin": "qiānxū de shuō",
                                     "korean": "겸손하게 말하자면.",
                                     "english": "I'll translate that Chinese sentence for you.\n\nThe Chinese sentence \"谦虚地说\" translates to:\n\nModestly speaking.",
                                     "japanese": "謙虚に言うと。",
@@ -25537,7 +25537,7 @@
                             "sentences": [
                                 {
                                     "sentence": "学习谦虚",
-                                    "pinyin": "Kenkyo wo manabu.",
+                                    "pinyin": "Xuéxí qiānxū",
                                     "korean": "겸손을 배우다.",
                                     "english": "Learning humility.",
                                     "japanese": "謙虚を学ぶ。",
@@ -25568,7 +25568,7 @@
                                 },
                                 {
                                     "sentence": "保持谦虚",
-                                    "pinyin": "謙虚さを保つ。\nkenkyo sa wo tamotsu.",
+                                    "pinyin": "bǎo chí qiān xū",
                                     "korean": "겸손을 유지하세요.",
                                     "english": "Stay humble.",
                                     "japanese": "謙虚さを保つ。",
@@ -25599,7 +25599,7 @@
                                 },
                                 {
                                     "sentence": "谦虚态度",
-                                    "pinyin": "kenkyona taido",
+                                    "pinyin": "qiānxū tàidù",
                                     "korean": "겸손한 태도",
                                     "english": "Humble attitude.",
                                     "japanese": "謙虚な態度",
@@ -25676,7 +25676,7 @@
                             "sentences": [
                                 {
                                     "sentence": "要有耐心",
-                                    "pinyin": "忍耐強くあれ。 - nintai tsuyoku are.",
+                                    "pinyin": "yào yǒu nàixīn",
                                     "korean": "인내심을 가져야 합니다.",
                                     "english": "Be patient.",
                                     "japanese": "忍耐強くあれ。",
@@ -25769,7 +25769,7 @@
                                 },
                                 {
                                     "sentence": "保持耐心",
-                                    "pinyin": "忍耐を保つ。(nintai wo tamotsu)",
+                                    "pinyin": "bǎo chí nài xīn",
                                     "korean": "인내심을 유지하세요.",
                                     "english": "Keep patience.",
                                     "japanese": "忍耐を保つ。",
@@ -25836,7 +25836,7 @@
                                 },
                                 {
                                     "sentence": "耐心等待",
-                                    "pinyin": "しんぼうづよくまつ (shinbouzuyoku matsu)",
+                                    "pinyin": "nàixīn děngdài",
                                     "korean": "참을성 있게 기다리다.",
                                     "english": "Wait patiently.",
                                     "japanese": "辛抱強く待つ。",
@@ -25944,7 +25944,7 @@
                             "sentences": [
                                 {
                                     "sentence": "很诚实",
-                                    "pinyin": "很正直です (hěn zhèngzhí desu)\n\nNote: This appears to be a mix of Chinese characters (很正直) with Japanese grammar (です). In pure Japanese, \"very honest\" would be とても正直です (totemo shōjiki desu).",
+                                    "pinyin": "hěn chéngshí",
                                     "korean": "매우 정직해요.",
                                     "english": "Very honest.",
                                     "japanese": "很正直です。",
@@ -26042,7 +26042,7 @@
                                 },
                                 {
                                     "sentence": "保持诚实",
-                                    "pinyin": "正直さを保つ。\n\nJapanese romaji: shōjiki-sa wo tamotsu.",
+                                    "pinyin": "bǎochí chéngshí",
                                     "korean": "정직함을 유지하세요.",
                                     "english": "Stay honest.",
                                     "japanese": "正直さを保つ。",
@@ -26078,7 +26078,7 @@
                             "sentences": [
                                 {
                                     "sentence": "诚实待人",
-                                    "pinyin": "人に誠実に接する。\n\nJapanese romaji: hito ni seijitsu ni sessuru",
+                                    "pinyin": "chéngshí dài rén",
                                     "korean": "정직하게 사람을 대하다.",
                                     "english": "Treat people with honesty.",
                                     "japanese": "人に誠実に接する。",
@@ -26217,7 +26217,7 @@
                             "sentences": [
                                 {
                                     "sentence": "很老实",
-                                    "pinyin": "很正直です。\n\nThis appears to be mixing Chinese and Japanese. The Chinese characters 很正直 (hěn zhèngzhí) mean \"very honest/upright\" in Chinese. The です (desu) is the Japanese copula.\n\nIf this is meant to be fully Japanese, it would be:\n- **Japanese:** とても正直です。\n- **Romaji:** totemo shōjiki desu\n\nOr more naturally:\n- **Japanese:** 正直です。\n- **Romaji:** shōjiki desu\n\nThe romaji for just the mixed sentence as written would be:\n- **很正直です** → (Chinese part has no standard romaji) + \"desu\"",
+                                    "pinyin": "hěn lǎoshí",
                                     "korean": "매우 성실하다.",
                                     "english": "Very honest.",
                                     "japanese": "很正直です。",
@@ -26341,7 +26341,7 @@
                             "sentences": [
                                 {
                                     "sentence": "老实做人",
-                                    "pinyin": "正直に生きる。(shōjiki ni ikiru)",
+                                    "pinyin": "lǎoshí zuòrén",
                                     "korean": "성실하게 사람 노릇을 하다.",
                                     "english": "To be an honest person.",
                                     "japanese": "正直に生きる。",
@@ -26369,7 +26369,7 @@
                                 },
                                 {
                                     "sentence": "老实工作",
-                                    "pinyin": "真面目に働く。(まじめにはたらく。)\n\nMajime ni hataraku.",
+                                    "pinyin": "lǎoshí gōngzuò",
                                     "korean": "성실하게 일하다.",
                                     "english": "Work honestly.",
                                     "japanese": "真面目に働く。",
@@ -26400,7 +26400,7 @@
                                 },
                                 {
                                     "sentence": "不够老实",
-                                    "pinyin": "shōjiki ja nai.",
+                                    "pinyin": "bù gòu lǎo shí",
                                     "korean": "충분히 솔직하지 않다.",
                                     "english": "Not honest enough.",
                                     "japanese": "正直じゃない。",
@@ -26431,7 +26431,7 @@
                                 },
                                 {
                                     "sentence": "老实可靠",
-                                    "pinyin": "shōjiki de shinrai dekiru",
+                                    "pinyin": "lǎoshí kěkào",
                                     "korean": "성실하고 믿음직하다",
                                     "english": "Honest and reliable.",
                                     "japanese": "正直で信頼できる",
@@ -26477,7 +26477,7 @@
                             "sentences": [
                                 {
                                     "sentence": "很友好",
-                                    "pinyin": "とてもゆうこうてきです。",
+                                    "pinyin": "hěn yǒuhǎo",
                                     "korean": "매우 친절해요.",
                                     "english": "Very friendly.",
                                     "japanese": "很友好 → とても友好的です。",
@@ -26699,7 +26699,7 @@
                                 },
                                 {
                                     "sentence": "友好访问",
-                                    "pinyin": "yūkō hōmon",
+                                    "pinyin": "yǒuhǎo fǎngwèn",
                                     "korean": "우호 방문",
                                     "english": "Friendly visit.",
                                     "japanese": "友好訪問",
@@ -26745,7 +26745,7 @@
                             "sentences": [
                                 {
                                     "sentence": "保持冷静",
-                                    "pinyin": "Reisei wo tamotsu.",
+                                    "pinyin": "Bǎochí lěngjìng",
                                     "korean": "침착함을 유지하세요.",
                                     "english": "Keep calm.",
                                     "japanese": "冷静を保つ。",
@@ -26776,7 +26776,7 @@
                                 },
                                 {
                                     "sentence": "很冷静",
-                                    "pinyin": "とても れいせい だ (totemo reisei da)",
+                                    "pinyin": "hěn lěngjìng",
                                     "korean": "매우 침착하다.",
                                     "english": "Very calm.",
                                     "japanese": "很冷静 → とても冷静だ",
@@ -26807,7 +26807,7 @@
                                 },
                                 {
                                     "sentence": "冷静分析",
-                                    "pinyin": "冷静に分析する。\nJapanese romaji: reisei ni bunseki suru",
+                                    "pinyin": "lěngjìng fēnxī",
                                     "korean": "냉정하게 분석하다.",
                                     "english": "Calmly analyze.",
                                     "japanese": "冷静に分析する。",
@@ -26838,7 +26838,7 @@
                                 },
                                 {
                                     "sentence": "冷静处理",
-                                    "pinyin": "冷静に対処する。(reisei ni taisho suru)",
+                                    "pinyin": "lěng jìng chǔ lǐ",
                                     "korean": "냉정하게 처리하다.",
                                     "english": "Stay calm and handle it.",
                                     "japanese": "冷静に対処する。",
@@ -26905,7 +26905,7 @@
                                 },
                                 {
                                     "sentence": "冷静思考",
-                                    "pinyin": "Reisei ni kangaeru.",
+                                    "pinyin": "lěngjìng sīkǎo",
                                     "korean": "냉정하게 생각하다.",
                                     "english": "Think calmly.",
                                     "japanese": "冷静に考える。",
@@ -26933,7 +26933,7 @@
                                 },
                                 {
                                     "sentence": "需要冷静",
-                                    "pinyin": "Reisei ga hitsuyō desu.",
+                                    "pinyin": "xūyào lěngjìng",
                                     "korean": "냉정이 필요하다.",
                                     "english": "Need to calm down.",
                                     "japanese": "冷静が必要です。",
@@ -26964,7 +26964,7 @@
                                 },
                                 {
                                     "sentence": "失去冷静",
-                                    "pinyin": "reisei wo ushinau",
+                                    "pinyin": "shīqù lěngjìng",
                                     "korean": "냉정을 잃다",
                                     "english": "Lose one's composure.",
                                     "japanese": "冷静を失う",
@@ -27010,7 +27010,7 @@
                             "sentences": [
                                 {
                                     "sentence": "很热情",
-                                    "pinyin": "ねっしんです。(nesshin desu.)",
+                                    "pinyin": "rè qíng",
                                     "korean": "매우 열정적이다.",
                                     "english": "Very enthusiastic.",
                                     "japanese": "熱心です。",
@@ -27072,7 +27072,7 @@
                                 },
                                 {
                                     "sentence": "热情服务",
-                                    "pinyin": "熱心なサービス (nesshin na sābisu)",
+                                    "pinyin": "rè qíng fú wù",
                                     "korean": "열정적인 서비스",
                                     "english": "Enthusiastic service.",
                                     "japanese": "熱心なサービス",
@@ -27103,7 +27103,7 @@
                                 },
                                 {
                                     "sentence": "热情欢迎",
-                                    "pinyin": "ねつれつかんげい (netsuretsu kangei)",
+                                    "pinyin": "rèqíng huānyíng",
                                     "korean": "열정적으로 환영합니다.",
                                     "english": "Warmly welcome.",
                                     "japanese": "熱烈歓迎",
@@ -27139,7 +27139,7 @@
                             "sentences": [
                                 {
                                     "sentence": "热情帮助",
-                                    "pinyin": "熱心に助ける (nesshin ni tasukeru)",
+                                    "pinyin": "rèqíng bāngzhù",
                                     "korean": "열정적으로 도와주다.",
                                     "english": "Enthusiastically help.",
                                     "japanese": "熱心に助ける",
@@ -27170,7 +27170,7 @@
                                 },
                                 {
                                     "sentence": "保持热情",
-                                    "pinyin": "熱意を保つ (netsui wo tamotsu)",
+                                    "pinyin": "bǎochí rèqíng",
                                     "korean": "열정을 유지하세요.",
                                     "english": "Keep your enthusiasm.",
                                     "japanese": "熱意を保つ",
@@ -27232,7 +27232,7 @@
                                 },
                                 {
                                     "sentence": "热情工作",
-                                    "pinyin": "熱心に働く。(nessin ni hataraku.)",
+                                    "pinyin": "rèqíng gōngzuò",
                                     "korean": "열정적으로 일하다.",
                                     "english": "Working enthusiastically.",
                                     "japanese": "熱心に働く。",
@@ -27340,7 +27340,7 @@
                                 },
                                 {
                                     "sentence": "积极态度",
-                                    "pinyin": "tsekkyokuteki na taido",
+                                    "pinyin": "jījí tàidù",
                                     "korean": "적극적인 태도",
                                     "english": "Positive attitude.",
                                     "japanese": "積極的な態度",
@@ -27407,7 +27407,7 @@
                             "sentences": [
                                 {
                                     "sentence": "积极思考",
-                                    "pinyin": "積極的に考える。(sekkyokuteki ni kangaeru.)",
+                                    "pinyin": "jījí sīkǎo",
                                     "korean": "적극적으로 사고하세요.",
                                     "english": "Think positively.",
                                     "japanese": "積極的に考える。",
@@ -27469,7 +27469,7 @@
                                 },
                                 {
                                     "sentence": "积极努力",
-                                    "pinyin": "積極的に努力する。(せっきょくてきにどりょくする。/ sekkyokuteki ni doryoku suru.)",
+                                    "pinyin": "jījí nǔlì",
                                     "korean": "적극적으로 노력하다",
                                     "english": "Work hard and actively.",
                                     "japanese": "積極的に努力する。",
@@ -27500,7 +27500,7 @@
                                 },
                                 {
                                     "sentence": "积极面对",
-                                    "pinyin": "積極的に向き合う。(sekkyokuteki ni mukiau.)",
+                                    "pinyin": "jījí miànduì",
                                     "korean": "적극적으로 대처하다.",
                                     "english": "Face it positively.",
                                     "japanese": "積極的に向き合う。",
@@ -27577,7 +27577,7 @@
                                 },
                                 {
                                     "sentence": "消极态度",
-                                    "pinyin": "消極的な態度 - shōkyokuteki na taido",
+                                    "pinyin": "xiāojí tàidù",
                                     "korean": "소극적인 태도",
                                     "english": "Negative attitude.",
                                     "japanese": "消極的な態度",
@@ -27639,7 +27639,7 @@
                                 },
                                 {
                                     "sentence": "消极对待",
-                                    "pinyin": "xiāo jí duì dài",
+                                    "pinyin": "xiāojí duìdài",
                                     "korean": "소극적으로 대하다.",
                                     "english": "Treat passively/negatively.",
                                     "japanese": "消極的に対処する",
@@ -27675,7 +27675,7 @@
                             "sentences": [
                                 {
                                     "sentence": "不要消极",
-                                    "pinyin": "消極的にならないで。\n**Japanese romaji:** Shoukyokuteki ni naranaide.",
+                                    "pinyin": "bùyào xiāojí",
                                     "korean": "소극적이지 마세요.",
                                     "english": "Don't be negative.",
                                     "japanese": "消極的にならないで。",
@@ -27737,7 +27737,7 @@
                                 },
                                 {
                                     "sentence": "消极行为",
-                                    "pinyin": "xiāo jí xíng wéi",
+                                    "pinyin": "xiāojí xíngwéi",
                                     "korean": "소극적 행위",
                                     "english": "Negative behavior.",
                                     "japanese": "消極的行為",
@@ -27768,7 +27768,7 @@
                                 },
                                 {
                                     "sentence": "克服消极",
-                                    "pinyin": "消極的な態度を克服する\n\nJapanese romaji: shōkyokuteki na taido wo kokufuku suru",
+                                    "pinyin": "kèfú xiāojí",
                                     "korean": "소극적인 것을 극복하다.",
                                     "english": "Overcome negativity.",
                                     "japanese": "消極的な態度を克服する",
@@ -27814,7 +27814,7 @@
                             "sentences": [
                                 {
                                     "sentence": "下定决心",
-                                    "pinyin": "決心を固める。(kesshin wo katameru.)",
+                                    "pinyin": "xià dìng juéxīn",
                                     "korean": "결심을 굳히다.",
                                     "english": "I've made up my mind.",
                                     "japanese": "決心を固める。",
@@ -27907,7 +27907,7 @@
                                 },
                                 {
                                     "sentence": "决心学习",
-                                    "pinyin": "benkyou suru kesshin wo suru.",
+                                    "pinyin": "jué xīn xué xí",
                                     "korean": "결심하고 공부하다.",
                                     "english": "I'll translate that Chinese sentence for you.\n\n\"决心学习\" means \"Determined to study\" or \"Resolve to learn\"\n\nThe most natural English translation would be:\n\n**Determined to study**",
                                     "japanese": "勉強する決心をする。",
@@ -27943,7 +27943,7 @@
                             "sentences": [
                                 {
                                     "sentence": "决心改变",
-                                    "pinyin": "Kesshin wo kaeru.",
+                                    "pinyin": "Juéxīn gǎibiàn",
                                     "korean": "결심을 바꾸다.",
                                     "english": "Determined to change.",
                                     "japanese": "決心を変える。",
@@ -27974,7 +27974,7 @@
                                 },
                                 {
                                     "sentence": "决心努力",
-                                    "pinyin": "努力を決心する。(doryoku wo kesshin suru.)",
+                                    "pinyin": "juéxīn nǔlì",
                                     "korean": "결심하고 노력하다.",
                                     "english": "Determined to work hard.",
                                     "japanese": "努力を決心する。",
@@ -28036,7 +28036,7 @@
                                 },
                                 {
                                     "sentence": "决心克服",
-                                    "pinyin": "決心して克服する。(Kesshin shite kokufuku suru.)",
+                                    "pinyin": "juéxīn kèfú",
                                     "korean": "결심을 극복하다.",
                                     "english": "Determined to overcome.",
                                     "japanese": "決心して克服する。",
@@ -28082,7 +28082,7 @@
                             "sentences": [
                                 {
                                     "sentence": "不要放弃",
-                                    "pinyin": "akiramenaide.",
+                                    "pinyin": "bù yào fàng qì",
                                     "korean": "포기하지 마세요.",
                                     "english": "Don't give up.",
                                     "japanese": "あきらめないで。",
@@ -28144,7 +28144,7 @@
                                 },
                                 {
                                     "sentence": "放弃机会",
-                                    "pinyin": "機会を諦める。\nkikai wo akirameru.",
+                                    "pinyin": "fàngqì jīhuì",
                                     "korean": "기회를 포기하다.",
                                     "english": "Give up the opportunity.",
                                     "japanese": "機会を諦める。",
@@ -28175,7 +28175,7 @@
                                 },
                                 {
                                     "sentence": "放弃梦想",
-                                    "pinyin": "夢を諦める。\nyume wo akirameru.",
+                                    "pinyin": "fàngqì mèngxiǎng",
                                     "korean": "꿈을 포기하다.",
                                     "english": "Give up on dreams.",
                                     "japanese": "夢を諦める。",
@@ -28211,7 +28211,7 @@
                             "sentences": [
                                 {
                                     "sentence": "放弃努力",
-                                    "pinyin": "努力を諦める。(doryoku wo akirameru)",
+                                    "pinyin": "fàngqì nǔlì",
                                     "korean": "노력을 포기하다.",
                                     "english": "Giving up on efforts.",
                                     "japanese": "努力を諦める。",
@@ -28273,7 +28273,7 @@
                                 },
                                 {
                                     "sentence": "选择放弃",
-                                    "pinyin": "諦めることを選ぶ。\n\nakirameru koto wo erabu.",
+                                    "pinyin": "xuǎnzé fàngqì",
                                     "korean": "포기를 선택하다.",
                                     "english": "I'll translate that Chinese sentence for you.\n\n\"选择放弃\" means \"Choose to give up\" or \"Choose to abandon\"\n\nChoose to give up.",
                                     "japanese": "諦めることを選ぶ。",
