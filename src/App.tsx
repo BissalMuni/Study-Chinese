@@ -42,6 +42,12 @@ function App() {
     const saved = localStorage.getItem('chineseStudy_repeatCount');
     return saved ? parseInt(saved) : 1;
   });
+
+  // repeatCount를 ref로도 관리하여 항상 최신 값 참조
+  const repeatCountRef = useRef<number>(repeatCount);
+  useEffect(() => {
+    repeatCountRef.current = repeatCount;
+  }, [repeatCount]);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [isAutoPlay, setIsAutoPlay] = useState<boolean>(() => {
@@ -59,13 +65,12 @@ function App() {
   const autoPlayCancelledRef = useRef<boolean>(false);
 
   // 휴지시간 상수
-  const REPEAT_PAUSE_TIME = 1500; // 반복 사이 휴지시간 (1.5초)
-  const LESSON_PAUSE_TIME = REPEAT_PAUSE_TIME * 2; // 레슨 경계 휴지시간 (3초)
+  const REPEAT_PAUSE_TIME = 2000; // 반복 사이 휴지시간 (1.5초)
+  const LESSON_PAUSE_TIME = REPEAT_PAUSE_TIME * 2.5; // 레슨 경계 휴지시간 (3초)
 
 
   // Auto-scroll to selected lesson when lesson list is shown
   useEffect(() => {
-
     if (selectedType && !selectedLesson && lessonData && selectedLessonId) {
       // Small delay to ensure refs are populated after render
       const timer = setTimeout(() => {
@@ -258,11 +263,16 @@ function App() {
     }
   }, [lessonData, selectedLessonId, selectLesson]);
 
+  // 자동 재생 세션 ID 관리
+  const autoPlaySessionRef = useRef<number>(0);
+
   // 자동 모드에서 수동 모드로 전환 시 오디오 중지
   useEffect(() => {
     if (!isAutoPlay) {
       // 자동 재생 취소 플래그 설정
       autoPlayCancelledRef.current = true;
+      // 세션 ID 증가로 이전 재생 무효화
+      autoPlaySessionRef.current += 1;
       // 오디오 중지
       if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
@@ -270,86 +280,39 @@ function App() {
     }
   }, [isAutoPlay]);
 
-  // 자동 모드에서 레슨이 변경되면 첫 문장 자동 재생
+  // 자동 모드 켜질 때 자동 재생 시작
   useEffect(() => {
+    if (isAutoPlay && allSentences.length > 0) {
+      console.log('🚀 Auto mode turned on, starting playback from index:', currentSentenceIndex);
+      autoPlayCancelledRef.current = false;
+      const currentSession = ++autoPlaySessionRef.current;
+
+      // 약간의 지연 후 재생 시작
+      setTimeout(() => {
+        if (autoPlaySessionRef.current === currentSession && isAutoPlay) {
+          playAutoWithNavigation(currentSentenceIndex);
+        }
+      }, 100);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAutoPlay]); // isAutoPlay만 감지 - repeatCount 변경 시 재시작하지 않음
+
+  // 자동 모드에서 레슨이 변경되면 자동 재생 시작
+  useEffect(() => {
+    console.log('🔍 Lesson change effect - isAutoPlay:', isAutoPlay, 'selectedLessonId:', selectedLessonId, 'previous:', previousLessonIdRef.current);
+
     if (isAutoPlay && selectedLessonId && previousLessonIdRef.current !== selectedLessonId) {
-      // 레슨이 변경되었고, 자동 재생이 이미 시작된 상태라면
-      if (previousLessonIdRef.current !== null && allSentences.length > 0 && allSentences[0]?.sentence) {
-        // 새 레슨의 첫 문장 자동 재생
+      // 레슨이 변경되었고, 자동 재생 모드라면
+      if (previousLessonIdRef.current !== null && allSentences.length > 0) {
+        console.log('🎯 Starting auto play for new lesson, sentences:', allSentences.length);
+        // 새 레슨의 첫 문장부터 자동 재생 시작
         const timer = setTimeout(() => {
-          // 취소 확인
-          if (autoPlayCancelledRef.current) {
-            autoPlayCancelledRef.current = false;
-            return;
-          }
-
-          if ('speechSynthesis' in window) {
-            window.speechSynthesis.cancel();
-
-            const playFirstSentence = async () => {
-              // 취소 확인
-              if (autoPlayCancelledRef.current) {
-                autoPlayCancelledRef.current = false;
-                return;
-              }
-
-              const utterance = new SpeechSynthesisUtterance(allSentences[0].sentence);
-              utterance.lang = 'zh-CN';
-              utterance.rate = 0.9;
-
-              const playOnce = () => {
-                return new Promise<void>((resolve) => {
-                  utterance.onend = () => resolve();
-                  utterance.onerror = () => resolve();
-                  window.speechSynthesis.speak(utterance);
-                });
-              };
-
-              // 반복 재생
-              for (let i = 0; i < repeatCount; i++) {
-                // 취소 확인
-                if (autoPlayCancelledRef.current) {
-                  autoPlayCancelledRef.current = false;
-                  return;
-                }
-
-                await playOnce();
-
-                // 취소 확인
-                if (autoPlayCancelledRef.current) {
-                  autoPlayCancelledRef.current = false;
-                  return;
-                }
-
-                if (i < repeatCount - 1) {
-                  await new Promise(resolve => setTimeout(resolve, REPEAT_PAUSE_TIME));
-                }
-              }
-
-              // 취소 확인
-              if (autoPlayCancelledRef.current) {
-                autoPlayCancelledRef.current = false;
-                return;
-              }
-
-              // 다음 문장으로 자동 이동
-              if (allSentences.length > 1) {
-                await new Promise(resolve => setTimeout(resolve, REPEAT_PAUSE_TIME));
-
-                // 취소 확인
-                if (autoPlayCancelledRef.current) {
-                  autoPlayCancelledRef.current = false;
-                  return;
-                }
-
-                setCurrentSentenceIndex(1);
-                if (allSentences[1]?.sentence) {
-                  playAudio(allSentences[1].sentence, 'chinese', repeatCount, true, 1);
-                }
-              }
-            };
-
-            playFirstSentence();
+          if (!autoPlayCancelledRef.current && isAutoPlay) {
+            console.log('✅ Triggering auto play from index 0');
+            setCurrentSentenceIndex(0);
+            playAutoWithNavigation(0);
+          } else {
+            console.log('⚠️ Auto play cancelled or not in auto mode');
           }
         }, 100);
 
@@ -358,7 +321,7 @@ function App() {
       previousLessonIdRef.current = selectedLessonId;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedLessonId, isAutoPlay, allSentences, repeatCount, REPEAT_PAUSE_TIME]);
+  }, [selectedLessonId, isAutoPlay, allSentences, repeatCount]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -395,50 +358,20 @@ function App() {
     const isDownSwipe = distance < -minSwipeDistance;
 
     if (isUpSwipe) {
-      // 위로 스와이프 - 다음 문장
-      if (currentSentenceIndex < allSentences.length - 1) {
-        setCurrentSentenceIndex(currentSentenceIndex + 1);
-      } else {
-        // 마지막 문장에서 다음 레슨으로
-        const currentLessonNum = parseInt(selectedLessonId || '0');
-        const nextLessonNum = currentLessonNum + 1;
-
-        if (lessonData && lessonData.contents) {
-          const nextLessonExists = lessonData.contents.some(
-            (item: any) => String(item.lesson) === String(nextLessonNum) || item.lesson === nextLessonNum
-          );
-
-          if (nextLessonExists) {
-            setTargetLessonNum(nextLessonNum);
-            setNextLessonDirection('next');
-            setShowLessonModal(true);
-          }
-        }
-      }
+      // 위로 스와이프 - 다음 문장 (수동 이동)
+      navigateManual('next');
     }
 
     if (isDownSwipe) {
-      // 아래로 스와이프 - 이전 문장
-      if (currentSentenceIndex > 0) {
-        setCurrentSentenceIndex(currentSentenceIndex - 1);
-      } else {
-        // 첫 문장에서 이전 레슨으로
-        const currentLessonNum = parseInt(selectedLessonId || '0');
-        const prevLessonNum = currentLessonNum - 1;
-
-        if (prevLessonNum >= 1) {
-          setTargetLessonNum(prevLessonNum);
-          setNextLessonDirection('prev');
-          setShowLessonModal(true);
-        }
-      }
+      // 아래로 스와이프 - 이전 문장 (수동 이동)
+      navigateManual('prev');
     }
   };
 
-  const playAudio = async (text: string, lang?: string, repeat: number = 1, autoPlayNext: boolean = false, nextIndex?: number) => {
+  // ============ 수동 재생: 문장 이동 없음, 반복 횟수만 적용 ============
+  const playManual = async (text: string, lang?: string, repeat: number = 1) => {
     try {
       if ('speechSynthesis' in window) {
-        // 이전 재생 중지
         window.speechSynthesis.cancel();
 
         const playOnce = () => {
@@ -465,54 +398,84 @@ function App() {
           });
         };
 
-        // 반복 재생
+        // 반복 재생만 수행 (문장 이동 없음)
         for (let i = 0; i < repeat; i++) {
-          // 취소 확인
-          if (autoPlayCancelledRef.current) {
-            autoPlayCancelledRef.current = false;
-            return;
-          }
-
           await playOnce();
 
-          // 취소 확인
-          if (autoPlayCancelledRef.current) {
-            autoPlayCancelledRef.current = false;
-            return;
-          }
-
-          // 반복 사이에 휴지시간
           if (i < repeat - 1) {
             await new Promise(resolve => setTimeout(resolve, REPEAT_PAUSE_TIME));
           }
         }
+      }
+    } catch (error) {
+      console.error('Manual playback error:', error);
+    }
+  };
 
-        // 자동 재생 모드일 때 다음 문장으로 이동
-        if (autoPlayNext) {
+  // ============ 자동 재생: 문장 이동 포함, 반복 횟수 적용 ============
+  const playAutoWithNavigation = useCallback(async (startIndex: number) => {
+    console.log('🎬 Auto play started from index:', startIndex, 'total sentences:', allSentences.length);
+    try {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+
+        const playOnce = (text: string) => {
+          return new Promise<void>((resolve) => {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'zh-CN';
+            utterance.rate = 0.9;
+            utterance.onend = () => resolve();
+            utterance.onerror = () => resolve();
+            window.speechSynthesis.speak(utterance);
+          });
+        };
+
+        let currentIdx = startIndex;
+
+        while (currentIdx < allSentences.length) {
+          console.log('🔄 Loop iteration - currentIdx:', currentIdx, 'cancelled:', autoPlayCancelledRef.current);
+
           // 취소 확인
           if (autoPlayCancelledRef.current) {
+            console.log('❌ Auto play cancelled');
             autoPlayCancelledRef.current = false;
             return;
           }
 
-          const currentIdx = nextIndex !== undefined ? nextIndex : currentSentenceIndex;
-          if (currentIdx < allSentences.length - 1) {
-            await new Promise(resolve => setTimeout(resolve, REPEAT_PAUSE_TIME));
+          const sentence = allSentences[currentIdx]?.sentence;
+          if (!sentence) {
+            console.log('❌ No sentence at index:', currentIdx);
+            break;
+          }
 
-            // 취소 확인
+          // 문장 인덱스 업데이트 (재생 전에)
+          console.log('📍 Setting index to:', currentIdx, 'sentence:', sentence.substring(0, 20));
+          setCurrentSentenceIndex(currentIdx);
+
+          // 현재 반복 횟수 가져오기 (ref에서 최신 값)
+          const currentRepeatCount = repeatCountRef.current;
+          console.log('🔢 Current repeat count:', currentRepeatCount);
+
+          // 문장 반복 재생
+          for (let i = 0; i < currentRepeatCount; i++) {
             if (autoPlayCancelledRef.current) {
+              console.log('❌ Auto play cancelled during repeat');
               autoPlayCancelledRef.current = false;
               return;
             }
 
-            const nextIdx = currentIdx + 1;
-            setCurrentSentenceIndex(nextIdx);
-            // 다음 문장 자동 재생
-            if (allSentences[nextIdx]?.sentence) {
-              playAudio(allSentences[nextIdx].sentence, 'chinese', repeat, true, nextIdx);
+            console.log('🔊 Playing repeat', i + 1, 'of', currentRepeatCount);
+            await playOnce(sentence);
+
+            if (i < currentRepeatCount - 1) {
+              await new Promise(resolve => setTimeout(resolve, REPEAT_PAUSE_TIME));
             }
-          } else {
-            // 마지막 문장에서 자동으로 다음 레슨으로 이동 (레슨 경계 휴지시간 적용)
+          }
+
+          // 마지막 문장인지 확인
+          if (currentIdx >= allSentences.length - 1) {
+            console.log('📝 Last sentence reached');
+            // 다음 레슨으로 이동 시도
             const currentLessonNum = parseInt(selectedLessonId || '0');
             const nextLessonNum = currentLessonNum + 1;
 
@@ -522,24 +485,78 @@ function App() {
               );
 
               if (nextLessonExists) {
+                console.log('➡️ Moving to next lesson:', nextLessonNum);
                 await new Promise(resolve => setTimeout(resolve, LESSON_PAUSE_TIME));
 
-                // 취소 확인
                 if (autoPlayCancelledRef.current) {
+                  console.log('❌ Auto play cancelled before lesson change');
                   autoPlayCancelledRef.current = false;
                   return;
                 }
 
-                // 자동 모드에서는 바로 다음 레슨으로 이동
                 selectLesson(String(nextLessonNum));
-                // 다음 레슨의 첫 문장 자동 재생은 selectLesson이 완료된 후 시작됨
+                return; // 레슨 변경 후 useEffect에서 자동 재생 재시작
               }
             }
+            break;
+          } else {
+            // 다음 문장으로 이동
+            console.log('⏭️ Moving to next sentence...');
+            await new Promise(resolve => setTimeout(resolve, REPEAT_PAUSE_TIME));
+
+            if (autoPlayCancelledRef.current) {
+              console.log('❌ Auto play cancelled before next sentence');
+              autoPlayCancelledRef.current = false;
+              return;
+            }
+
+            currentIdx++;
+            console.log('✅ Incremented to:', currentIdx);
           }
         }
+        console.log('🏁 Auto play finished');
       }
     } catch (error) {
-      console.error('Audio playback error:', error);
+      console.error('Auto playback error:', error);
+    }
+  }, [allSentences, selectedLessonId, lessonData, selectLesson, REPEAT_PAUSE_TIME, LESSON_PAUSE_TIME]); // repeatCount는 ref로 참조하므로 제외
+
+  // ============ 수동 문장 이동: 재생 없음, 인덱스만 변경 ============
+  const navigateManual = (direction: 'prev' | 'next') => {
+    if (direction === 'next') {
+      if (currentSentenceIndex >= allSentences.length - 1) {
+        // 마지막 문장에서 다음 레슨으로 이동 확인 모달
+        const currentLessonNum = parseInt(selectedLessonId || '0');
+        const nextLessonNum = currentLessonNum + 1;
+
+        if (lessonData && lessonData.contents) {
+          const nextLessonExists = lessonData.contents.some(
+            (item: any) => String(item.lesson) === String(nextLessonNum) || item.lesson === nextLessonNum
+          );
+
+          if (nextLessonExists) {
+            setTargetLessonNum(nextLessonNum);
+            setNextLessonDirection('next');
+            setShowLessonModal(true);
+          }
+        }
+      } else {
+        setCurrentSentenceIndex(currentSentenceIndex + 1);
+      }
+    } else {
+      if (currentSentenceIndex === 0) {
+        // 첫 문장에서 이전 레슨으로 이동 확인 모달
+        const currentLessonNum = parseInt(selectedLessonId || '0');
+        const prevLessonNum = currentLessonNum - 1;
+
+        if (prevLessonNum >= 1) {
+          setTargetLessonNum(prevLessonNum);
+          setNextLessonDirection('prev');
+          setShowLessonModal(true);
+        }
+      } else {
+        setCurrentSentenceIndex(currentSentenceIndex - 1);
+      }
     }
   };
 
@@ -730,7 +747,7 @@ function App() {
                     <button
                       className="repeat-btn"
                       onClick={() => {
-                        const counts = [1, 3, 5, 10];
+                        const counts = [1, 2, 3, 5, 10];
                         const currentIndex = counts.indexOf(repeatCount);
                         const nextIndex = (currentIndex + 1) % counts.length;
                         setRepeatCount(counts[nextIndex]);
@@ -742,8 +759,11 @@ function App() {
                   <div className="autoplay-controller">
                     <button
                       className={`autoplay-toggle-btn ${isAutoPlay ? 'active' : ''}`}
-                      onClick={() => setIsAutoPlay(!isAutoPlay)}
-                      title={isAutoPlay ? '자동 모드' : '수동 모드'}
+                      onClick={() => {
+                        console.log(isAutoPlay ? '🛑 Switching to manual mode' : '▶️ Switching to auto mode');
+                        setIsAutoPlay(!isAutoPlay);
+                      }}
+                      title={isAutoPlay ? '자동 모드 (클릭하면 수동 모드로 전환)' : '수동 모드 (클릭하면 자동 모드로 전환)'}
                     >
                       {isAutoPlay ? '자동' : '수동'}
                     </button>
@@ -765,7 +785,7 @@ function App() {
                             {allSentences[currentSentenceIndex]?.sentence && (
                               <p
                                 className="translation-sentence"
-                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount, isAutoPlay)}
+                                onClick={() => playManual(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount)}
                               >
                                 {allSentences[currentSentenceIndex]?.sentence}
                               </p>
@@ -773,7 +793,7 @@ function App() {
                             {allSentences[currentSentenceIndex]?.english && (
                               <p
                                 className="translation-english"
-                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.english, 'english', repeatCount, isAutoPlay)}
+                                onClick={() => playManual(allSentences[currentSentenceIndex]?.english, 'english', repeatCount)}
                               >
                                 {allSentences[currentSentenceIndex]?.english}
                               </p>
@@ -781,7 +801,7 @@ function App() {
                             {allSentences[currentSentenceIndex]?.korean && (
                               <p
                                 className="translation-korean"
-                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.korean, 'korean', repeatCount, isAutoPlay)}
+                                onClick={() => playManual(allSentences[currentSentenceIndex]?.korean, 'korean', repeatCount)}
                               >
                                 {allSentences[currentSentenceIndex]?.korean}
                               </p>
@@ -790,7 +810,7 @@ function App() {
                             {allSentences[currentSentenceIndex]?.pinyin && (
                               <p
                                 className="translation-pinyin"
-                                onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount, isAutoPlay)}
+                                onClick={() => playManual(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount)}
                               >
                                 {allSentences[currentSentenceIndex]?.pinyin}
                               </p>
@@ -814,7 +834,7 @@ function App() {
                           <span className="content">{allSentences[currentSentenceIndex]?.sentence}</span>
                           <button
                             className="tts-button-inline"
-                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.sentence, 'chinese')}
+                            onClick={() => playManual(allSentences[currentSentenceIndex]?.sentence, 'chinese', repeatCount)}
                             title="중국어 음성 재생"
                           >
                             🔊
@@ -827,7 +847,7 @@ function App() {
                           <span className="content">{allSentences[currentSentenceIndex]?.korean}</span>
                           <button
                             className="tts-button-inline"
-                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.korean, 'korean')}
+                            onClick={() => playManual(allSentences[currentSentenceIndex]?.korean, 'korean', repeatCount)}
                             title="한국어 음성 재생"
                           >
                             🔊
@@ -852,7 +872,7 @@ function App() {
                           <span className="content">{allSentences[currentSentenceIndex]?.english}</span>
                           <button
                             className="tts-button-inline"
-                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.english, 'english')}
+                            onClick={() => playManual(allSentences[currentSentenceIndex]?.english, 'english', repeatCount)}
                             title="영어 음성 재생"
                           >
                             🔊
@@ -862,7 +882,7 @@ function App() {
                           <span className="content">{allSentences[currentSentenceIndex]?.japanese}</span>
                           <button
                             className="tts-button-inline"
-                            onClick={() => playAudio(allSentences[currentSentenceIndex]?.japanese, 'japanese')}
+                            onClick={() => playManual(allSentences[currentSentenceIndex]?.japanese, 'japanese', repeatCount)}
                             title="일본어 음성 재생"
                           >
                             🔊
@@ -892,7 +912,7 @@ function App() {
                                   {word}
                                   <button
                                     className="tts-button-word"
-                                    onClick={() => playAudio(word, 'chinese')}
+                                    onClick={() => playManual(word, 'chinese', repeatCount)}
                                     title="단어 음성 재생"
                                   >
                                     🔊
@@ -948,54 +968,13 @@ function App() {
               中
             </button>
             <button
-              onClick={() => {
-                if (currentSentenceIndex === 0) {
-                  // 첫 문장에서 이전 레슨으로 이동
-                  const currentLessonNum = parseInt(selectedLessonId || '0');
-                  const prevLessonNum = currentLessonNum - 1;
-
-                  if (prevLessonNum >= 1) {
-                    setTargetLessonNum(prevLessonNum);
-                    setNextLessonDirection('prev');
-                    setShowLessonModal(true);
-                  }
-                } else {
-                  setCurrentSentenceIndex(currentSentenceIndex - 1);
-                }
-              }}
+              onClick={() => navigateManual('prev')}
               className="control-btn prev-btn"
             >
               ◀️
             </button>
             <button
-              onClick={() => {
-                if (currentSentenceIndex >= allSentences.length - 1) {
-                  // 마지막 문장에서 다음 레슨으로 이동
-                  const currentLessonNum = parseInt(selectedLessonId || '0');
-                  const nextLessonNum = currentLessonNum + 1;
-
-                  // lessonData에서 다음 레슨이 존재하는지 확인
-                  if (lessonData && lessonData.contents) {
-                    const nextLessonExists = lessonData.contents.some(
-                      (item: any) => String(item.lesson) === String(nextLessonNum) || item.lesson === nextLessonNum
-                    );
-
-                    if (nextLessonExists) {
-                      // 수동 모드일 때만 팝업 표시
-                      if (!isAutoPlay) {
-                        setTargetLessonNum(nextLessonNum);
-                        setNextLessonDirection('next');
-                        setShowLessonModal(true);
-                      } else {
-                        // 자동 모드일 때는 바로 이동
-                        selectLesson(String(nextLessonNum));
-                      }
-                    }
-                  }
-                } else {
-                  setCurrentSentenceIndex(currentSentenceIndex + 1);
-                }
-              }}
+              onClick={() => navigateManual('next')}
               className="control-btn next-btn"
             >
               ▶️
@@ -1013,6 +992,32 @@ function App() {
                     onClick={() => {
                       if (targetLessonNum !== null) {
                         selectLesson(String(targetLessonNum));
+                        // 이전 레슨으로 이동하는 경우 마지막 문장으로 이동
+                        if (nextLessonDirection === 'prev') {
+                          // selectLesson이 완료된 후 마지막 문장으로 이동하도록 타이머 설정
+                          setTimeout(() => {
+                            const prevLessonContent = lessonData.contents.filter((item: any) => {
+                              return String(item.lesson) === String(targetLessonNum) || item.lesson === targetLessonNum;
+                            });
+                            const prevSentences: any[] = [];
+                            prevLessonContent.forEach((lessonItem: any) => {
+                              if (lessonItem.content) {
+                                lessonItem.content.forEach((categoryItem: any) => {
+                                  if (categoryItem.subcategories) {
+                                    categoryItem.subcategories.forEach((subcat: any) => {
+                                      if (subcat.sentences) {
+                                        prevSentences.push(...subcat.sentences);
+                                      }
+                                    });
+                                  }
+                                });
+                              }
+                            });
+                            if (prevSentences.length > 0) {
+                              setCurrentSentenceIndex(prevSentences.length - 1);
+                            }
+                          }, 100);
+                        }
                       }
                       setShowLessonModal(false);
                       setNextLessonDirection(null);
