@@ -3119,7 +3119,7 @@
                             "sentences": [
                                 {
                                     "sentence": "老师正在上课",
-                                    "pinyin": "先生は授業をしています。\n\nJapanese romaji: Sensei wa jugyou wo shiteimasu.",
+                                    "pinyin": "Lǎoshī zhèngzài shàngkè",
                                     "korean": "선생님이 수업 중입니다.",
                                     "english": "The teacher is teaching a class.",
                                     "japanese": "先生は授業をしています。",
@@ -9977,7 +9977,7 @@
                                 },
                                 {
                                     "sentence": "你累了，是不是",
-                                    "pinyin": "疲れたでしょう？\nTsukareta deshou?",
+                                    "pinyin": "Nǐ lèi le, shì bù shì?",
                                     "korean": "너 피곤하지, 그렇지?",
                                     "english": "Are you tired?",
                                     "japanese": "疲れたでしょう？",
@@ -15291,7 +15291,7 @@
                             "sentences": [
                                 {
                                     "sentence": "连我都不相信",
-                                    "pinyin": "私さえ信じない。\nwatashi sae shinjinai.",
+                                    "pinyin": "lián wǒ dōu bù xiāngxìn",
                                     "korean": "나조차도 믿지 않아.",
                                     "english": "Even I don't believe it.",
                                     "japanese": "私さえ信じない。",
@@ -18702,7 +18702,7 @@
                                 },
                                 {
                                     "sentence": "表示同意",
-                                    "pinyin": "tóng yì",
+                                    "pinyin": "biǎo shì tóng yì",
                                     "korean": "동의를 표시하다.",
                                     "english": "Indicates agreement.",
                                     "japanese": "同意を表す。",
@@ -18733,7 +18733,7 @@
                                 },
                                 {
                                     "sentence": "获得同意",
-                                    "pinyin": "同意を得る → dōi wo eru",
+                                    "pinyin": "dé dào tóng yì",
                                     "korean": "동의를 얻다.",
                                     "english": "Get consent.",
                                     "japanese": "同意を得る",
@@ -18779,7 +18779,7 @@
                             "sentences": [
                                 {
                                     "sentence": "我反对这个意见",
-                                    "pinyin": "Watashi wa kono iken ni hantai desu.",
+                                    "pinyin": "Wǒ fǎnduì zhège yìjiàn",
                                     "korean": "저는 이 의견에 반대합니다.",
                                     "english": "I oppose this opinion.",
                                     "japanese": "私はこの意見に反対です。",
@@ -24524,7 +24524,7 @@
                                 },
                                 {
                                     "sentence": "同情心",
-                                    "pinyin": "同情心 (dōjōshin)",
+                                    "pinyin": "dōjōshin",
                                     "korean": "동정심",
                                     "english": "Sympathy.",
                                     "japanese": "同情心",
@@ -27546,7 +27546,7 @@
                             "sentences": [
                                 {
                                     "sentence": "比较消极",
-                                    "pinyin": "比較的消極的です。\n\nJapanese romaji: Hikakuteki shōkyokuteki desu.",
+                                    "pinyin": "bǐ jiào xiāo jí",
                                     "korean": "비교적 소극적이다.",
                                     "english": "\"Rather pessimistic.\"",
                                     "japanese": "比較的消極的です。",

@@ -92,7 +92,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
   // Auto-scroll to selected item
   useEffect(() => {
-    const scrollToSelected = (ref: React.RefObject<HTMLDivElement>, selector: string) => {
+    const scrollToSelected = (ref: React.RefObject<HTMLDivElement | null>, selector: string) => {
       if (ref.current) {
         const selectedElement = ref.current.querySelector(selector);
         if (selectedElement) {

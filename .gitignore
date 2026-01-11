@@ -43,4 +43,4 @@ Thumbs.db
 public/data/**/*.txt
 
 # Python files
-*.py
+*.py"build/" 

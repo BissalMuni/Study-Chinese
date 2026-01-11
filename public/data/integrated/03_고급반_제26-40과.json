@@ -57,7 +57,7 @@
                                     "id": 2,
                                     "sentence": "我希望能说一口流利的汉语",
                                     "pinyin": "wǒ xī wàng néng shuō yī kǒu liú lì de hàn yǔ",
-                                    "korean": "유창한 중국어를 할 수 있기를 희망합니다",
+                                    "korean": "저는 유창한 중국어를 구사할 수 있기를 바랍니다",
                                     "english": "I hope to be able to speak fluent Chinese",
                                     "japanese": "流暢な中国語を話せるようになりたいです",
                                     "japanese_romaji": "Ryūchō na chūgokugo wo hanaseru you ni naritai desu",
@@ -118,7 +118,7 @@
                                     "id": 3,
                                     "sentence": "跟中国人交朋友",
                                     "pinyin": "gēn zhōngguó rén jiāo péngyou",
-                                    "korean": "중국 사람과 친구가 되고 싶어요",
+                                    "korean": "중국 사람과 친구가 되다",
                                     "english": "Make friends with Chinese people",
                                     "japanese": "中国人と友達になりたい",
                                     "japanese_romaji": "Chūgokujin to tomodachi ni naritai",
@@ -159,7 +159,7 @@
                                     "id": 4,
                                     "sentence": "公司派我来学习的",
                                     "pinyin": "gōng sī pài wǒ lái xué xí de",
-                                    "korean": "회사에서 저를 보내서 공부하는 거예요",
+                                    "korean": "회사에서 저를 보내서 공부하게 한 거예요",
                                     "english": "The company sent me here to study",
                                     "japanese": "会社が私を勉強に派遣したのです",
                                     "japanese_romaji": "Kaisha ga watashi wo benkyō ni haken shita no desu",
@@ -271,7 +271,7 @@
                                     "id": 6,
                                     "sentence": "希望学习结束的时候，我能说一口流利的汉语",
                                     "pinyin": "xī wàng xué xí jié shù de shí hòu, wǒ néng shuō yī kǒu liú lì de hàn yǔ",
-                                    "korean": "학습이 끝날 때까지 유창한 중국어를 할 수 있기를 바라요",
+                                    "korean": "공부가 끝날 때쯤 유창한 중국어를 할 수 있기를 바라요",
                                     "english": "I hope I can speak fluent Chinese when the study ends",
                                     "japanese": "勉強が終わる時に、流暢な中国語を話せるようになりたいです",
                                     "japanese_romaji": "Benkyō ga owaru toki ni, ryūchō na chūgokugo wo hanaseru you ni naritai desu",
@@ -423,7 +423,7 @@
                                     "id": 8,
                                     "sentence": "你会唱京剧",
                                     "pinyin": "nǐ huì chàng jīngjù",
-                                    "korean": "경극을 부를 수 있으세요?",
+                                    "korean": "경극을 부를 수 있어요?",
                                     "english": "Can you sing Beijing Opera?",
                                     "japanese": "京劇を歌えますか？",
                                     "japanese_romaji": "Kyōgeki wo utaemasu ka?",
@@ -535,7 +535,7 @@
                                     "id": 10,
                                     "sentence": "看了，真恐怖",
                                     "pinyin": "kàn le, zhēn kǒng bù",
-                                    "korean": "봤어요, 정말 무서워요",
+                                    "korean": "봤어요, 정말 무섭더라고요",
                                     "english": "I watched it, really scary",
                                     "japanese": "見ました、本当に怖いです",
                                     "japanese_romaji": "Mimashita, hontō ni kowai desu",
@@ -576,7 +576,7 @@
                                     "id": 11,
                                     "sentence": "新冠肺炎患者特别多",
                                     "pinyin": "xīn guān fèi yán huàn zhě tè bié duō",
-                                    "korean": "코로나 폐렴 환자가 특별히 많아요",
+                                    "korean": "코로나19 확진자가 특히 많아요",
                                     "english": "COVID-19 patients are especially numerous",
                                     "japanese": "新型コロナ肺炎の患者が特に多いです",
                                     "japanese_romaji": "Shingata korona haien no kanja ga toku ni ōi desu",
@@ -668,7 +668,7 @@
                                     "id": 13,
                                     "sentence": "带好口罩，勤洗手，少出门",
                                     "pinyin": "dài hǎo kǒu zhào, qín xǐ shǒu, shǎo chū mén",
-                                    "korean": "마스크 잘 쓰고, 손 자주 씻고, 외출 적게 하세요",
+                                    "korean": "마스크 잘 착용하고, 손 자주 씻고, 외출 줄이세요",
                                     "english": "Wear masks properly, wash hands frequently, go out less",
                                     "japanese": "マスクをちゃんと着けて、手をこまめに洗って、外出を減らしてください",
                                     "japanese_romaji": "Masuku wo chanto tsukete, te wo komame ni aratte, gaishutsu wo herashite kudasai",
@@ -719,7 +719,7 @@
                                     "id": 14,
                                     "sentence": "戴口罩、勤洗手也很重要",
                                     "pinyin": "dài kǒu zhào, qín xǐ shǒu yě hěn zhòng yào",
-                                    "korean": "마스크 쓰고 손 자주 씻는 것도 매우 중요해요",
+                                    "korean": "마스크를 쓰고 손을 자주 씻는 것도 매우 중요해요",
                                     "english": "Wearing masks and washing hands frequently are also very important",
                                     "japanese": "マスクを着け、手をこまめに洗うこともとても大切です",
                                     "japanese_romaji": "Masuku wo tsuke, te wo komame ni arau koto mo totemo taisetsu desu",
@@ -775,7 +775,7 @@
                                     "id": 15,
                                     "sentence": "我们要注意防护，保护好自己",
                                     "pinyin": "wǒ men yào zhù yì fáng hù, bǎo hù hǎo zì jǐ",
-                                    "korean": "우리는 방호에 주의하고 자신을 잘 보호해야 해요",
+                                    "korean": "우리는 방호에 주의하고 자신을 잘 보호해야 합니다",
                                     "english": "We need to pay attention to protection and protect ourselves well",
                                     "japanese": "私たちは防護に気をつけて、自分をしっかり守らなければなりません",
                                     "japanese_romaji": "Watashitachi wa bōgo ni ki wo tsukete, jibun wo shikkari mamoranakereba narimasen",
@@ -831,7 +831,7 @@
                                     "id": 16,
                                     "sentence": "我觉得疫苗和治疗药都很重要",
                                     "pinyin": "wǒ jué de yì miáo hé zhì liáo yào dōu hěn zhòng yào",
-                                    "korean": "백신과 치료약 둘 다 매우 중요하다고 생각해요",
+                                    "korean": "저는 백신과 치료제 둘 다 매우 중요하다고 생각해요",
                                     "english": "I think vaccines and therapeutic drugs are both very important",
                                     "japanese": "ワクチンと治療薬はどちらもとても大切だと思います",
                                     "japanese_romaji": "Wakuchin to chiryōyaku wa dochira mo totemo taisetsu da to omoimasu",
@@ -907,7 +907,7 @@
                                     "id": 17,
                                     "sentence": "小心累坏了身体",
                                     "pinyin": "xiǎo xīn lèi huài le shēn tǐ",
-                                    "korean": "몸이 과로로 상하지 않게 조심하세요",
+                                    "korean": "몸 상할까 조심해",
                                     "english": "Be careful not to overwork and harm your body",
                                     "japanese": "体を疲れで壊さないように気をつけてください",
                                     "japanese_romaji": "Karada wo tsukare de kowasanai you ni ki wo tsukete kudasai",
@@ -948,7 +948,7 @@
                                     "id": 18,
                                     "sentence": "路上小心，注意安全",
                                     "pinyin": "lù shàng xiǎo xīn, zhù yì ān quán",
-                                    "korean": "길에서 조심하고 안전에 주의하세요",
+                                    "korean": "길 조심하고 안전하게 가세요",
                                     "english": "Be careful on the road and pay attention to safety",
                                     "japanese": "道中気をつけて、安全に注意してください",
                                     "japanese_romaji": "Dochū ki wo tsukete, anzen ni chūi shite kudasai",
@@ -989,7 +989,7 @@
                                     "id": 19,
                                     "sentence": "小心开车",
                                     "pinyin": "xiǎo xīn kāi chē",
-                                    "korean": "운전 조심하세요",
+                                    "korean": "조심히 운전하세요",
                                     "english": "Drive carefully",
                                     "japanese": "運転に気をつけてください",
                                     "japanese_romaji": "Unten ni ki wo tsukete kudasai",
@@ -1061,7 +1061,7 @@
                                     "id": 21,
                                     "sentence": "小心轻放",
                                     "pinyin": "xiǎo xīn qīng fàng",
-                                    "korean": "조심히 가볍게 놓으세요",
+                                    "korean": "조심히 다루세요",
                                     "english": "Handle with care, put down gently",
                                     "japanese": "気をつけて、そっと置いてください",
                                     "japanese_romaji": "Ki wo tsukete, sotto oite kudasai",
@@ -1123,7 +1123,7 @@
                                     "id": 23,
                                     "sentence": "当心滑倒",
                                     "pinyin": "dāng xīn huá dǎo",
-                                    "korean": "미끄러져 넘어지지 않게 조심하세요",
+                                    "korean": "미끄러지지 않게 조심하세요",
                                     "english": "Be careful not to slip and fall",
                                     "japanese": "滑って転ばないように気をつけてください",
                                     "japanese_romaji": "Subette korobanai you ni ki wo tsukete kudasai",
@@ -1154,7 +1154,7 @@
                                     "id": 24,
                                     "sentence": "注意安全",
                                     "pinyin": "zhù yì ān quán",
-                                    "korean": "안전에 주의하세요",
+                                    "korean": "안전에 주의하다",
                                     "english": "Pay attention to safety",
                                     "japanese": "安全に注意してください",
                                     "japanese_romaji": "Anzen ni chūi shite kudasai",
@@ -1200,7 +1200,7 @@
                                     "id": 25,
                                     "sentence": "妈，有感冒药吗",
                                     "pinyin": "mā, yǒu gǎn mào yào ma",
-                                    "korean": "엄마, 감기약 있어요?",
+                                    "korean": "엄마, 감기약 있어?",
                                     "english": "Mom, do you have cold medicine?",
                                     "japanese": "お母さん、風邪薬はありますか？",
                                     "japanese_romaji": "Okaasan, kaze gusuri wa arimasu ka?",
@@ -1241,7 +1241,7 @@
                                     "id": 26,
                                     "sentence": "怎么了？哪儿不舒服",
                                     "pinyin": "zěn me le? nǎr bù shū fu",
-                                    "korean": "왜 그래? 어디가 불편해?",
+                                    "korean": "왜 그래요? 어디 불편하세요?",
                                     "english": "What's wrong? Where do you feel uncomfortable?",
                                     "japanese": "どうしたの？どこが具合悪いの？",
                                     "japanese_romaji": "Dō shita no? Doko ga guai warui no?",
@@ -1282,7 +1282,7 @@
                                     "id": 27,
                                     "sentence": "一直咳嗽流鼻涕，我可能感冒了",
                                     "pinyin": "yī zhí ké sòu liú bí tì, wǒ kě néng gǎn mào le",
-                                    "korean": "계속 기침하고 콧물이 나와서 감기에 걸린 것 같아요",
+                                    "korean": "계속 기침하고 콧물이 나서 감기에 걸린 것 같아요",
                                     "english": "I've been coughing and having a runny nose all the time, I might have caught a cold",
                                     "japanese": "ずっと咳が出て鼻水が流れて、風邪をひいたかもしれません",
                                     "japanese_romaji": "Zutto seki ga dete hanamizu ga nagarete, kaze wo hiita kamo shiremasen",
@@ -1338,7 +1338,7 @@
                                     "id": 28,
                                     "sentence": "你先吃饭，然后再吃药",
                                     "pinyin": "nǐ xiān chī fàn, rán hòu zài chī yào",
-                                    "korean": "먼저 밥 먹고 그 다음에 약 드세요",
+                                    "korean": "먼저 밥을 드시고 그 다음에 약을 드세요",
                                     "english": "Eat first, then take medicine",
                                     "japanese": "まず食事をしてから薬を飲んでください",
                                     "japanese_romaji": "Saki ni shokuji wo shite kara kusuri wo fukuyō shite kudasai",
@@ -1389,7 +1389,7 @@
                                     "id": 29,
                                     "sentence": "快把电视关上，早点儿睡觉",
                                     "pinyin": "kuài bǎ diàn shì guān shàng, zǎo diǎnr shuì jiào",
-                                    "korean": "빨리 TV 끄고 일찍 자세요",
+                                    "korean": "얼른 TV 끄고 일찍 자라",
                                     "english": "Turn off the TV quickly and go to bed early",
                                     "japanese": "早くテレビを消して、早めに寝てください",
                                     "japanese_romaji": "Hayaku terebi wo keshite, hayame ni nete kudasai",
@@ -1440,7 +1440,7 @@
                                     "id": 30,
                                     "sentence": "多喝热水",
                                     "pinyin": "duō hē rè shuǐ",
-                                    "korean": "따뜻한 물 많이 드세요",
+                                    "korean": "따뜻한 물을 많이 마시세요",
                                     "english": "Drink lots of hot water",
                                     "japanese": "湯をたくさん飲んでください",
                                     "japanese_romaji": "Yu wo takusan nonde kudasai",
@@ -1476,7 +1476,7 @@
                                     "id": 31,
                                     "sentence": "好好休息",
                                     "pinyin": "hǎo hao xiū xi",
-                                    "korean": "푹 쉬세요",
+                                    "korean": "푹 쉬어요",
                                     "english": "Get some good rest",
                                     "japanese": "よく休んでください",
                                     "japanese_romaji": "Yoku yasunde kudasai",
@@ -1507,7 +1507,7 @@
                                     "id": 32,
                                     "sentence": "按时吃药",
                                     "pinyin": "àn shí chī yào",
-                                    "korean": "시간에 맞춰 약 드세요",
+                                    "korean": "제때 약을 드세요",
                                     "english": "Take medicine on time",
                                     "japanese": "時間どおりに薬を飲んでください",
                                     "japanese_romaji": "Jikan dōri ni kusuri wo nonde kudasai",
@@ -1553,7 +1553,7 @@
                                     "id": 33,
                                     "sentence": "我有意中人了",
                                     "pinyin": "wǒ yǒu yì zhōng rén le",
-                                    "korean": "저에게 마음에 드는 사람이 생겻어요",
+                                    "korean": "저에게 마음에 드는 사람이 생겼어요",
                                     "english": "I have someone I like",
                                     "japanese": "意中の人がいます",
                                     "japanese_romaji": "Ichū no hito ga imasu",
@@ -1594,7 +1594,7 @@
                                     "id": 34,
                                     "sentence": "她是个很好的女孩子",
                                     "pinyin": "tā shì gè hěn hǎo de nǚ hái zi",
-                                    "korean": "그녀는 아주 좋은 여자애예요",
+                                    "korean": "그녀는 아주 좋은 여자예요",
                                     "english": "She is a very good girl",
                                     "japanese": "彼女はとてもいい女の子です",
                                     "japanese_romaji": "Kanojo wa totemo ii onna no ko desu",
@@ -1650,7 +1650,7 @@
                                     "id": 35,
                                     "sentence": "你们交往多长时间了",
                                     "pinyin": "nǐmen jiāowǎng duō cháng shíjiān le",
-                                    "korean": "얼마나 오랫동안 사귀었어요?",
+                                    "korean": "얼마나 오래 사귀었어요?",
                                     "english": "How long have you been dating?",
                                     "japanese": "付き合うようになってからどのくらい経つのですか？",
                                     "japanese_romaji": "Tsukiau you ni natte kara dono kurai tatsu no desu ka?",
@@ -1696,7 +1696,7 @@
                                     "id": 36,
                                     "sentence": "半年了",
                                     "pinyin": "bàn nián le",
-                                    "korean": "반년 되었어요",
+                                    "korean": "반년이 되었어요",
                                     "english": "Half a year",
                                     "japanese": "半年になります",
                                     "japanese_romaji": "Hantoshi ni narimasu",
@@ -1727,7 +1727,7 @@
                                     "id": 37,
                                     "sentence": "陈老师教我们汉语",
                                     "pinyin": "chén lǎo shī jiāo wǒ men hàn yǔ",
-                                    "korean": "진 선생님이 우리에게 중국어를 가르치세요",
+                                    "korean": "진 선생님이 우리에게 중국어를 가르치십니다",
                                     "english": "Teacher Chen teaches us Chinese",
                                     "japanese": "陳先生が私たちに中国語を教えてくださいます",
                                     "japanese_romaji": "Chin sensei ga watashitachi ni chūgokugo wo oshiete kudasaimasu",
@@ -1768,7 +1768,7 @@
                                     "id": 38,
                                     "sentence": "我朋友给我生日礼物",
                                     "pinyin": "wǒ péng you gěi wǒ shēng rì lǐ wù",
-                                    "korean": "친구가 저에게 생일선물을 줬어요",
+                                    "korean": "친구가 제게 생일 선물을 줬어요",
                                     "english": "My friend gave me a birthday gift",
                                     "japanese": "友達が私に誕生日プレゼントをくれました",
                                     "japanese_romaji": "Tomodachi ga watashi ni tanjōbi purezento wo kuremashita",
@@ -1819,7 +1819,7 @@
                                     "id": 39,
                                     "sentence": "找我零钱",
                                     "pinyin": "zhǎo wǒ língqián",
-                                    "korean": "저에게 거스름돈을 주세요",
+                                    "korean": "거스름돈을 주세요",
                                     "english": "Give me change",
                                     "japanese": "お釣りをください",
                                     "japanese_romaji": "Otsuri wo kudasai",
@@ -1855,7 +1855,7 @@
                                     "id": 40,
                                     "sentence": "还我钱",
                                     "pinyin": "huán wǒ qián",
-                                    "korean": "저에게 돈 돌려주세요",
+                                    "korean": "돈 돌려줘",
                                     "english": "Give me my money back",
                                     "japanese": "お金を返してください",
                                     "japanese_romaji": "Okane wo kaeshite kudasai",
@@ -1906,7 +1906,7 @@
                                     "id": 41,
                                     "sentence": "公司通知我们这周末加班",
                                     "pinyin": "gōng sī tōng zhī wǒ men zhè zhōu mò jiā bān",
-                                    "korean": "회사에서 이번 주말에 야근하라고 통지했어요",
+                                    "korean": "회사에서 이번 주말에 가다（加班）하라고 통지했어요",
                                     "english": "The company notified us to work overtime this weekend",
                                     "japanese": "会社が今度の週末に残業するように通知しました",
                                     "japanese_romaji": "Kaisha ga kondo no shūmatsu ni zangyō suru you ni tsūchi shimashita",
@@ -1952,7 +1952,7 @@
                                     "id": 42,
                                     "sentence": "这个项目什么时候完成",
                                     "pinyin": "zhè ge xiàng mù shén me shí hòu wán chéng",
-                                    "korean": "이 프로젝트는 언제 완성되나요?",
+                                    "korean": "이 프로젝트는 언제 완료되나요?",
                                     "english": "When will this project be completed?",
                                     "japanese": "このプロジェクトはいつ完成しますか？",
                                     "japanese_romaji": "Kono purojekuto wa itsu kansei shimasu ka?",
@@ -1993,7 +1993,7 @@
                                     "id": 43,
                                     "sentence": "我们需要加快进度",
                                     "pinyin": "wǒ men xū yào jiā kuài jìn dù",
-                                    "korean": "우리는 진도를 빨리 나가야 해요",
+                                    "korean": "우리는 속도를 내야 해요",
                                     "english": "We need to speed up the progress",
                                     "japanese": "私たちは進度を速める必要があります",
                                     "japanese_romaji": "Watashitachi wa shindo wo hayameru hitsuyō ga arimasu",
@@ -2034,7 +2034,7 @@
                                     "id": 44,
                                     "sentence": "大家辛苦了",
                                     "pinyin": "dà jiā xīn kǔ le",
-                                    "korean": "모두 수고하셨어요",
+                                    "korean": "모두 수고하셨습니다",
                                     "english": "Everyone has worked hard",
                                     "japanese": "みなさんお疲れ様でした",
                                     "japanese_romaji": "Minasan otsukaresama deshita",
@@ -2070,7 +2070,7 @@
                                     "id": 45,
                                     "sentence": "这个价格可以商量吗",
                                     "pinyin": "zhè ge jià gé kě yǐ shāng liàng ma",
-                                    "korean": "이 가격은 협상할 수 있나요?",
+                                    "korean": "이 가격은 협상 가능한가요?",
                                     "english": "Can this price be negotiated?",
                                     "japanese": "この価格は交渉できますか？",
                                     "japanese_romaji": "Kono kakaku wa kōshō dekimasu ka?",
@@ -2116,7 +2116,7 @@
                                     "id": 46,
                                     "sentence": "我们再考虑考虑",
                                     "pinyin": "wǒmen zài kǎolǜ kǎolǜ",
-                                    "korean": "우리가 다시 생각해 볼게요",
+                                    "korean": "우리 다시 생각해 볼게요",
                                     "english": "We'll think about it again",
                                     "japanese": "また考えてみましょう",
                                     "japanese_romaji": "Mata kangaete mimashou",
@@ -2203,7 +2203,7 @@
                                     "id": 48,
                                     "sentence": "成交",
                                     "pinyin": "chéng jiāo",
-                                    "korean": "거래 성사",
+                                    "korean": "성사",
                                     "english": "Deal!",
                                     "japanese": "成約！",
                                     "japanese_romaji": "Seiyaku!",
@@ -2244,7 +2244,7 @@
                                     "id": 49,
                                     "sentence": "这个暑假你有什么计划",
                                     "pinyin": "zhè ge shǔ jià nǐ yǒu shén me jì huà",
-                                    "korean": "이번 여름방학에 무슨 계획이 있어요?",
+                                    "korean": "이번 여름방학에 무슨 계획 있어요?",
                                     "english": "What plans do you have for this summer vacation?",
                                     "japanese": "この夏休みにどんな計画がありますか？",
                                     "japanese_romaji": "Kono natsu ni donna keikaku ga arimasu ka?",
@@ -2418,7 +2418,7 @@
                                     "id": 53,
                                     "sentence": "这里的风景真美",
                                     "pinyin": "zhè lǐ de fēng jǐng zhēn měi",
-                                    "korean": "여기 풍경이 정말 아름다워요",
+                                    "korean": "여기 풍경이 정말 아름답네요",
                                     "english": "The scenery here is really beautiful",
                                     "japanese": "ここの景色は本当に美しいです",
                                     "japanese_romaji": "Koko no keshiki wa hontō ni utsukushii desu",
@@ -2510,7 +2510,7 @@
                                     "id": 55,
                                     "sentence": "这个地方很有历史意义",
                                     "pinyin": "zhè ge dì fang hěn yǒu lì shǐ yì yì",
-                                    "korean": "이 곳은 역사적 의미가 많아요",
+                                    "korean": "이 곳은 역사적 의미가 있어요",
                                     "english": "This place has great historical significance",
                                     "japanese": "この場所は歴史的意義があります",
                                     "japanese_romaji": "Kono basho wa rekishiteki igi ga arimasu",
@@ -2561,7 +2561,7 @@
                                     "id": 56,
                                     "sentence": "导游介绍得很详细",
                                     "pinyin": "dǎo yóu jiè shào de hěn xiáng xì",
-                                    "korean": "가이드가 아주 자세히 설명해 주네요",
+                                    "korean": "가이드가 아주 자세히 소개해 주네요",
                                     "english": "The tour guide explains very detailed",
                                     "japanese": "ガイドの説明がとても詳しいです",
                                     "japanese_romaji": "Gaido no setsumei ga totemo kuwashii desu",
@@ -2622,7 +2622,7 @@
                                     "id": 57,
                                     "sentence": "中国的传统文化很丰富",
                                     "pinyin": "zhōng guó de chuán tǒng wén huà hěn fēng fù",
-                                    "korean": "중국의 전통문화가 매우 풍부해요",
+                                    "korean": "중국의 전통 문화는 매우 풍부해요",
                                     "english": "China's traditional culture is very rich",
                                     "japanese": "中国の伝統文化はとても豊かです",
                                     "japanese_romaji": "Chūgoku no dentō bunka wa totemo yutaka desu",
@@ -2719,7 +2719,7 @@
                                     "id": 59,
                                     "sentence": "你会书法吗",
                                     "pinyin": "nǐ huì shū fǎ ma",
-                                    "korean": "서예 할 줄 아세요?",
+                                    "korean": "서예 하실 줄 아세요?",
                                     "english": "Can you do calligraphy?",
                                     "japanese": "書道ができますか？",
                                     "japanese_romaji": "Shodō ga dekimasu ka?",
@@ -2760,7 +2760,7 @@
                                     "id": 60,
                                     "sentence": "我正在学习太极拳",
                                     "pinyin": "wǒ zhèng zài xué xí tài jí quán",
-                                    "korean": "저는 지금 태극권을 배우고 있어요",
+                                    "korean": "저는 지금 태권도를 배우고 있어요",
                                     "english": "I'm currently learning Tai Chi",
                                     "japanese": "私は今太極拳を学んでいます",
                                     "japanese_romaji": "Watashi wa ima taikyokuken wo manande imasu",
@@ -2801,7 +2801,7 @@
                                     "id": 61,
                                     "sentence": "这幅画很有意思",
                                     "pinyin": "zhè fú huà hěn yǒu yì si",
-                                    "korean": "이 그림이 매우 흥미로워요",
+                                    "korean": "이 그림은 매우 재미있어요",
                                     "english": "This painting is very interesting",
                                     "japanese": "この絵はとても面白いです",
                                     "japanese_romaji": "Kono e wa totemo omoshiroi desu",
@@ -2893,7 +2893,7 @@
                                     "id": 63,
                                     "sentence": "这个表演很精彩",
                                     "pinyin": "zhè ge biǎo yǎn hěn jīng cǎi",
-                                    "korean": "이 공연이 매우 훌륭해요",
+                                    "korean": "이 공연은 매우 정교해요",
                                     "english": "This performance is very wonderful",
                                     "japanese": "この公演はとても素晴らしいです",
                                     "japanese_romaji": "Kono kōen wa totemo subarashii desu",
@@ -2934,7 +2934,7 @@
                                     "id": 64,
                                     "sentence": "我很喜欢中国音乐",
                                     "pinyin": "wǒ hěn xǐ huan zhōng guó yīn yuè",
-                                    "korean": "저는 중국 음악을 매우 좋아해요",
+                                    "korean": "저는 중국 음악을 아주 좋아해요",
                                     "english": "I really like Chinese music",
                                     "japanese": "私は中国の音楽がとても好きです",
                                     "japanese_romaji": "Watashi wa Chūgoku no ongaku ga totemo suki desu",
@@ -3077,7 +3077,7 @@
                                     "id": 67,
                                     "sentence": "最近天气变化很大",
                                     "pinyin": "zuì jìn tiān qì biàn huà hěn dà",
-                                    "korean": "최근 날씨 변화가 매우 커요",
+                                    "korean": "최근 날씨 변화가 매우 크다",
                                     "english": "The weather has changed a lot recently",
                                     "japanese": "最近天気の変化がとても大きいです",
                                     "japanese_romaji": "Saikin tenki no henka ga totemo ōkii desu",
@@ -3164,7 +3164,7 @@
                                     "id": 69,
                                     "sentence": "空气污染越来越严重",
                                     "pinyin": "kōngqì wūrǎn yuè lái yuè yánzhòng",
-                                    "korean": "대기오염이 점점 심해져요",
+                                    "korean": "대기오염이 점점 심각해져요",
                                     "english": "Air pollution is getting more and more serious",
                                     "japanese": "大気汚染がどんどん深刻になっています",
                                     "japanese_romaji": "Taiki osen ga dondon shinkoku ni natte imasu",
@@ -3205,7 +3205,7 @@
                                     "id": 70,
                                     "sentence": "政府应该采取措施",
                                     "pinyin": "zhèng fǔ yīng gāi cǎi qǔ cuò shī",
-                                    "korean": "정부가 조치를 취해야 해요",
+                                    "korean": "정부는 조치를 취해야 합니다",
                                     "english": "The government should take measures",
                                     "japanese": "政府は対策を取るべきです",
                                     "japanese_romaji": "Seifu wa taisaku wo toru beki desu",
@@ -3246,7 +3246,7 @@
                                     "id": 71,
                                     "sentence": "我们每个人都要保护环境",
                                     "pinyin": "wǒ men měi gè rén dōu yào bǎo hù huán jìng",
-                                    "korean": "우리 모든 사람이 환경을 보호해야 해요",
+                                    "korean": "우리 모든 사람이 환경을 보호해야 합니다",
                                     "english": "All of us need to protect the environment",
                                     "japanese": "私たち一人一人が環境を守らなければなりません",
                                     "japanese_romaji": "Watashitachi hitori hitori ga kankyō wo mamoranakereba narimasen",
@@ -3297,7 +3297,7 @@
                                     "id": 72,
                                     "sentence": "这是我们共同的责任",
                                     "pinyin": "zhè shì wǒ men gòng tóng de zé rèn",
-                                    "korean": "이것은 우리 공동의 책임이에요",
+                                    "korean": "이것은 우리 공동의 책임입니다",
                                     "english": "This is our common responsibility",
                                     "japanese": "これは私たちの共通の責任です",
                                     "japanese_romaji": "Kore wa watashitachi no kyōtsū no sekinin desu",
@@ -3476,7 +3476,7 @@
                                     "id": 76,
                                     "sentence": "生活成本越来越高",
                                     "pinyin": "shēng huó chéng běn yuè lái yuè gāo",
-                                    "korean": "생활비가 점점 높아져요",
+                                    "korean": "생활비가 점점 높아지고 있어요",
                                     "english": "The cost of living is getting higher and higher",
                                     "japanese": "生活費がどんどん高くなっています",
                                     "japanese_romaji": "Seikatsuhi ga dondon takaku natte imasu",
@@ -3655,7 +3655,7 @@
                                     "id": 80,
                                     "sentence": "还是要分散投资",
                                     "pinyin": "hái shì yào fēn sǎn tóu zī",
-                                    "korean": "역시 분산투자를 해야 해요",
+                                    "korean": "역시 분산 투자를 해야 해요",
                                     "english": "We should still diversify our investments",
                                     "japanese": "やはり分散投資をすべきです",
                                     "japanese_romaji": "Yahari bunsan tōshi wo subeki desu",
@@ -3711,7 +3711,7 @@
                                     "id": 81,
                                     "sentence": "刚才我去他那儿的时候，他正在给一家公司打电话",
                                     "pinyin": "gāng cái wǒ qù tā nàr de shí hòu, tā zhèng zài gěi yī jiā gōng sī dǎ diàn huà",
-                                    "korean": "방금 제가 그에게 갔을 때, 그는 한 회사에 전화를 하고 있었어요",
+                                    "korean": "방금 제가 그의 집에 갔을 때, 그는 한 회사에 전화를 하고 있었어요",
                                     "english": "When I went to his place just now, he was making a phone call to a company",
                                     "japanese": "さっき私が彼のところに行った時、彼は会社に電話をしていました",
                                     "japanese_romaji": "Sakki watashi ga kare no tokoro ni itta toki, kare wa kaisha ni denwa wo shite imashita",
@@ -3894,7 +3894,7 @@
                                     "id": 84,
                                     "sentence": "如果成功的话，下个月就开始工作",
                                     "pinyin": "rú guǒ chéng gōng de huà, xià ge yuè jiù kāi shǐ gōng zuò",
-                                    "korean": "성공하면 다음 달부터 일을 시작해요",
+                                    "korean": "성공하면 다음 달부터 일을 시작합니다",
                                     "english": "If successful, he will start working next month",
                                     "japanese": "成功すれば来月から仕事を始めます",
                                     "japanese_romaji": "Seikō sureba raigetsu kara shigoto wo hajimemasu",
@@ -3950,7 +3950,7 @@
                                     "id": 85,
                                     "sentence": "要是明天不下雨，我们就去爬山",
                                     "pinyin": "yào shì míng tiān bù xià yǔ, wǒ men jiù qù pá shān",
-                                    "korean": "내일 비가 오지 않으면 우리는 등산을 가요",
+                                    "korean": "내일 비가 오지 않으면 우리는 등산을 갈 거예요",
                                     "english": "If it doesn't rain tomorrow, we'll go mountain climbing",
                                     "japanese": "明日雨が降らなければ、私たちは山登りに行きます",
                                     "japanese_romaji": "Ashita ame ga furanakereba, watashitachi wa yamanobori ni ikimasu",
@@ -4133,7 +4133,7 @@
                                     "id": 88,
                                     "sentence": "只要努力，一定会成功",
                                     "pinyin": "zhǐ yào nǔ lì, yī dìng huì chéng gōng",
-                                    "korean": "노력하기만 하면 반드시 성공할 거예요",
+                                    "korean": "노력하기만 하면 반드시 성공할 것이다",
                                     "english": "As long as you work hard, you will surely succeed",
                                     "japanese": "努力さえすれば必ず成功します",
                                     "japanese_romaji": "Doryoku sae sureba kanarazu seikō shimasu",
@@ -4305,7 +4305,8 @@
                                     },
                                     "english": "If I had known earlier, I wouldn't have come",
                                     "japanese": "早く知っていたら、来なかったのに",
-                                    "japanese_romaji": "Hayaku shitte itara, konakatta no ni"
+                                    "japanese_romaji": "Hayaku shitte itara, konakatta no ni",
+                                    "korean": "진작 알았더라면 안 왔을 텐데"
                                 },
                                 {
                                     "id": 91,
@@ -4356,7 +4357,8 @@
                                     },
                                     "english": "If it rains tomorrow, the game will be canceled",
                                     "japanese": "明日雨が降ったら、試合は中止になります",
-                                    "japanese_romaji": "Ashita ame ga futtara, shiai wa chūshi ni narimasu"
+                                    "japanese_romaji": "Ashita ame ga futtara, shiai wa chūshi ni narimasu",
+                                    "korean": "만약 내일 비가 오면 경기는 취소된다"
                                 },
                                 {
                                     "id": 92,
@@ -4397,7 +4399,8 @@
                                     },
                                     "english": "If there's a problem, you're responsible",
                                     "japanese": "万が一問題が起きたら、あなたが責任を負います",
-                                    "japanese_romaji": "Man ga ichi mondai ga okitara, anata ga sekinin wo oimasu"
+                                    "japanese_romaji": "Man ga ichi mondai ga okitara, anata ga sekinin wo oimasu",
+                                    "korean": "만약 문제가 생기면, 당신이 책임져"
                                 },
                                 {
                                     "id": 93,
@@ -4443,7 +4446,8 @@
                                     },
                                     "english": "Only by studying hard can you achieve good grades",
                                     "japanese": "一生懸命勉強してこそ、良い成績を取ることができます",
-                                    "japanese_romaji": "Isshōkenmei benkyō shite koso, yoi seiseki wo toru koto ga dekimasu"
+                                    "japanese_romaji": "Isshōkenmei benkyō shite koso, yoi seiseki wo toru koto ga dekimasu",
+                                    "korean": "열심히 공부해야만 좋은 성적을 받을 수 있다"
                                 },
                                 {
                                     "id": 94,
@@ -4494,7 +4498,8 @@
                                     },
                                     "english": "Unless you agree, I won't leave",
                                     "japanese": "あなたが同意しない限り、私は行きません",
-                                    "japanese_romaji": "Anata ga dōi shinai kagiri, watashi wa ikimasen"
+                                    "japanese_romaji": "Anata ga dōi shinai kagiri, watashi wa ikimasen",
+                                    "korean": "네가 약속하지 않으면 나는 안 가"
                                 },
                                 {
                                     "id": 95,
@@ -4545,7 +4550,8 @@
                                     },
                                     "english": "No matter how difficult, I will persist",
                                     "japanese": "どんなに困難でも、私は諦めません",
-                                    "japanese_romaji": "Donna ni konnan demo, watashi wa akiramemasen"
+                                    "japanese_romaji": "Donna ni konnan demo, watashi wa akiramemasen",
+                                    "korean": "아무리 어려워도 나는 포기하지 않을 거야"
                                 },
                                 {
                                     "id": 96,
@@ -4596,7 +4602,8 @@
                                     },
                                     "english": "No matter what, we all support you",
                                     "japanese": "どんなことがあっても、私たちはあなたを応援します",
-                                    "japanese_romaji": "Donna koto ga atte mo, watashitachi wa anata wo ōen shimasu"
+                                    "japanese_romaji": "Donna koto ga atte mo, watashitachi wa anata wo ōen shimasu",
+                                    "korean": "어쨌든 우리는 너를 지지해"
                                 }
                             ]
                         }
@@ -4657,7 +4664,8 @@
                                     },
                                     "english": "Because of the rain, the game was canceled",
                                     "japanese": "雨のため、試合は中止になりました",
-                                    "japanese_romaji": "Ame no tame, shiai wa chūshi ni narimashita"
+                                    "japanese_romaji": "Ame no tame, shiai wa chūshi ni narimashita",
+                                    "korean": "비가 와서 경기가 취소되었어요"
                                 },
                                 {
                                     "id": 98,
@@ -4713,7 +4721,8 @@
                                     },
                                     "english": "Due to traffic jams, I was late",
                                     "japanese": "交通渋滞のため、遅刻しました",
-                                    "japanese_romaji": "Kōtsū jūtai no tame, chikoku shimashita"
+                                    "japanese_romaji": "Kōtsū jūtai no tame, chikoku shimashita",
+                                    "korean": "교통 체증 때문에 늦었어요"
                                 },
                                 {
                                     "id": 99,
@@ -4769,7 +4778,8 @@
                                     },
                                     "english": "Since you don't agree, let's forget it",
                                     "japanese": "あなたが同意しないなら、やめましょう",
-                                    "japanese_romaji": "Anata ga dōi shinai nara, yamemashō"
+                                    "japanese_romaji": "Anata ga dōi shinai nara, yamemashō",
+                                    "korean": "네가 동의하지 않는다면, 그냥 됐어"
                                 },
                                 {
                                     "id": 100,
@@ -4830,7 +4840,8 @@
                                     },
                                     "english": "Thanks to your help, I succeeded",
                                     "japanese": "あなたの助けのおかげで、成功しました",
-                                    "japanese_romaji": "Anata no tasuke no okage de, seikō shimashita"
+                                    "japanese_romaji": "Anata no tasuke no okage de, seikō shimashita",
+                                    "korean": "당신의 도움 덕분에 제가 성공했습니다"
                                 },
                                 {
                                     "id": 101,
@@ -4881,7 +4892,8 @@
                                     },
                                     "english": "What is the result of doing this?",
                                     "japanese": "こうすることの結果は何ですか？",
-                                    "japanese_romaji": "Kō suru koto no kekka wa nan desu ka?"
+                                    "japanese_romaji": "Kō suru koto no kekka wa nan desu ka?",
+                                    "korean": "이렇게 하면 결과가 어떻게 돼?"
                                 },
                                 {
                                     "id": 102,
@@ -4932,7 +4944,8 @@
                                     },
                                     "english": "His efforts finally paid off",
                                     "japanese": "彼の努力がついに報われました",
-                                    "japanese_romaji": "Kare no doryoku ga tsui ni mukuwaremashita"
+                                    "japanese_romaji": "Kare no doryoku ga tsui ni mukuwaremashita",
+                                    "korean": "그의 노력이 드디어 결실을 맺었다"
                                 },
                                 {
                                     "id": 103,
@@ -4993,7 +5006,8 @@
                                     },
                                     "english": "This matter had a great impact",
                                     "japanese": "この件は大きな影響を与えました",
-                                    "japanese_romaji": "Kono ken wa ōkina eikyō wo ataemashita"
+                                    "japanese_romaji": "Kono ken wa ōkina eikyō wo ataemashita",
+                                    "korean": "이 일은 큰 영향을 미쳤다"
                                 },
                                 {
                                     "id": 104,
@@ -5044,7 +5058,8 @@
                                     },
                                     "english": "Finally we reached an agreement",
                                     "japanese": "最終的に私たちは合意に達しました",
-                                    "japanese_romaji": "Saishūteki ni watashitachi wa gōi ni tasshimashita"
+                                    "japanese_romaji": "Saishūteki ni watashitachi wa gōi ni tasshimashita",
+                                    "korean": "결국 우리는 합의에 도달했습니다"
                                 }
                             ]
                         }
@@ -5110,7 +5125,8 @@
                                     },
                                     "english": "Rather than taking the bus, it's better to take the subway",
                                     "japanese": "バスに乗るよりも、地下鉄に乗った方がいいです",
-                                    "japanese_romaji": "Basu ni noru yori mo, chikatetsu ni notta hou ga ii desu"
+                                    "japanese_romaji": "Basu ni noru yori mo, chikatetsu ni notta hou ga ii desu",
+                                    "korean": "버스를 타느니 차라리 지하철을 타는 게 낫다"
                                 },
                                 {
                                     "id": 106,
@@ -5161,7 +5177,8 @@
                                     },
                                     "english": "I'd rather be a little tired than be late",
                                     "japanese": "遅刻するよりも、少し疲れた方がましです",
-                                    "japanese_romaji": "Chikoku suru yori mo, sukoshi tsukareta hou ga mashi desu"
+                                    "japanese_romaji": "Chikoku suru yori mo, sukoshi tsukareta hou ga mashi desu",
+                                    "korean": "조금 피곤하더라도 늦고 싶지 않다"
                                 },
                                 {
                                     "id": 107,
@@ -5207,7 +5224,8 @@
                                     },
                                     "english": "I'd rather walk than take a taxi",
                                     "japanese": "タクシーに乗るよりも、歩いた方がいいです",
-                                    "japanese_romaji": "Takushī ni noru yori mo, aruita hou ga ii desu"
+                                    "japanese_romaji": "Takushī ni noru yori mo, aruita hou ga ii desu",
+                                    "korean": "그는 겉보기만큼 단순하지 않다"
                                 },
                                 {
                                     "id": 108,
@@ -5253,7 +5271,8 @@
                                     },
                                     "english": "In comparison, this one is cheaper",
                                     "japanese": "比較すると、こちらの方が安いです",
-                                    "japanese_romaji": "Hikaku suru to, kochira no hou ga yasui desu"
+                                    "japanese_romaji": "Hikaku suru to, kochira no hou ga yasui desu",
+                                    "korean": "이에 비해 이 방안이 더 낫다"
                                 },
                                 {
                                     "id": 109,
@@ -5294,7 +5313,8 @@
                                     },
                                     "english": "The North and South are different",
                                     "japanese": "北方と南方は違います",
-                                    "japanese_romaji": "Hoppō to nanpō wa chigaimasu"
+                                    "japanese_romaji": "Hoppō to nanpō wa chigaimasu",
+                                    "korean": "북방과 남방은 다르다"
                                 },
                                 {
                                     "id": 110,
@@ -5350,7 +5370,8 @@
                                     },
                                     "english": "There's a big difference between cities and rural areas",
                                     "japanese": "都市と農村には大きな違いがあります",
-                                    "japanese_romaji": "Toshi to nōson ni wa ōkina chigai ga arimasu"
+                                    "japanese_romaji": "Toshi to nōson ni wa ōkina chigai ga arimasu",
+                                    "korean": "도시와 농촌은 큰 차이가 있다"
                                 },
                                 {
                                     "id": 111,
@@ -5396,7 +5417,8 @@
                                     },
                                     "english": "The cultural differences between East and West are obvious",
                                     "japanese": "東西の文化の違いは明らかです",
-                                    "japanese_romaji": "Tōzai no bunka no chigai wa akiraka desu"
+                                    "japanese_romaji": "Tōzai no bunka no chigai wa akiraka desu",
+                                    "korean": "그들 둘은 성격이 완전히 다르다"
                                 },
                                 {
                                     "id": 112,
@@ -5452,7 +5474,8 @@
                                     },
                                     "english": "He came to China to learn Chinese",
                                     "japanese": "彼は中国語を学ぶために中国に来ました",
-                                    "japanese_romaji": "Kare wa chūgokugo wo manabu tame ni Chūgoku ni kimashita"
+                                    "japanese_romaji": "Kare wa chūgokugo wo manabu tame ni Chūgoku ni kimashita",
+                                    "korean": "이번에는 지난번과 상황이 반대예요"
                                 }
                             ]
                         }
@@ -5523,7 +5546,8 @@
                                     },
                                     "english": "She studies hard to find a good job",
                                     "japanese": "彼女は良い仕事を見つけるために一生懸命勉強します",
-                                    "japanese_romaji": "Kanojo wa yoi shigoto wo mitsukeru tame ni isshōkenmei benkyō shimasu"
+                                    "japanese_romaji": "Kanojo wa yoi shigoto wo mitsukeru tame ni isshōkenmei benkyō shimasu",
+                                    "korean": "중국어를 잘 배우기 위해 그는 매일 연습한다"
                                 },
                                 {
                                     "id": 114,
@@ -5579,7 +5603,8 @@
                                     },
                                     "english": "He goes to China to do business",
                                     "japanese": "彼は商売をするために中国に行きます",
-                                    "japanese_romaji": "Kare wa shōbai wo suru tame ni Chūgoku ni ikimasu"
+                                    "japanese_romaji": "Kare wa shōbai wo suru tame ni Chūgoku ni ikimasu",
+                                    "korean": "그는 장사하러 중국에 갔다"
                                 },
                                 {
                                     "id": 115,
@@ -5640,7 +5665,8 @@
                                     },
                                     "english": "We do this for everyone's benefit",
                                     "japanese": "私たちは皆の利益のためにこれをします",
-                                    "japanese_romaji": "Watashitachi wa mina no rieki no tame ni kore wo shimasu"
+                                    "japanese_romaji": "Watashitachi wa mina no rieki no tame ni kore wo shimasu",
+                                    "korean": "우리가 이렇게 하는 것은 모두의 이익을 위해서입니다"
                                 },
                                 {
                                     "id": 116,
@@ -5696,7 +5722,8 @@
                                     },
                                     "english": "He succeeded by relying on his own efforts",
                                     "japanese": "彼は自分の努力に頼って成功しました",
-                                    "japanese_romaji": "Kare wa jibun no doryoku ni tayotte seikō shimashita"
+                                    "japanese_romaji": "Kare wa jibun no doryoku ni tayotte seikō shimashita",
+                                    "korean": "부모님을 걱정시키지 않기 위해 그는 사실대로 말하지 않았다"
                                 },
                                 {
                                     "id": 117,
@@ -5747,7 +5774,8 @@
                                     },
                                     "english": "According to regulations, we cannot do this",
                                     "japanese": "規定によると、私たちはこれをすることができません",
-                                    "japanese_romaji": "Kitei ni yoru to, watashitachi wa kore wo suru koto ga dekimasen"
+                                    "japanese_romaji": "Kitei ni yoru to, watashitachi wa kore wo suru koto ga dekimasen",
+                                    "korean": "노력을 통해 그는 목표를 실현했다"
                                 },
                                 {
                                     "id": 118,
@@ -5798,7 +5826,8 @@
                                     },
                                     "english": "According to the weather forecast, it will rain tomorrow",
                                     "japanese": "天気予報によると、明日は雨が降ります",
-                                    "japanese_romaji": "Tenki yohō ni yoru to, ashita wa ame ga furimasu"
+                                    "japanese_romaji": "Tenki yohō ni yoru to, ashita wa ame ga furimasu",
+                                    "korean": "현대 과학기술의 도움으로 업무 효율이 향상되었다"
                                 },
                                 {
                                     "id": 119,
@@ -5854,7 +5883,8 @@
                                     },
                                     "english": "Using his spare time, he learned to drive",
                                     "japanese": "余暇時間を利用して、彼は運転を覚えました",
-                                    "japanese_romaji": "Yoka jikan wo riyō shite, kare wa unten wo oboemashita"
+                                    "japanese_romaji": "Yoka jikan wo riyō shite, kare wa unten wo oboemashita",
+                                    "korean": "여가 시간을 이용해서 그는 운전을 배웠다"
                                 },
                                 {
                                     "id": 120,
@@ -5915,7 +5945,8 @@
                                     },
                                     "english": "By relying on her own abilities, she achieved success",
                                     "japanese": "自分の能力に頼って、彼女は成功を収めました",
-                                    "japanese_romaji": "Jibun no nōryoku ni tayotte, kanojo wa seikō wo osaemashita"
+                                    "japanese_romaji": "Jibun no nōryoku ni tayotte, kanojo wa seikō wo osaemashita",
+                                    "korean": "자신의 능력으로 성공을 거뒀다"
                                 }
                             ]
                         }

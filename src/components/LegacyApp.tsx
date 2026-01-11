@@ -1,14 +1,16 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowLeft } from 'lucide-react';
 import Navigation from './Navigation';
 import SentenceCard from './SentenceCard';
 import { SentenceData, ContentSection, isDateBasedContent, isCategoryContent, isDayContent } from '../types';
+import { useGlobalState } from '../contexts/GlobalStateContext';
 
-interface LegacyAppProps {
-  onBackClick: () => void;
-  isDarkMode: boolean;
-}
-
-const LegacyApp: React.FC<LegacyAppProps> = ({ onBackClick, isDarkMode }) => {
+const LegacyApp: React.FC = () => {
+  const navigate = useNavigate();
+  const { state } = useGlobalState();
+  const isDarkMode = state.isDarkMode;
   const [sentenceData, setSentenceData] = useState<SentenceData | null>(null);
   const [availableDates, setAvailableDates] = useState<string[]>([]);
   const [pastMonths, setPastMonths] = useState<string[]>([]);
@@ -221,10 +223,14 @@ const LegacyApp: React.FC<LegacyAppProps> = ({ onBackClick, isDarkMode }) => {
       {/* Header */}
       <header className="app-header">
         <div className="header-title">
-          <button onClick={onBackClick} className="back-button">
-            🔙
-          </button>
-          <h1>중국어 학습</h1>
+          <motion.button
+            onClick={() => navigate('/')}
+            className="back-button"
+            whileTap={{ scale: 0.9 }}
+          >
+            <ArrowLeft size={20} />
+          </motion.button>
+          <h1>중국어 학습 (Legacy)</h1>
         </div>
       </header>
 

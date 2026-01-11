@@ -15,7 +15,8 @@
       "Bash(move:*)",
       "Bash(del \"D:\\Coding\\chinesestudy\\src\\data\\intergrated\\04_실전회화_제41-50과_complete_filled.json\")",
       "Bash(pip install:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(git checkout p_pinyin.py)"
     ],
     "defaultMode": "acceptEdits"
   }
