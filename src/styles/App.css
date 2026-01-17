@@ -261,289 +261,289 @@ body {
 }
 
 /* Dark Mode Styles */
-.app.dark-mode body,
-.app.dark-mode {
+html.dark body,
+html.dark {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
 }
 
-.app.dark-mode .navigation-vertical {
+html.dark .navigation-vertical {
   background: #34495e;
   color: white;
 }
 
-.app.dark-mode .nav-section {
+html.dark .nav-section {
   border-bottom-color: #455a64;
 }
 
-.app.dark-mode .nav-label {
+html.dark .nav-label {
   color: #bdc3c7;
 }
 
-.app.dark-mode .month-item,
-.app.dark-mode .day-item,
-.app.dark-mode .category-item {
+html.dark .month-item,
+html.dark .day-item,
+html.dark .category-item {
   background: #2c3e50;
   color: white;
 }
 
-.app.dark-mode .month-item:hover,
-.app.dark-mode .day-item:hover,
-.app.dark-mode .category-item:hover {
+html.dark .month-item:hover,
+html.dark .day-item:hover,
+html.dark .category-item:hover {
   background: #455a64;
 }
 
-.app.dark-mode .nav-scroll-container::-webkit-scrollbar-track {
+html.dark .nav-scroll-container::-webkit-scrollbar-track {
   background: #2c3e50;
 }
 
-.app.dark-mode .nav-scroll-container::-webkit-scrollbar-thumb {
+html.dark .nav-scroll-container::-webkit-scrollbar-thumb {
   background: #667eea;
 }
 
-.app.dark-mode .month-selector select,
-.app.dark-mode .past-month-selector select,
-.app.dark-mode .present-month-selector select {
+html.dark .month-selector select,
+html.dark .past-month-selector select,
+html.dark .present-month-selector select {
   background: #2c3e50;
   color: white;
   border-color: #667eea;
 }
 
-.app.dark-mode .date-tab,
-.app.dark-mode .category-tab {
+html.dark .date-tab,
+html.dark .category-tab {
   background: #2c3e50;
   color: white;
   border-color: #546e7a;
 }
 
-.app.dark-mode .date-tab:hover,
-.app.dark-mode .category-tab:hover {
+html.dark .date-tab:hover,
+html.dark .category-tab:hover {
   background: #455a64;
 }
 
-.app.dark-mode .sentence-card {
+html.dark .sentence-card {
   background: #2c3e50;
   color: white;
 }
 
-.app.dark-mode .subcategory-divider h3 {
+html.dark .subcategory-divider h3 {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-.app.dark-mode .subcategory-divider h3:before {
+html.dark .subcategory-divider h3:before {
   border-right-color: #667eea;
 }
 
-.app.dark-mode .subcategory-divider h3:after {
+html.dark .subcategory-divider h3:after {
   border-left-color: #764ba2;
 }
 
-.app.dark-mode .chinese-sentence {
+html.dark .chinese-sentence {
   color: #ecf0f1;
 }
 
-.app.dark-mode .pinyin {
+html.dark .pinyin {
   color: #bdc3c7;
 }
 
-.app.dark-mode .meanings {
+html.dark .meanings {
   background: #34495e;
 }
 
-.app.dark-mode .meaning-text {
+html.dark .meaning-text {
   color: #ecf0f1;
 }
 
-.app.dark-mode .words-toggle {
+html.dark .words-toggle {
   background: #34495e;
 }
 
-.app.dark-mode .words-toggle:hover {
+html.dark .words-toggle:hover {
   background: #455a64;
 }
 
-.app.dark-mode .words-title {
+html.dark .words-title {
   color: #ecf0f1;
 }
 
-.app.dark-mode .sentence-number {
+html.dark .sentence-number {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
 }
 
-.app.dark-mode .word-card {
+html.dark .word-card {
   background: #34495e;
   border-left-color: #667eea;
 }
 
-.app.dark-mode .example-card {
+html.dark .example-card {
   background: #2c3e50;
   border-left-color: #8080ff;
 }
 
-.app.dark-mode .example-sentence {
+html.dark .example-sentence {
   color: #ecf0f1;
 }
 
-.app.dark-mode .example-pinyin {
+html.dark .example-pinyin {
   color: #95a5a6;
 }
 
-.app.dark-mode .example-meaning {
+html.dark .example-meaning {
   color: #bdc3c7;
 }
 
-.app.dark-mode .examples-toggle {
+html.dark .examples-toggle {
   background: #2c3e50;
 }
 
-.app.dark-mode .examples-toggle:hover {
+html.dark .examples-toggle:hover {
   background: #34495e;
 }
 
-.app.dark-mode .examples-title {
+html.dark .examples-title {
   color: #9b59b6;
 }
 
-.app.dark-mode .audio-button-small:hover {
+html.dark .audio-button-small:hover {
   background: #34495e;
 }
 
-.app.dark-mode .word-chinese {
+html.dark .word-chinese {
   color: #ecf0f1;
 }
 
-.app.dark-mode .word-chinese-complex {
+html.dark .word-chinese-complex {
   color: #95a5a6;
 }
 
-.app.dark-mode .word-meaning {
+html.dark .word-meaning {
   color: #bdc3c7;
 }
 
-.app.dark-mode .word-meaning-detail {
+html.dark .word-meaning-detail {
   color: #7f8c8d;
 }
 
-.app.dark-mode .content-area {
+html.dark .content-area {
   background: #2c3e50 !important;
   color: white;
 }
 
-.app.dark-mode .main-sentence {
+html.dark .main-sentence {
   color: #ecf0f1;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-.app.dark-mode .main-sentence:hover {
+html.dark .main-sentence:hover {
   color: #3498db;
 }
 
-.app.dark-mode .sentence-translations {
+html.dark .sentence-translations {
   background: rgba(52, 152, 219, 0.2);
   border-left-color: #3498db;
 }
 
-.app.dark-mode .translation-sentence {
+html.dark .translation-sentence {
   color: #3498db;
 }
 
-.app.dark-mode .translation-pinyin {
+html.dark .translation-pinyin {
   color: #e74c3c;
 }
 
-.app.dark-mode .translation-korean {
+html.dark .translation-korean {
   color: #2ecc71;
 }
 
-.app.dark-mode .translation-english {
+html.dark .translation-english {
   color: #9b59b6;
 }
 
-.app.dark-mode .sentence-header {
+html.dark .sentence-header {
   border-bottom-color: #546e7a;
 }
 
-.app.dark-mode .sentence-id {
+html.dark .sentence-id {
   color: #667eea;
 }
 
-.app.dark-mode .sentence-counter {
+html.dark .sentence-counter {
   background: #34495e;
   color: #ecf0f1;
 }
 
-.app.dark-mode .repeat-btn,
-.app.dark-mode .autoplay-toggle-btn {
+html.dark .repeat-btn,
+html.dark .autoplay-toggle-btn {
   background: linear-gradient(135deg, #292d3e 0%, #42384a 100%);
   box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);
 }
 
-.app.dark-mode .autoplay-toggle-btn.active {
+html.dark .autoplay-toggle-btn.active {
   background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
 }
 
-.app.dark-mode .repeat-btn:hover,
-.app.dark-mode .autoplay-toggle-btn:hover {
+html.dark .repeat-btn:hover,
+html.dark .autoplay-toggle-btn:hover {
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.6);
 }
 
-.app.dark-mode .word-item-detail {
+html.dark .word-item-detail {
   background: #34495e;
   border-left-color: #667eea;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.app.dark-mode .word-row-main .word-chinese {
+html.dark .word-row-main .word-chinese {
   color: #ecf0f1;
 }
 
-.app.dark-mode .word-row-main .word-pinyin {
+html.dark .word-row-main .word-pinyin {
   color: #95a5a6;
 }
 
-.app.dark-mode .word-row-main .word-korean {
+html.dark .word-row-main .word-korean {
   color: #e74c3c;
 }
 
-.app.dark-mode .word-english {
+html.dark .word-english {
   color: #2ecc71;
 }
 
-.app.dark-mode .word-row-sub .word-traditional {
+html.dark .word-row-sub .word-traditional {
   color: #9b59b6;
 }
 
-.app.dark-mode .word-row-sub .word-meaning {
+html.dark .word-row-sub .word-meaning {
   color: #bdc3c7;
   background: #2c3e50;
 }
 
-.app.dark-mode .no-words {
+html.dark .no-words {
   background: #34495e;
   color: #bdc3c7;
   border-color: #546e7a;
 }
 
-.app.dark-mode .translation-item {
+html.dark .translation-item {
   background: #34495e;
   border-left-color: #667eea;
 }
 
-.app.dark-mode .translation-item .label {
+html.dark .translation-item .label {
   color: #667eea;
 }
 
-.app.dark-mode .translation-item .content {
+html.dark .translation-item .content {
   color: #ecf0f1;
 }
 
-.app.dark-mode .words-sentence-separator {
+html.dark .words-sentence-separator {
   background: #2c3e50;
   border-top-color: #546e7a;
 }
 
-.app.dark-mode .header-with-center {
+html.dark .header-with-center {
   background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%) !important;
 }
 
@@ -2299,19 +2299,19 @@ body {
 }
 
 /* Dark Mode Modal */
-.app.dark-mode .lesson-modal {
+html.dark .lesson-modal {
   background: #2c3e50;
 }
 
-.app.dark-mode .lesson-modal h3 {
+html.dark .lesson-modal h3 {
   color: #ecf0f1;
 }
 
-.app.dark-mode .lesson-modal-btn.cancel {
+html.dark .lesson-modal-btn.cancel {
   background: #34495e;
   color: #bdc3c7;
 }
 
-.app.dark-mode .lesson-modal-btn.cancel:hover {
+html.dark .lesson-modal-btn.cancel:hover {
   background: #455a64;
 }

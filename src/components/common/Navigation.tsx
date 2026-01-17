@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, History, Settings, Home } from 'lucide-react';
+import { BookOpen, Settings, Home } from 'lucide-react';
 
 interface NavItem {
   path: string;
@@ -12,7 +12,6 @@ interface NavItem {
 const navItems: NavItem[] = [
   { path: '/', label: '홈', icon: <Home size={20} /> },
   { path: '/study', label: '학습', icon: <BookOpen size={20} /> },
-  { path: '/legacy', label: '기존', icon: <History size={20} /> },
   { path: '/settings', label: '설정', icon: <Settings size={20} /> },
 ];
 

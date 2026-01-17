@@ -9,14 +9,12 @@ const STORAGE_KEYS = {
   SELECTED_LESSON: 'chineseStudy_selectedLessonId',
   IS_AUTO_PLAY: 'chineseStudy_isAutoPlay',
   SENTENCE_INDEX: 'chineseStudy_currentSentenceIndex',
-  VIEW_MODE: 'chineseStudy_viewMode',
   DATA_CATEGORY: 'chineseStudy_dataCategory',
   FONT_SIZE: 'chineseStudy_fontSize',
 } as const;
 
 // 표시 모드 타입
 export type DisplayMode = 'chinese' | 'translations' | 'others' | 'words';
-export type ViewMode = 'legacy' | 'new' | null;
 export type DataCategory = 'currently' | 'integrated' | null;
 export type IntegratedType = '01_초급반_제1-10과' | '02_중급반_제11-25과' | '03_고급반_제26-40과' | '04_실전회화_제41-50과' | '05_패턴_제1-90과';
 export type CurrentlyType = '202508';
@@ -30,7 +28,6 @@ export interface GlobalState {
   selectedLessonId: string | null;
   isAutoPlay: boolean;
   currentSentenceIndex: number;
-  viewMode: ViewMode;
   dataCategory: DataCategory;
   fontSize: number;
   // 학습 진행 상태
@@ -60,7 +57,6 @@ const getInitialState = (): GlobalState => {
       selectedLessonId: localStorage.getItem(STORAGE_KEYS.SELECTED_LESSON),
       isAutoPlay: localStorage.getItem(STORAGE_KEYS.IS_AUTO_PLAY) === 'true',
       currentSentenceIndex: parseInt(localStorage.getItem(STORAGE_KEYS.SENTENCE_INDEX) || '0'),
-      viewMode: localStorage.getItem(STORAGE_KEYS.VIEW_MODE) as ViewMode,
       dataCategory: localStorage.getItem(STORAGE_KEYS.DATA_CATEGORY) as DataCategory,
       fontSize: parseInt(localStorage.getItem(STORAGE_KEYS.FONT_SIZE) || '18'),
       completedSentences: 0,
@@ -77,7 +73,6 @@ const getInitialState = (): GlobalState => {
       selectedLessonId: null,
       isAutoPlay: false,
       currentSentenceIndex: 0,
-      viewMode: null,
       dataCategory: null,
       fontSize: 18,
       completedSentences: 0,
@@ -113,7 +108,6 @@ export const GlobalStateProvider = ({ children }: { children: ReactNode }) => {
     saveToStorage(STORAGE_KEYS.SELECTED_LESSON, state.selectedLessonId);
     saveToStorage(STORAGE_KEYS.IS_AUTO_PLAY, state.isAutoPlay);
     saveToStorage(STORAGE_KEYS.SENTENCE_INDEX, state.currentSentenceIndex);
-    saveToStorage(STORAGE_KEYS.VIEW_MODE, state.viewMode);
     saveToStorage(STORAGE_KEYS.DATA_CATEGORY, state.dataCategory);
     saveToStorage(STORAGE_KEYS.FONT_SIZE, state.fontSize);
   }, [state]);

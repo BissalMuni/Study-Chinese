@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, History, Settings, Sparkles } from 'lucide-react';
+import { BookOpen, Settings, Sparkles } from 'lucide-react';
 import { useGlobalState } from '../contexts/GlobalStateContext';
 import { StreakCounter } from '../components/animations';
 
@@ -18,20 +18,12 @@ const Home: React.FC = () => {
       delay: 0.1,
     },
     {
-      to: '/legacy',
-      icon: <History size={32} />,
-      title: '기존 버전',
-      description: 'Past/Present 모드',
-      gradient: 'from-green-500 to-teal-600',
-      delay: 0.2,
-    },
-    {
       to: '/settings',
       icon: <Settings size={32} />,
       title: '설정',
       description: '앱 환경 설정',
       gradient: 'from-gray-500 to-gray-700',
-      delay: 0.3,
+      delay: 0.2,
     },
   ];
 
