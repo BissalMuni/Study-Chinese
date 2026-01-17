@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg z-50 safe-area-bottom">
+    <nav className="shrink-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg z-50 safe-area-bottom">
       <ul className="flex justify-around items-center h-16 max-w-md mx-auto">
         {navItems.map((item) => (
           <li key={item.path} className="flex-1">
