@@ -89,7 +89,7 @@ const SettingsPage: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <motion.div
-                  className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md"
+                  className="absolute top-1/2 -translate-y-1/2 left-1 w-6 h-6 bg-white rounded-full shadow-md"
                   animate={{ x: state.isDarkMode ? 24 : 0 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                 />
@@ -112,7 +112,7 @@ const SettingsPage: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 <motion.div
-                  className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md"
+                  className="absolute top-1/2 -translate-y-1/2 left-1 w-6 h-6 bg-white rounded-full shadow-md"
                   animate={{ x: state.isAutoPlay ? 24 : 0 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                 />

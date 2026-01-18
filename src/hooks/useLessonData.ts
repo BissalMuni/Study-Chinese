@@ -172,5 +172,3 @@ export const useLessonData = (params?: UseLessonDataParams): UseLessonDataReturn
     selectedLessonContent,
   };
 };
-
-export default useLessonData;

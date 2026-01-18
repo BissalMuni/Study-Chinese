@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useGlobalState } from '../../contexts/GlobalStateContext';
 import { useLessonData, useSpeechSynthesis, useSwipeNavigation } from '../../hooks';
-import { Header, ProgressBar } from '../common';
+import { Header } from '../common';
 import SentenceCard from './SentenceCard';
 import AudioController from './AudioController';
 import CelebrationEffect from '../animations/CelebrationEffect';
@@ -93,18 +93,9 @@ const StudyView: React.FC = () => {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pb-40">
       <Header
         title={lessonTitle}
-        subtitle={`${state.currentSentenceIndex + 1} / ${allSentences.length}`}
+        // subtitle={`${state.currentSentenceIndex + 1} / ${allSentences.length}`}
         onBack={() => updateState('selectedLessonId', null)}
       />
-
-      {/* 진행률 바 */}
-      <div className="px-4 py-2 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <ProgressBar
-          current={state.currentSentenceIndex + 1}
-          total={allSentences.length}
-          color={state.currentSentenceIndex === allSentences.length - 1 ? 'success' : 'primary'}
-        />
-      </div>
 
       {/* 문장 카드 */}
       <div
@@ -137,15 +128,6 @@ const StudyView: React.FC = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* 스와이프 힌트 */}
-        <motion.div
-          className="flex justify-center mt-6 text-sm text-gray-400"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
-          <span>↑ 위로 스와이프: 다음 | ↓ 아래로 스와이프: 이전</span>
-        </motion.div>
       </div>
 
       {/* 오디오 컨트롤러 */}

@@ -48,7 +48,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   }
 
   return (
-    <div className="p-4 space-y-3">
+    <div className="p-3 space-y-3">
       <h2 className="text-lg font-bold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
         <BookOpen size={20} className="text-primary-500" />
         레슨 선택
@@ -65,7 +65,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
                 lessonRefs.current[String(lesson.lesson)] = el;
               }}
               onClick={() => onSelectLesson(String(lesson.lesson))}
-              className={`relative p-4 rounded-xl text-left transition-all ${
+              className={`relative p-2 rounded-xl text-left transition-all ${
                 isSelected
                   ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/30'
                   : 'bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700'

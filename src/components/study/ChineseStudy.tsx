@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { useGlobalState, IntegratedType, CurrentlyType, DataCategory } from '../../contexts/GlobalStateContext';
+import { useGlobalState, IntegratedType, CurrentlyType, DataCategory, PlayMode } from '../../contexts/GlobalStateContext';
 import { useLessonData } from '../../hooks';
 import { Header } from '../common';
 import CategorySelector from './CategorySelector';
 import TypeSelector from './TypeSelector';
 import LessonSelector from './LessonSelector';
+import PlaySelector from './PlaySelector';
+import LessonPlaySettingsSelector from './LessonPlaySettingsSelector';
 import StudyView from './StudyView';
+import LessonStudyView from './LessonStudyView';
 
 const ChineseStudy: React.FC = () => {
   const navigate = useNavigate();
@@ -53,14 +56,40 @@ const ChineseStudy: React.FC = () => {
   const handleSelectLesson = (lessonId: string) => {
     updateState('selectedLessonId', lessonId);
     updateState('currentSentenceIndex', 0);
+    updateState('playMode', null); // 플레이 모드 선택 화면으로
     selectLesson(lessonId);
+  };
+
+  // 플레이 모드 선택
+  const handleSelectPlayMode = (mode: PlayMode) => {
+    updateState('playMode', mode);
+  };
+
+  // 레슨 연습 시작 (설정 화면에서)
+  const handleStartLessonPlay = () => {
+    updateState('playMode', 'lesson_playing' as PlayMode);
+  };
+
+  // 레슨 연습 바로 시작 (설정 화면 없이)
+  const handleStartLessonDirect = () => {
+    updateState('playMode', 'lesson_playing' as PlayMode);
   };
 
   // 뒤로가기
   const handleBack = () => {
-    if (state.selectedLessonId && allSentences.length > 0) {
-      // 학습 중 -> 레슨 선택
+    if (state.playMode === 'lesson_playing') {
+      // 레슨 연습 중 -> 레슨 연습 설정
+      updateState('playMode', 'lesson');
+    } else if (state.playMode === 'sentence') {
+      // 문장 연습 중 -> 플레이 모드 선택
+      updateState('playMode', null);
+    } else if (state.playMode === 'lesson') {
+      // 레슨 연습 설정 -> 플레이 모드 선택
+      updateState('playMode', null);
+    } else if (state.selectedLessonId && allSentences.length > 0) {
+      // 플레이 모드 선택 -> 레슨 선택
       updateState('selectedLessonId', null);
+      updateState('playMode', null);
     } else if (state.selectedType) {
       // 레슨 선택 -> 타입 선택
       updateState('selectedType', null);
@@ -76,9 +105,40 @@ const ChineseStudy: React.FC = () => {
 
   // 현재 상태에 따른 화면 렌더링
   const renderContent = () => {
-    // 학습 뷰 (레슨 선택 + 문장 있음)
-    if (state.selectedLessonId && allSentences.length > 0) {
+    // 레슨 연습 뷰 (레슨 연습 모드 + 재생 중)
+    if (state.playMode === 'lesson_playing' && state.selectedLessonId && allSentences.length > 0) {
+      return <LessonStudyView />;
+    }
+
+    // 레슨 연습 설정 (레슨 연습 모드 선택됨)
+    if (state.playMode === 'lesson' && state.selectedLessonId && allSentences.length > 0) {
+      return (
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+          <Header
+            title="레슨 연습 설정"
+            onBack={handleBack}
+          />
+          <LessonPlaySettingsSelector onStart={handleStartLessonPlay} />
+        </div>
+      );
+    }
+
+    // 문장 연습 뷰 (문장 연습 모드 선택됨)
+    if (state.playMode === 'sentence' && state.selectedLessonId && allSentences.length > 0) {
       return <StudyView />;
+    }
+
+    // 플레이 모드 선택 (레슨 선택됨 + 문장 있음)
+    if (state.selectedLessonId && allSentences.length > 0 && state.playMode === null) {
+      return (
+        <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+          <Header
+            title="학습 방식"
+            onBack={handleBack}
+          />
+          <PlaySelector onSelectMode={handleSelectPlayMode} onStartLessonDirect={handleStartLessonDirect} />
+        </div>
+      );
     }
 
     // 레슨 선택 (타입 선택됨 + 레슨 데이터 있음)

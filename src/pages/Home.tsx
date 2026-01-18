@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div className="h-full flex flex-col bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* 배경 장식 */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -49,10 +49,10 @@ const Home: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-10 px-6 pt-12 pb-24">
+      <div className="relative z-10 flex-1 flex flex-col justify-center gap-8 px-6 py-8">
         {/* 헤더 */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
         </motion.div>
 
         {/* 메뉴 카드 */}
-        <div className="space-y-4 max-w-md mx-auto">
+        <div className="flex flex-col gap-6 max-w-md mx-auto w-full">
           {menuItems.map((item, index) => (
             <motion.div
               key={item.to}
@@ -95,7 +95,7 @@ const Home: React.FC = () => {
             >
               <Link to={item.to}>
                 <motion.div
-                  className={`relative overflow-hidden p-6 rounded-2xl bg-gradient-to-r ${item.gradient} shadow-xl`}
+                  className={`relative overflow-hidden p-2 rounded-2xl bg-gradient-to-r ${item.gradient} shadow-xl`}
                   whileHover={{ scale: 1.02, y: -3 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -130,7 +130,7 @@ const Home: React.FC = () => {
 
         {/* 하단 정보 */}
         <motion.div
-          className="text-center mt-12 text-white/50 text-sm"
+          className="text-center text-white/50 text-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}

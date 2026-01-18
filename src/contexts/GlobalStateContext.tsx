@@ -11,16 +11,32 @@ const STORAGE_KEYS = {
   SENTENCE_INDEX: 'chineseStudy_currentSentenceIndex',
   DATA_CATEGORY: 'chineseStudy_dataCategory',
   FONT_SIZE: 'chineseStudy_fontSize',
+  LESSON_PLAY_SETTINGS: 'chineseStudy_lessonPlaySettings',
 } as const;
 
 // 표시 모드 타입
-export type DisplayMode = 'chinese' | 'translations' | 'others' | 'words';
+type DisplayMode = 'chinese' | 'translations' | 'others' | 'words';
 export type DataCategory = 'currently' | 'integrated' | null;
 export type IntegratedType = '01_초급반_제1-10과' | '02_중급반_제11-25과' | '03_고급반_제26-40과' | '04_실전회화_제41-50과' | '05_패턴_제1-90과';
 export type CurrentlyType = '202508';
+export type PlayMode = 'sentence' | 'lesson' | 'lesson_playing' | null;
+export type RepeatOrder = 'sequential' | 'random';
+export type CardAnimation = 'slide' | 'fade' | 'flip' | 'scale' | 'zoom' | 'rotate' | 'bounce' | 'slideUp' | 'slideDown' | 'blur' | 'elastic' | 'none' | 'random';
+export type CardColorMode = 'fixed' | 'random';
+export type CardMovement = 'fixed' | 'moving'; // 카드 이동 모드
+
+// 레슨 연습 설정
+export interface LessonPlaySettings {
+  repeatOrder: RepeatOrder;
+  sentenceRepeatCount: number;
+  cardAnimation: CardAnimation;
+  cardColorMode: CardColorMode;
+  transitionDelay: number; // 카드 전환 사이 쉬는 시간 (초)
+  cardMovement: CardMovement; // 카드 이동 설정
+}
 
 // 전역 상태 인터페이스
-export interface GlobalState {
+interface GlobalState {
   isDarkMode: boolean;
   repeatCount: number;
   displayMode: DisplayMode;
@@ -30,6 +46,9 @@ export interface GlobalState {
   currentSentenceIndex: number;
   dataCategory: DataCategory;
   fontSize: number;
+  // 플레이 모드
+  playMode: PlayMode;
+  lessonPlaySettings: LessonPlaySettings;
   // 학습 진행 상태
   completedSentences: number;
   totalSentences: number;
@@ -46,6 +65,30 @@ interface GlobalStateContextType {
 
 const GlobalStateContext = createContext<GlobalStateContextType | undefined>(undefined);
 
+// 기본 레슨 연습 설정
+const defaultLessonPlaySettings: LessonPlaySettings = {
+  repeatOrder: 'sequential',
+  sentenceRepeatCount: 3,
+  cardAnimation: 'slide',
+  cardColorMode: 'fixed',
+  transitionDelay: 1, // 기본 1초
+  cardMovement: 'fixed', // 기본 고정
+};
+
+// localStorage에서 lessonPlaySettings 불러오기
+const loadLessonPlaySettings = (): LessonPlaySettings => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEYS.LESSON_PLAY_SETTINGS);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return { ...defaultLessonPlaySettings, ...parsed };
+    }
+  } catch (error) {
+    console.error('lessonPlaySettings 로드 오류:', error);
+  }
+  return defaultLessonPlaySettings;
+};
+
 // 초기 상태 가져오기
 const getInitialState = (): GlobalState => {
   try {
@@ -59,6 +102,8 @@ const getInitialState = (): GlobalState => {
       currentSentenceIndex: parseInt(localStorage.getItem(STORAGE_KEYS.SENTENCE_INDEX) || '0'),
       dataCategory: localStorage.getItem(STORAGE_KEYS.DATA_CATEGORY) as DataCategory,
       fontSize: parseInt(localStorage.getItem(STORAGE_KEYS.FONT_SIZE) || '18'),
+      playMode: null,
+      lessonPlaySettings: loadLessonPlaySettings(),
       completedSentences: 0,
       totalSentences: 0,
       streakCount: 0,
@@ -75,6 +120,8 @@ const getInitialState = (): GlobalState => {
       currentSentenceIndex: 0,
       dataCategory: null,
       fontSize: 18,
+      playMode: null,
+      lessonPlaySettings: loadLessonPlaySettings(),
       completedSentences: 0,
       totalSentences: 0,
       streakCount: 0,
@@ -110,6 +157,12 @@ export const GlobalStateProvider = ({ children }: { children: ReactNode }) => {
     saveToStorage(STORAGE_KEYS.SENTENCE_INDEX, state.currentSentenceIndex);
     saveToStorage(STORAGE_KEYS.DATA_CATEGORY, state.dataCategory);
     saveToStorage(STORAGE_KEYS.FONT_SIZE, state.fontSize);
+    // lessonPlaySettings는 JSON으로 저장
+    try {
+      localStorage.setItem(STORAGE_KEYS.LESSON_PLAY_SETTINGS, JSON.stringify(state.lessonPlaySettings));
+    } catch (error) {
+      console.error('lessonPlaySettings 저장 오류:', error);
+    }
   }, [state]);
 
   // 다크모드 클래스 토글
@@ -171,4 +224,3 @@ export const useGlobalState = () => {
   return context;
 };
 
-export default GlobalStateContext;

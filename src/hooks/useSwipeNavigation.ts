@@ -86,5 +86,3 @@ export const useSwipeNavigation = (options: UseSwipeNavigationOptions = {}): Swi
 
   return { onTouchStart, onTouchMove, onTouchEnd };
 };
-
-export default useSwipeNavigation;

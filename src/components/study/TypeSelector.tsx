@@ -48,7 +48,7 @@ const integratedTypes: TypeOption[] = [
   {
     type: '05_패턴_제1-90과',
     label: '패턴회화',
-    sublabel: '제1-30과',
+    sublabel: '제1-90과',
     icon: <Repeat size={24} />,
     color: 'from-pink-400 to-pink-600',
   },
@@ -68,7 +68,7 @@ const TypeSelector: React.FC<TypeSelectorProps> = ({ dataCategory, onSelectType 
   const types = dataCategory === 'integrated' ? integratedTypes : currentlyTypes;
 
   return (
-    <div className="p-4">
+    <div className="p-3">
       <h2 className="text-lg font-bold text-gray-800 dark:text-white mb-4">
         {dataCategory === 'integrated' ? '통합 코스 선택' : '현재 학습'}
       </h2>
@@ -78,7 +78,7 @@ const TypeSelector: React.FC<TypeSelectorProps> = ({ dataCategory, onSelectType 
           <motion.button
             key={item.type}
             onClick={() => onSelectType(item.type)}
-            className={`relative overflow-hidden p-5 rounded-2xl text-white bg-gradient-to-r ${item.color} shadow-lg`}
+            className={`relative overflow-hidden p-3 rounded-2xl text-white bg-gradient-to-r ${item.color} shadow-lg`}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1 }}

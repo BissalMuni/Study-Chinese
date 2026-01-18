@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* 다크 모드 설정 (class 기반) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* 테마 변수 */
 @theme {
   --color-primary-50: #eff6ff;

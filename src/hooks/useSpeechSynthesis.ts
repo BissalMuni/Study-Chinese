@@ -83,5 +83,3 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
 
   return { speak, stop, isPlaying, currentRepeat };
 };
-
-export default useSpeechSynthesis;
