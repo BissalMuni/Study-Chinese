@@ -24,6 +24,7 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentRepeat, setCurrentRepeat] = useState(0);
   const cancelledRef = useRef(false);
+  const resumeIntervalRef = useRef<number | null>(null);
 
   const speak = useCallback(async (text: string, lang: string = 'chinese', repeat: number = 1) => {
     if (!('speechSynthesis' in window)) {
@@ -35,6 +36,16 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
     setIsPlaying(true);
     setCurrentRepeat(0);
     window.speechSynthesis.cancel();
+
+    // Chrome 버그 workaround: 일정 간격으로 resume() 호출
+    if (resumeIntervalRef.current) {
+      clearInterval(resumeIntervalRef.current);
+    }
+    resumeIntervalRef.current = window.setInterval(() => {
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+    }, 200);
 
     const langCode = LANG_MAP[lang] || lang;
 
@@ -49,8 +60,18 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
         utterance.lang = langCode;
         utterance.rate = rate;
 
+        // 특정 언어에 맞는 음성 선택 시도
+        const voices = window.speechSynthesis.getVoices();
+        const matchingVoice = voices.find(v => v.lang.startsWith(langCode.split('-')[0]));
+        if (matchingVoice) {
+          utterance.voice = matchingVoice;
+        }
+
         utterance.onend = () => resolve();
-        utterance.onerror = () => resolve();
+        utterance.onerror = (event) => {
+          console.error('SpeechSynthesis error:', event.error);
+          resolve(); // 에러가 나도 계속 진행
+        };
 
         window.speechSynthesis.speak(utterance);
       });
@@ -69,6 +90,11 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
         }
       }
     } finally {
+      // interval 정리
+      if (resumeIntervalRef.current) {
+        clearInterval(resumeIntervalRef.current);
+        resumeIntervalRef.current = null;
+      }
       setIsPlaying(false);
       setCurrentRepeat(0);
     }
@@ -76,6 +102,11 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
 
   const stop = useCallback(() => {
     cancelledRef.current = true;
+    // interval 정리
+    if (resumeIntervalRef.current) {
+      clearInterval(resumeIntervalRef.current);
+      resumeIntervalRef.current = null;
+    }
     window.speechSynthesis?.cancel();
     setIsPlaying(false);
     setCurrentRepeat(0);
