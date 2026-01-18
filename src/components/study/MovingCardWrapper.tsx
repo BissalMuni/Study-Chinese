@@ -17,7 +17,7 @@ const MovingCardWrapper: React.FC<MovingCardWrapperProps> = ({ children, isMovin
   // 새로운 랜덤 속도 생성
   const createNewVelocity = useCallback(() => ({
     x: (Math.random() - 0.5) * 1.5,
-    y: (Math.random() - 0.5) * 1.5,
+    y: (Math.random() - 0.5) * 3,
     r: (Math.random() - 0.5) * 0.5,
   }), []);
 
