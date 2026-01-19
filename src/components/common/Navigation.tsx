@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { BookOpen, Settings, Home } from 'lucide-react';
+import { useAdTrigger } from '../../contexts/AdContext';
 
 interface NavItem {
   path: string;
@@ -17,10 +18,20 @@ const navItems: NavItem[] = [
 
 const Navigation: React.FC = () => {
   const location = useLocation();
+  const { triggerAd } = useAdTrigger();
+  const prevPathRef = useRef(location.pathname);
 
   const isActive = (path: string) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
+  };
+
+  const handleNavClick = (path: string) => {
+    // 현재 경로와 다른 경로로 이동할 때만 광고 트리거
+    if (prevPathRef.current !== path) {
+      triggerAd('NAVIGATION_CHANGE');
+      prevPathRef.current = path;
+    }
   };
 
   return (
@@ -30,6 +41,7 @@ const Navigation: React.FC = () => {
           <li key={item.path} className="flex-1">
             <Link
               to={item.path}
+              onClick={() => handleNavClick(item.path)}
               className="flex flex-col items-center justify-center h-full relative"
             >
               <motion.div

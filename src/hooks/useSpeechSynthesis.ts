@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface UseSpeechSynthesisOptions {
   rate?: number;
@@ -12,11 +12,46 @@ interface UseSpeechSynthesisReturn {
   currentRepeat: number;
 }
 
+// 안드로이드 인터페이스 타입 정의
+interface AndroidAudio {
+  speakTTS: (text: string) => void;
+  speakTTSWithLanguage: (text: string, lang: string) => void;
+  setTTSLanguage: (lang: string) => boolean;
+  setTTSSpeechRate: (rate: number) => void;
+  stopTTS: () => void;
+  isTTSSpeaking: () => boolean;
+}
+
+declare global {
+  interface Window {
+    AndroidAudio?: AndroidAudio;
+    onAndroidTTSStateChange?: (isSpeaking: boolean, text: string | null) => void;
+    onAndroidTTSError?: (message: string) => void;
+  }
+}
+
 const LANG_MAP: Record<string, string> = {
   chinese: 'zh-CN',
   korean: 'ko-KR',
   english: 'en-US',
   japanese: 'ja-JP',
+};
+
+// 안드로이드 언어 코드 매핑
+const ANDROID_LANG_MAP: Record<string, string> = {
+  chinese: 'zh',
+  korean: 'ko',
+  english: 'en',
+  japanese: 'ja',
+  'zh-CN': 'zh',
+  'ko-KR': 'ko',
+  'en-US': 'en',
+  'ja-JP': 'ja',
+};
+
+// 안드로이드 앱 여부 확인
+const isAndroidApp = (): boolean => {
+  return typeof window !== 'undefined' && !!window.AndroidAudio;
 };
 
 export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): UseSpeechSynthesisReturn => {
@@ -25,16 +60,113 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
   const [currentRepeat, setCurrentRepeat] = useState(0);
   const cancelledRef = useRef(false);
   const resumeIntervalRef = useRef<number | null>(null);
+  const androidTTSDoneResolveRef = useRef<(() => void) | null>(null);
 
-  const speak = useCallback(async (text: string, lang: string = 'chinese', repeat: number = 1) => {
-    if (!('speechSynthesis' in window)) {
-      console.warn('SpeechSynthesis not supported');
-      return;
+  // 안드로이드 TTS 상태 콜백 설정
+  useEffect(() => {
+    if (isAndroidApp()) {
+      window.onAndroidTTSStateChange = (isSpeaking: boolean, _text: string | null) => {
+        console.log('Android TTS state change:', isSpeaking);
+        // TTS가 완료되었을 때 (isSpeaking = false)
+        if (!isSpeaking && androidTTSDoneResolveRef.current) {
+          // 약간의 딜레이를 주어 다음 재생 준비 시간 확보
+          setTimeout(() => {
+            if (androidTTSDoneResolveRef.current) {
+              androidTTSDoneResolveRef.current();
+            }
+          }, 100);
+        }
+      };
+
+      window.onAndroidTTSError = (message: string) => {
+        console.error('Android TTS Error:', message);
+        if (androidTTSDoneResolveRef.current) {
+          androidTTSDoneResolveRef.current();
+        }
+      };
     }
 
+    return () => {
+      window.onAndroidTTSStateChange = undefined;
+      window.onAndroidTTSError = undefined;
+    };
+  }, []);
+
+  const speak = useCallback(async (text: string, lang: string = 'chinese', repeat: number = 1) => {
     cancelledRef.current = false;
     setIsPlaying(true);
     setCurrentRepeat(0);
+
+    // 안드로이드 앱인 경우 네이티브 TTS 사용
+    if (isAndroidApp()) {
+      const androidLang = ANDROID_LANG_MAP[lang] || 'zh';
+
+      // 속도 설정 (안드로이드 기본 1.0, 웹 기본 0.9이므로 변환)
+      window.AndroidAudio!.setTTSSpeechRate(rate / 0.9);
+
+      const playOnceAndroid = (): Promise<void> => {
+        return new Promise((resolve) => {
+          if (cancelledRef.current) {
+            resolve();
+            return;
+          }
+
+          // 이전 resolve가 있으면 먼저 정리
+          if (androidTTSDoneResolveRef.current) {
+            androidTTSDoneResolveRef.current();
+            androidTTSDoneResolveRef.current = null;
+          }
+
+          // 타임아웃 설정 (15초 후 자동 resolve - 긴 문장 대비)
+          const timeout = setTimeout(() => {
+            console.log('Android TTS timeout - auto resolving');
+            if (androidTTSDoneResolveRef.current) {
+              androidTTSDoneResolveRef.current = null;
+              resolve();
+            }
+          }, 15000);
+
+          // resolve를 래핑하여 타임아웃도 정리
+          androidTTSDoneResolveRef.current = () => {
+            clearTimeout(timeout);
+            androidTTSDoneResolveRef.current = null;
+            resolve();
+          };
+
+          // 약간의 딜레이 후 TTS 호출 (이전 TTS가 정리될 시간 확보)
+          setTimeout(() => {
+            if (!cancelledRef.current) {
+              window.AndroidAudio!.speakTTSWithLanguage(text, androidLang);
+            }
+          }, 50);
+        });
+      };
+
+      try {
+        for (let i = 0; i < repeat; i++) {
+          if (cancelledRef.current) break;
+
+          setCurrentRepeat(i + 1);
+          await playOnceAndroid();
+
+          if (i < repeat - 1 && !cancelledRef.current) {
+            await new Promise(resolve => setTimeout(resolve, pauseBetweenRepeats));
+          }
+        }
+      } finally {
+        setIsPlaying(false);
+        setCurrentRepeat(0);
+      }
+      return;
+    }
+
+    // 웹 브라우저인 경우 기존 speechSynthesis 사용
+    if (!('speechSynthesis' in window)) {
+      console.warn('SpeechSynthesis not supported');
+      setIsPlaying(false);
+      return;
+    }
+
     window.speechSynthesis.cancel();
 
     // Chrome 버그 workaround: 일정 간격으로 resume() 호출
@@ -102,12 +234,23 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
 
   const stop = useCallback(() => {
     cancelledRef.current = true;
-    // interval 정리
+
+    // 안드로이드 앱인 경우
+    if (isAndroidApp()) {
+      window.AndroidAudio!.stopTTS();
+      if (androidTTSDoneResolveRef.current) {
+        androidTTSDoneResolveRef.current();
+        androidTTSDoneResolveRef.current = null;
+      }
+    }
+
+    // 웹 브라우저인 경우
     if (resumeIntervalRef.current) {
       clearInterval(resumeIntervalRef.current);
       resumeIntervalRef.current = null;
     }
     window.speechSynthesis?.cancel();
+
     setIsPlaying(false);
     setCurrentRepeat(0);
   }, []);

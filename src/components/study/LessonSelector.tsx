@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Check } from 'lucide-react';
+import { useAdTrigger } from '../../contexts/AdContext';
 
 interface LessonInfo {
   lesson: number | string;
@@ -22,6 +23,12 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
   loading = false,
 }) => {
   const lessonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
+  const { triggerAd } = useAdTrigger();
+
+  const handleSelectLesson = (lessonId: string) => {
+    triggerAd('LESSON_SELECT');
+    onSelectLesson(lessonId);
+  };
 
   // 선택된 레슨으로 자동 스크롤
   useEffect(() => {
@@ -64,7 +71,7 @@ const LessonSelector: React.FC<LessonSelectorProps> = ({
               ref={(el) => {
                 lessonRefs.current[String(lesson.lesson)] = el;
               }}
-              onClick={() => onSelectLesson(String(lesson.lesson))}
+              onClick={() => handleSelectLesson(String(lesson.lesson))}
               className={`relative p-2 rounded-xl text-left transition-all ${
                 isSelected
                   ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/30'

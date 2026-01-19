@@ -2,12 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Layers } from 'lucide-react';
 import { DataCategory } from '../../contexts/GlobalStateContext';
+import { useAdTrigger } from '../../contexts/AdContext';
 
 interface CategorySelectorProps {
   onSelectCategory: (category: DataCategory) => void;
 }
 
 const CategorySelector: React.FC<CategorySelectorProps> = ({ onSelectCategory }) => {
+  const { triggerAd } = useAdTrigger();
+
+  const handleSelectCategory = (category: DataCategory) => {
+    triggerAd('CATEGORY_SELECT');
+    onSelectCategory(category);
+  };
+
   return (
     <div className="p-4 flex flex-col items-center justify-center min-h-[60vh]">
       <motion.h1
@@ -20,7 +28,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({ onSelectCategory })
 
       <div className="w-full max-w-sm space-y-4">
         <motion.button
-          onClick={() => onSelectCategory('currently')}
+          onClick={() => handleSelectCategory('currently')}
           className="w-full p-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl text-white shadow-xl shadow-cyan-500/30"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -40,7 +48,7 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({ onSelectCategory })
         </motion.button>
 
         <motion.button
-          onClick={() => onSelectCategory('integrated')}
+          onClick={() => handleSelectCategory('integrated')}
           className="w-full p-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl text-white shadow-xl shadow-purple-500/30"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
