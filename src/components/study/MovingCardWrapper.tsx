@@ -58,8 +58,8 @@ const MovingCardWrapper: React.FC<MovingCardWrapperProps> = ({ children, isMovin
       const cardRect = cardElement.getBoundingClientRect();
 
       // 화면 1/5 범위 제한 계산
-      const maxX = (containerRect.width - cardRect.width) / 2 + cardRect.width / 5;
-      const maxY = (containerRect.height - cardRect.height) / 2 + cardRect.height / 5;
+      const maxX = (containerRect.width - cardRect.width) / 2 + cardRect.width / 8;
+      const maxY = (containerRect.height - cardRect.height) / 2 + cardRect.height / 8;
 
       setPosition((prev) => {
         let newX = prev.x + velocity.x;
@@ -127,7 +127,7 @@ const MovingCardWrapper: React.FC<MovingCardWrapperProps> = ({ children, isMovin
     <div
       ref={containerRef}
       className="relative w-full h-full"
-      style={{ minHeight: '100%' }}
+      // style={{ minHeight: '100%' }}
     >
       <motion.div
         animate={

@@ -237,7 +237,7 @@ const LessonStudyView: React.FC = () => {
   const variants = getAnimationVariants();
 
   return (
-    <div className="min-h-screen flex flex-col pb-20 bg-gray-50 dark:bg-gray-900">
+    <div className="h-full flex flex-col overflow-hidden bg-gray-50 dark:bg-gray-900">
       <Header
         title={lessonTitle}
         onBack={handleBack}
