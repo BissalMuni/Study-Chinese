@@ -62,14 +62,21 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
   const resumeIntervalRef = useRef<number | null>(null);
   const androidTTSDoneResolveRef = useRef<(() => void) | null>(null);
   const androidTTSTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const androidTTSStartedRef = useRef(false); // TTS가 실제로 시작되었는지 추적
 
   // 안드로이드 TTS 상태 콜백 설정
   useEffect(() => {
     if (isAndroidApp()) {
       window.onAndroidTTSStateChange = (isSpeaking: boolean, _text: string | null) => {
-        console.log('Android TTS state change:', isSpeaking);
-        // TTS가 완료되었을 때 (isSpeaking = false)
-        if (!isSpeaking && androidTTSDoneResolveRef.current) {
+        console.log('Android TTS state change:', isSpeaking, 'started:', androidTTSStartedRef.current);
+
+        if (isSpeaking) {
+          // TTS가 실제로 시작됨
+          androidTTSStartedRef.current = true;
+        } else if (!isSpeaking && androidTTSStartedRef.current && androidTTSDoneResolveRef.current) {
+          // TTS가 시작된 후에 완료된 경우만 처리
+          androidTTSStartedRef.current = false;
+
           // 타임아웃 먼저 취소
           if (androidTTSTimeoutRef.current) {
             clearTimeout(androidTTSTimeoutRef.current);
@@ -132,6 +139,9 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
             androidTTSDoneResolveRef.current = null;
           }
 
+          // resolve 함수를 먼저 저장 (TTS 호출 전에 설정해야 콜백이 제대로 동작)
+          androidTTSDoneResolveRef.current = resolve;
+
           // 타임아웃 설정 (15초 후 자동 resolve - 긴 문장 대비)
           androidTTSTimeoutRef.current = setTimeout(() => {
             console.log('Android TTS timeout - auto resolving');
@@ -142,10 +152,7 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
             }
           }, 15000);
 
-          // resolve 함수 저장 (콜백에서 호출됨)
-          androidTTSDoneResolveRef.current = resolve;
-
-          // TTS 즉시 호출
+          // TTS 호출 (resolve 설정 후에 호출)
           if (!cancelledRef.current) {
             window.AndroidAudio!.speakTTSWithLanguage(text, androidLang);
           }
