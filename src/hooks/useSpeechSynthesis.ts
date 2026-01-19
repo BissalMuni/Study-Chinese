@@ -68,13 +68,13 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
   useEffect(() => {
     if (isAndroidApp()) {
       window.onAndroidTTSStateChange = (isSpeaking: boolean, _text: string | null) => {
-        console.log('Android TTS state change:', isSpeaking, 'started:', androidTTSStartedRef.current);
+        console.log('Android TTS state change:', isSpeaking, 'started:', androidTTSStartedRef.current, 'hasResolve:', !!androidTTSDoneResolveRef.current);
 
         if (isSpeaking) {
           // TTS가 실제로 시작됨
           androidTTSStartedRef.current = true;
-        } else if (!isSpeaking && androidTTSStartedRef.current && androidTTSDoneResolveRef.current) {
-          // TTS가 시작된 후에 완료된 경우만 처리
+        } else if (!isSpeaking && androidTTSStartedRef.current) {
+          // TTS가 시작된 후에 완료된 경우
           androidTTSStartedRef.current = false;
 
           // 타임아웃 먼저 취소
@@ -82,9 +82,13 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
             clearTimeout(androidTTSTimeoutRef.current);
             androidTTSTimeoutRef.current = null;
           }
-          const resolveFunc = androidTTSDoneResolveRef.current;
-          androidTTSDoneResolveRef.current = null;
-          resolveFunc();
+
+          // resolve 호출
+          if (androidTTSDoneResolveRef.current) {
+            const resolveFunc = androidTTSDoneResolveRef.current;
+            androidTTSDoneResolveRef.current = null;
+            resolveFunc();
+          }
         }
       };
 
