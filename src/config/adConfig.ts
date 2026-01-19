@@ -23,19 +23,19 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     id: 'CATEGORY_SELECT',
     name: '카테고리 선택',
     description: '카테고리 선택 시 광고 표시',
-    enabled: true,
+    enabled: false,
     type: 'interstitial',
     probability: 0.5,
-    countThreshold: 3,
+    countThreshold: 5,
   },
   LESSON_SELECT: {
     id: 'LESSON_SELECT',
     name: '레슨 선택',
     description: '레슨 선택 시 광고 표시',
-    enabled: true,
+    enabled: false,
     type: 'interstitial',
     probability: 0.5,
-    countThreshold: 3,
+    countThreshold: 5,
   },
   LESSON_COMPLETE: {
     id: 'LESSON_COMPLETE',
@@ -60,7 +60,7 @@ export const defaultAdPoints: Record<AdPointId, AdPointConfig> = {
     enabled: true,
     type: 'interstitial',
     probability: 0.5,
-    countThreshold: 3,
+    countThreshold: 5,
   },
 };
 

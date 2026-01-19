@@ -69,12 +69,7 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
         console.log('Android TTS state change:', isSpeaking);
         // TTS가 완료되었을 때 (isSpeaking = false)
         if (!isSpeaking && androidTTSDoneResolveRef.current) {
-          // 약간의 딜레이를 주어 다음 재생 준비 시간 확보
-          setTimeout(() => {
-            if (androidTTSDoneResolveRef.current) {
-              androidTTSDoneResolveRef.current();
-            }
-          }, 100);
+          androidTTSDoneResolveRef.current();
         }
       };
 
@@ -133,12 +128,10 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
             resolve();
           };
 
-          // 약간의 딜레이 후 TTS 호출 (이전 TTS가 정리될 시간 확보)
-          setTimeout(() => {
-            if (!cancelledRef.current) {
-              window.AndroidAudio!.speakTTSWithLanguage(text, androidLang);
-            }
-          }, 50);
+          // TTS 즉시 호출
+          if (!cancelledRef.current) {
+            window.AndroidAudio!.speakTTSWithLanguage(text, androidLang);
+          }
         });
       };
 
