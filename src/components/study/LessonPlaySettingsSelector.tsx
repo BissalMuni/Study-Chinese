@@ -125,6 +125,42 @@ const LessonPlaySettingsSelector: React.FC<LessonPlaySettingsSelectorProps> = ({
         </div>
       </motion.div>
 
+      {/* 반복 대기 시간 */}
+      <motion.div
+        className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Clock size={18} className="text-orange-500" />
+            <span className="font-medium text-gray-700 dark:text-gray-200">반복 대기 시간</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <motion.button
+              onClick={() => updateSettings('repeatPauseTime', Math.max(0, (settings.repeatPauseTime ?? 2) - 0.5))}
+              disabled={(settings.repeatPauseTime ?? 2) <= 0}
+              className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg disabled:opacity-40"
+              whileTap={{ scale: 0.9 }}
+            >
+              <Minus size={18} className="text-gray-600 dark:text-gray-300" />
+            </motion.button>
+            <span className="w-14 text-center font-bold text-xl text-gray-700 dark:text-gray-200">
+              {settings.repeatPauseTime ?? 2}초
+            </span>
+            <motion.button
+              onClick={() => updateSettings('repeatPauseTime', Math.min(5, (settings.repeatPauseTime ?? 2) + 0.5))}
+              disabled={(settings.repeatPauseTime ?? 2) >= 5}
+              className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg disabled:opacity-40"
+              whileTap={{ scale: 0.9 }}
+            >
+              <Plus size={18} className="text-gray-600 dark:text-gray-300" />
+            </motion.button>
+          </div>
+        </div>
+      </motion.div>
+
       {/* 카드 전환 애니메이션 */}
       <motion.div
         className="bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm"

@@ -13,7 +13,8 @@ const StudyView: React.FC = () => {
     selectedType: state.selectedType,
     selectedLessonId: state.selectedLessonId
   });
-  const { speak, stop, isPlaying, currentRepeat } = useSpeechSynthesis();
+  const repeatPauseMs = (state.lessonPlaySettings.repeatPauseTime ?? 2) * 1000;
+  const { speak, stop, isPlaying, currentRepeat } = useSpeechSynthesis({ pauseBetweenRepeats: repeatPauseMs });
   const [showCelebration, setShowCelebration] = useState(false);
   const [direction, setDirection] = useState<'next' | 'prev'>('next');
 

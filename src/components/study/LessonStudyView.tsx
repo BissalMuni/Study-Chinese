@@ -24,7 +24,8 @@ const LessonStudyView: React.FC = () => {
     selectedType: state.selectedType,
     selectedLessonId: state.selectedLessonId
   });
-  const { speak, stop, isPlaying } = useSpeechSynthesis();
+  const repeatPauseMs = (state.lessonPlaySettings.repeatPauseTime ?? 2) * 1000;
+  const { speak, stop, isPlaying } = useSpeechSynthesis({ pauseBetweenRepeats: repeatPauseMs });
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentRepeat, setCurrentRepeat] = useState(1);

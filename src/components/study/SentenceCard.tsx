@@ -32,7 +32,8 @@ const SentenceCard: React.FC<SentenceCardProps> = ({
   cardGradient,
 }) => {
   const { state } = useGlobalState();
-  const { speak, isPlaying, currentRepeat } = useSpeechSynthesis();
+  const repeatPauseMs = (state.lessonPlaySettings.repeatPauseTime ?? 2) * 1000;
+  const { speak, isPlaying, currentRepeat } = useSpeechSynthesis({ pauseBetweenRepeats: repeatPauseMs });
   const [internalShowTranslations, setInternalShowTranslations] = useState(false);
   const [internalShowWords, setInternalShowWords] = useState(false);
 

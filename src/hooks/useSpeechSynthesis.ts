@@ -61,6 +61,7 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
   const cancelledRef = useRef(false);
   const resumeIntervalRef = useRef<number | null>(null);
   const androidTTSDoneResolveRef = useRef<(() => void) | null>(null);
+  const androidTTSTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // 안드로이드 TTS 상태 콜백 설정
   useEffect(() => {
@@ -69,14 +70,28 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
         console.log('Android TTS state change:', isSpeaking);
         // TTS가 완료되었을 때 (isSpeaking = false)
         if (!isSpeaking && androidTTSDoneResolveRef.current) {
-          androidTTSDoneResolveRef.current();
+          // 타임아웃 먼저 취소
+          if (androidTTSTimeoutRef.current) {
+            clearTimeout(androidTTSTimeoutRef.current);
+            androidTTSTimeoutRef.current = null;
+          }
+          const resolveFunc = androidTTSDoneResolveRef.current;
+          androidTTSDoneResolveRef.current = null;
+          resolveFunc();
         }
       };
 
       window.onAndroidTTSError = (message: string) => {
         console.error('Android TTS Error:', message);
         if (androidTTSDoneResolveRef.current) {
-          androidTTSDoneResolveRef.current();
+          // 타임아웃 먼저 취소
+          if (androidTTSTimeoutRef.current) {
+            clearTimeout(androidTTSTimeoutRef.current);
+            androidTTSTimeoutRef.current = null;
+          }
+          const resolveFunc = androidTTSDoneResolveRef.current;
+          androidTTSDoneResolveRef.current = null;
+          resolveFunc();
         }
       };
     }
@@ -106,27 +121,29 @@ export const useSpeechSynthesis = (options: UseSpeechSynthesisOptions = {}): Use
             return;
           }
 
+          // 이전 타임아웃 정리
+          if (androidTTSTimeoutRef.current) {
+            clearTimeout(androidTTSTimeoutRef.current);
+            androidTTSTimeoutRef.current = null;
+          }
+
           // 이전 resolve가 있으면 먼저 정리
           if (androidTTSDoneResolveRef.current) {
-            androidTTSDoneResolveRef.current();
             androidTTSDoneResolveRef.current = null;
           }
 
           // 타임아웃 설정 (15초 후 자동 resolve - 긴 문장 대비)
-          const timeout = setTimeout(() => {
+          androidTTSTimeoutRef.current = setTimeout(() => {
             console.log('Android TTS timeout - auto resolving');
+            androidTTSTimeoutRef.current = null;
             if (androidTTSDoneResolveRef.current) {
               androidTTSDoneResolveRef.current = null;
               resolve();
             }
           }, 15000);
 
-          // resolve를 래핑하여 타임아웃도 정리
-          androidTTSDoneResolveRef.current = () => {
-            clearTimeout(timeout);
-            androidTTSDoneResolveRef.current = null;
-            resolve();
-          };
+          // resolve 함수 저장 (콜백에서 호출됨)
+          androidTTSDoneResolveRef.current = resolve;
 
           // TTS 즉시 호출
           if (!cancelledRef.current) {

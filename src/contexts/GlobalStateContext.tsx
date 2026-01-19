@@ -33,6 +33,7 @@ export interface LessonPlaySettings {
   cardColorMode: CardColorMode;
   transitionDelay: number; // 카드 전환 사이 쉬는 시간 (초)
   cardMovement: CardMovement; // 카드 이동 설정
+  repeatPauseTime: number; // 문장 반복 사이 대기 시간 (초)
 }
 
 // 전역 상태 인터페이스
@@ -73,6 +74,7 @@ const defaultLessonPlaySettings: LessonPlaySettings = {
   cardColorMode: 'fixed',
   transitionDelay: 1, // 기본 1초
   cardMovement: 'fixed', // 기본 고정
+  repeatPauseTime: 2, // 기본 2초
 };
 
 // localStorage에서 lessonPlaySettings 불러오기
